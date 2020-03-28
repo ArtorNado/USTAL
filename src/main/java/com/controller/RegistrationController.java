@@ -22,16 +22,18 @@ public class RegistrationController {
     }
 
     @GetMapping("/registration")
-    public String addUser(@RequestParam String login, @RequestParam String password, Map<String, Object> model){
+    public Map addUser(@RequestParam String login, @RequestParam String password, Map<String, Object> model){
         User userFromDb = userRepository.findByUserLogin(login);
         if(userFromDb != null){
             model.put("message", "User exist");
-            return "/registration";
+            System.out.println("failed");
+            return model;
         }
         System.out.println(login);
         System.out.println(password);
         User u = new User(login, password);
         userRepository.save(u);
-        return "redirect:/login";
+        model.put("message", "User exist");
+        return model;
     }
 }
