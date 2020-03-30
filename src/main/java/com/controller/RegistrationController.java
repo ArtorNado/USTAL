@@ -52,8 +52,8 @@ public class RegistrationController {
     }
 
     @PostMapping("/bla")
-    public ResponseEntity<Message> signIn(@RequestBody U u) {
-        return ResponseEntity.ok(new Message("SUC"));
+    public Message signIn(@RequestBody U u) {
+        return new Message("SUC");
     }
 
 
