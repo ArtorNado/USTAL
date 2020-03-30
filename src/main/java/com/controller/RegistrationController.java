@@ -51,13 +51,19 @@ public class RegistrationController {
         return new Message("successful");
     }
 
-    @RequestMapping(value = "/bla", method = RequestMethod.POST, consumes = "application/json")
+    @PostMapping("/bla")
+    public ResponseEntity<Message> signIn(@RequestBody U u) {
+        return ResponseEntity.ok(new Message("SUC"));
+    }
+
+
+   /* @PostMapping(value = "/bla" consumes = "application/json")
     public Message update(@RequestBody U u) {
-        /*if (u != null) {
+        *//*if (u != null) {
             return new Message("successful");
         }else {
             return new Message("failed");
-        }*/
+        }*//*
         return new Message("SUC");
-    }
+    }*/
 }
