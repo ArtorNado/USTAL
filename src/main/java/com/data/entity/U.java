@@ -1,11 +1,8 @@
 package com.data.entity;
 
 public class U {
-    public int userName;
-    public String userPassword;
-
-    public U() {
-    }
+    private int userName;
+    private String userPassword;
 
     public U(int userName, String userPassword) {
         this.userName = userName;
