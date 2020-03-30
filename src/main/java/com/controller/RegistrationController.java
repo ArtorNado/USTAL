@@ -53,10 +53,11 @@ public class RegistrationController {
 
     @RequestMapping(value = "/bla", method = RequestMethod.POST, consumes = "application/json")
     public Message update(@RequestBody U u) {
-        if (u != null) {
+        /*if (u != null) {
             return new Message("successful");
         }else {
             return new Message("failed");
-        }
+        }*/
+        return new Message("SUC");
     }
 }
