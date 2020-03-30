@@ -50,9 +50,8 @@ public class RegistrationController {
         return new Message("successful");
     }
 
-    @RequestMapping(value = "/bla", method = RequestMethod.POST)
+    @RequestMapping(value = "/bla", method = RequestMethod.POST, consumes = "application/json")
     public Message update(@RequestBody User user) {
-
         if (user != null) {
             System.out.println("userLog");
             System.out.println(user.getUserLogin());
