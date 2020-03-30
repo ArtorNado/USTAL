@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.data.entity.U;
 import com.data.entity.User;
 import com.data.repository.UserRepository;
 import com.response.Message;
@@ -51,10 +52,10 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/bla", method = RequestMethod.POST, consumes = "application/json")
-    public Message update(@RequestBody User user) {
-        if (user != null) {
+    public Message update(@RequestBody U u) {
+        if (u != null) {
             System.out.println("userLog");
-            System.out.println(user.getUserLogin());
+            System.out.println(u.getUserLogin());
             return new Message("successful");
         }else {
             System.out.println("NULL");
