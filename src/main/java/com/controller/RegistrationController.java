@@ -19,7 +19,7 @@ public class RegistrationController {
     @Autowired
     UserRepository userRepository;
 
-    /*@RequestMapping("/registration")
+    @RequestMapping("/registration")
     public Message addUser(@RequestParam String login, @RequestParam String password, Map<String, Object> model){
         User userFromDb = userRepository.findByUserLogin(login);
         if(userFromDb != null){
@@ -33,23 +33,23 @@ public class RegistrationController {
         userRepository.save(u);
         model.put("message", "User exist");
         return new Message("successful");
-    }*/
-
-    @RequestMapping("/registration")
-    public Message addUser(User user, Map<String, Object> model){
-        User userFromDb = userRepository.findByUserLogin(user.getUserLogin());
-        if(userFromDb != null){
-            model.put("message", "User exist");
-            System.out.println("failed");
-            return new Message("failed");
-        }
-        System.out.println(user.getUserLogin());
-        System.out.println(user.getUserPassword());
-        User u = new User(user.getUserLogin(), user.getUserPassword());
-        userRepository.save(u);
-        model.put("message", "User exist");
-        return new Message("successful");
     }
+
+//    @RequestMapping("/registration")
+//    public Message addUser(User user, Map<String, Object> model){
+//        User userFromDb = userRepository.findByUserLogin(user.getUserLogin());
+//        if(userFromDb != null){
+//            model.put("message", "User exist");
+//            System.out.println("failed");
+//            return new Message("failed");
+//        }
+//        System.out.println(user.getUserLogin());
+//        System.out.println(user.getUserPassword());
+//        User u = new User(user.getUserLogin(), user.getUserPassword());
+//        userRepository.save(u);
+//        model.put("message", "User exist");
+//        return new Message("successful");
+//    }
 
     @PostMapping("/bla")
     public Message signIn(@RequestBody U u) {
