@@ -51,13 +51,15 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/bla", method = RequestMethod.POST)
-    public ResponseEntity<User> update(@RequestBody User user) {
+    public Message update(@RequestBody User user) {
 
         if (user != null) {
             System.out.println("userLog");
             System.out.println(user.getUserLogin());
+            return new Message("successful");
+        }else {
+            System.out.println("NULL");
+            return new Message("failed");
         }
-        System.out.println("NULL");
-        return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 }
