@@ -23,7 +23,7 @@ public class RegistrationController {
     UserDataRepository userDataRepository;
 
     @RequestMapping("/registration")
-    public Message addUser(@RequestBody U u, @RequestBody UD ud, Map<String, Object> model){
+    public Message addUser(@RequestBody U u, Map<String, Object> model){
         User userFromDb = userRepository.findByUserLogin(u.getUserLogin());
         if(userFromDb != null){
             model.put("message", "User exist");
@@ -31,8 +31,8 @@ public class RegistrationController {
         }
         User newUser = new User(u.getUserLogin(), u.getUserPassword());
         userRepository.save(newUser);
-        UserData newUserData = new UserData(newUser.getUserId(), ud.getUserFirstName(), ud.getUserSecondName(),
-                ud.getUserGender(), ud.getUserCity());
+        UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
+                u.getUserGender(), u.getUserCity());
         userDataRepository.save(newUserData);
         model.put("message", "User exist");
         return new Message("successful");
