@@ -1,6 +1,7 @@
-package com.data.entity;
+package com.data.x;
 
 public class U {
+
     private String userLogin;
     private String userPassword;
 

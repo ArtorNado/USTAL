@@ -18,6 +18,14 @@ public class User {
     public User() {
     }
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     public User(String userLogin, String userPassword) {
         this.userLogin = userLogin;
         this.userPassword = userPassword;

@@ -1,36 +1,55 @@
 package com.data.entity;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
+
 @Entity
-@Table(name="usr")
+@Table(name="userData")
 public class UserData {
 
     @Id
-    @Column(name="user_id")
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User userId;
+    @Column(name = "user_id")
+    private Integer userId;
 
     private String userFirstName;
 
     private String userSecondName;
 
+    private String userGender;
+
+    private String userCity;
+
     public UserData() {
     }
 
-    public UserData(String userFirstName, String userSecondName) {
+    public UserData(Integer userId, String userFirstName, String userSecondName, String userGender, String userCity) {
+        this.userId = userId;
         this.userFirstName = userFirstName;
         this.userSecondName = userSecondName;
+        this.userGender = userGender;
+        this.userCity = userCity;
     }
 
-    public User getUserId() {
+    public String getUserGender() {
+        return userGender;
+    }
+
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
+    }
+
+    public String getUserCity() {
+        return userCity;
+    }
+
+    public void setUserCity(String userCity) {
+        this.userCity = userCity;
+    }
+
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(User userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
