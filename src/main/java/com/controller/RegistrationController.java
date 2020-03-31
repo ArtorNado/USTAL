@@ -24,7 +24,7 @@ public class RegistrationController {
 
     @RequestMapping("/registration")
     public Message addUser(@RequestBody U u, Map<String, Object> model){
-        User userFromDb = userRepository.findByUserLogin(u.getUserLogin());
+        /*User userFromDb = userRepository.findByUserLogin(u.getUserLogin());
         if(userFromDb != null){
             model.put("message", "User exist");
             return new Message("failed");
@@ -34,8 +34,8 @@ public class RegistrationController {
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
                 u.getUserGender(), u.getUserCity());
         userDataRepository.save(newUserData);
-        model.put("message", "User exist");
-        return new Message("successful");
+        model.put("message", "User exist");*/
+        return new Message(u.getUserLogin());
     }
 
 
