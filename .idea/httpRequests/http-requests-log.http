@@ -1,3 +1,51 @@
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+"userLogin" : "ul1",
+"userPassword" : "up1",
+  "userFirstName" : "fn1",
+  "userSecondName" : "sc1",
+  "userGender" : "Male",
+  "userCity" : "c1"
+}
+
+<> 2020-04-06T071127.200.json
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+"userLogin" : "ul1",
+"userPassword" : "up1",
+  "userFirstName" : "fn1",
+  "userSecondName" : "sc1",
+  "userGender" : "Male",
+  "userCity" : "c1"
+}
+
+<> 2020-04-06T070937.200.json
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+"userLogin" : "ul1",
+"userPassword" : "up1",
+  "userFirstName" : "fn1",
+  "userSecondName" : "sc1",
+  "userGender" : "Male",
+  "userCity" : "c1"
+}
+
+<> 2020-04-06T070514.200.json
+
+###
+
 POST http://localhost:8080/signIn
 Content-Type: application/json
 

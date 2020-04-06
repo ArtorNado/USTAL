@@ -1,9 +1,13 @@
-POST http://localhost:8080/signIn
+POST http://localhost:8080/registration
 Content-Type: application/json
 
 {
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
+"userLogin" : "ul1",
+"userPassword" : "up1",
+  "userFirstName" : "fn1",
+  "userSecondName" : "sc1",
+  "userGender" : "Male",
+  "userCity" : "c1"
+}
 
 ###

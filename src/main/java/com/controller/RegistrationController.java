@@ -26,7 +26,11 @@ public class RegistrationController {
     @RequestMapping("/registration")
     public Message addUser(@RequestBody U u){
         Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
-        if(userFromDb != null) return new Message("failed");
+        if(userFromDb.isPresent()){
+            System.out.println(userFromDb);
+            System.out.println(u.getUserLogin());
+            return new Message("failed");
+        }
         User newUser = new User(u.getUserLogin(), u.getUserPassword());
         userRepository.save(newUser);
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
