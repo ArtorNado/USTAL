@@ -1,0 +1,68 @@
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+<> 2020-04-06T044522.403.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+<> 2020-04-06T044149.200.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+<> 2020-04-06T044137.200.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+<> 2020-04-06T043609.200.json
+
+###
+
+POST http://localhost/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+###
+
+POST http://localhost/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+###
+

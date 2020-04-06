@@ -15,6 +15,10 @@ public class User {
 
     private String userPassword;
 
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
+
     public User() {
     }
 

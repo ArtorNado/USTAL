@@ -1,0 +1,9 @@
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "login1",
+  "password" : "password1"
+  }
+
+###

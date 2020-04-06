@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @Controller
@@ -23,18 +24,14 @@ public class RegistrationController {
     UserDataRepository userDataRepository;
 
     @RequestMapping("/registration")
-    public Message addUser(@RequestBody U u, Map<String, Object> model){
-        /*User userFromDb = userRepository.findByUserLogin(u.getUserLogin());
-        if(userFromDb != null){
-            model.put("message", "User exist");
-            return new Message("failed");
-        }
+    public Message addUser(@RequestBody U u){
+        Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
+        if(userFromDb != null) return new Message("failed");
         User newUser = new User(u.getUserLogin(), u.getUserPassword());
         userRepository.save(newUser);
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
                 u.getUserGender(), u.getUserCity());
         userDataRepository.save(newUserData);
-        model.put("message", "User exist");*/
         return new Message(u.getUserLogin());
     }
 

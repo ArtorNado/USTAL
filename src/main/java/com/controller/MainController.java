@@ -1,5 +1,6 @@
 package com.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -13,6 +14,7 @@ public class MainController {
         return "greeting";
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/main")
     public String main(Map<String, Object> model) {
         return "main";
