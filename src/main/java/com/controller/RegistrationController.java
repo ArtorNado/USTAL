@@ -38,11 +38,4 @@ public class RegistrationController {
         userDataRepository.save(newUserData);
         return new Message(u.getUserLogin());
     }
-
-
-    @PostMapping("/bla")
-    public Message signIn(@RequestBody U u) {
-        return new Message("SUC");
-    }
-
 }
