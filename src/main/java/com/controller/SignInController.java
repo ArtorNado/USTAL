@@ -35,7 +35,7 @@ public class SignInController {
     }
 
     @PreAuthorize("isAuthenticated()")
-    @PostMapping("/user/{user-id}")
+    @GetMapping("/user/{user-id}")
     public ResponseEntity<UserData> getUser(@PathVariable("user-id") String userId) {
         System.out.println(userId);
         return ResponseEntity.ok(userDataRepository.findUserDataByUserId(Integer.parseInt(userId)));
