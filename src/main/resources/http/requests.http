@@ -1,13 +1,9 @@
-POST http://localhost:8080/registration
-Content-Type: application/json
 
-{
-"userLogin" : "ul1",
-"userPassword" : "up1",
-  "userFirstName" : "fn1",
-  "userSecondName" : "sc1",
-  "userGender" : "Male",
-  "userCity" : "c1"
-}
+POST http://localhost:8080/user/8
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+
 
 ###
+
