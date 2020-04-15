@@ -1,3 +1,291 @@
+POST http://localhost:8080/userId/login1
+Content-Type: application/json
+
+<> 2020-04-15T085921.200.json
+
+###
+
+POST http://localhost:8080/userId/login1
+Content-Type: application/json
+
+<> 2020-04-15T085446.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T085057.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T084751.500.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T084357.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T084044.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+
+<> 2020-04-15T083804.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T083737.200.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T083548.500.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T083252.405.json
+
+###
+
+POST http://localhost:8080/userId/br
+Content-Type: application/json
+
+<> 2020-04-15T083241.405.json
+
+###
+
+POST http://localhost:8080/userId?br=
+Content-Type: application/json
+
+<> 2020-04-15T082958.500.json
+
+###
+
+POST http://localhost:8080/userId?userLogin=br
+Content-Type: application/json
+
+<> 2020-04-15T082909.500.json
+
+###
+
+POST http://localhost:8080/userId?userLogin=br
+Content-Type: application/json
+
+<> 2020-04-15T082751.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T082701.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T082235.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T081725.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T081330.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T080646.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T080248.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "login1"
+}
+
+<> 2020-04-15T080238.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "login1"
+}
+
+<> 2020-04-15T075831.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "br"
+}
+
+<> 2020-04-15T075815.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "dr"
+}
+
+<> 2020-04-15T075803.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "dsssd"
+}
+
+<> 2020-04-15T075754.500.json
+
+###
+
+POST http://localhost:8080/userId
+Content-Type: application/json
+
+{
+  "userLogin" : "dsssd"
+}
+
+<> 2020-04-15T075431.403.json
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+  "userLogin" : "dsssd",
+  "userPassword" : "ddsss",
+  "userFirstName" : "ddaa",
+  "userSecondName" : "ddaa",
+  "userGender" : "ddaa",
+  "userCity" : "daad"
+}
+
+<> 2020-04-15T071438.200.json
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+  "userLogin" : "dd",
+  "userPassword" : "dd",
+  "userFirstName" : "ddaa",
+  "userSecondName" : "ddaa",
+  "userGender" : "ddaa",
+  "userCity" : "daad"
+}
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{
+  "userLogin" : "dd",
+  "userPassword" : "dd",
+  "userFirstName" : "ddaa",
+  "userSecondName" : "ddaa",
+  "userGender" : "ddaa",
+  "userCity" : "daad"
+}
+
+###
+
+POST http://localhost:8080/registration
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+{
+  "userLogin" : "dd",
+  "userPassword" : "dd",
+  "userFirstName" : "dd",
+  "userSecondName" : "dd",
+  "userGender" : "dd",
+  "userCity" : "dd"
+}
+
+###
+
 POST http://localhost:8080/user/8
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
@@ -189,122 +477,6 @@ Content-Type: application/json
 }
 
 <> 2020-04-07T084249.200.json
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-"userLogin" : "ul1",
-"userPassword" : "up1",
-  "userFirstName" : "fn1",
-  "userSecondName" : "sc1",
-  "userGender" : "Male",
-  "userCity" : "c1"
-}
-
-<> 2020-04-06T071127.200.json
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-"userLogin" : "ul1",
-"userPassword" : "up1",
-  "userFirstName" : "fn1",
-  "userSecondName" : "sc1",
-  "userGender" : "Male",
-  "userCity" : "c1"
-}
-
-<> 2020-04-06T070937.200.json
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-"userLogin" : "ul1",
-"userPassword" : "up1",
-  "userFirstName" : "fn1",
-  "userSecondName" : "sc1",
-  "userGender" : "Male",
-  "userCity" : "c1"
-}
-
-<> 2020-04-06T070514.200.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
-
-<> 2020-04-06T044522.403.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
-
-<> 2020-04-06T044149.200.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
-
-<> 2020-04-06T044137.200.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
-
-<> 2020-04-06T043609.200.json
-
-###
-
-POST http://localhost/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
-
-###
-
-POST http://localhost/signIn
-Content-Type: application/json
-
-{
-  "userLogin" : "login1",
-  "password" : "password1"
-  }
 
 ###
 

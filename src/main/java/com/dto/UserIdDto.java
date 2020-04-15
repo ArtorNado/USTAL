@@ -2,20 +2,20 @@ package com.dto;
 
 public class UserIdDto {
 
-    private String userID;
+    private Integer userID;
 
     public UserIdDto() {
     }
 
-    public UserIdDto(String userID) {
+    public UserIdDto(Integer userID) {
         this.userID = userID;
     }
 
-    public String getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 }

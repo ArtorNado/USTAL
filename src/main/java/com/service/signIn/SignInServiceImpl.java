@@ -1,17 +1,18 @@
-package com.service;
+package com.service.signIn;
 
 import com.data.entity.User;
 import com.data.repository.UserRepository;
 import com.dto.SignInDto;
 import com.dto.TokenDto;
+import com.dto.UserIdDto;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -41,6 +42,18 @@ public class SignInServiceImpl implements SignInService {
                         .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
                         .compact(); // преобразовали в строку
                 return new TokenDto(token);
+        } else throw new AccessDeniedException("User not found");
+    }
+
+    @Override
+    public UserIdDto getUserId(String userLogin) {
+        System.out.println(userLogin);
+        Optional<User> userOptional = userRepository.findByUserLogin(userLogin);
+        System.out.println(userOptional.toString() + "userOpt");
+        if(userOptional.isPresent()) {
+            UserIdDto userIdDto = new UserIdDto();
+            userIdDto.setUserID(userOptional.get().getUserId());
+            return userIdDto;
         } else throw new AccessDeniedException("User not found");
     }
 }
