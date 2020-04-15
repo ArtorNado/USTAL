@@ -28,7 +28,8 @@ public class SignInController {
         return ResponseEntity.ok(signInService.signIn(signInData));
     }
 
-    @PostMapping("/userId/{user-login}")
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/userId/{user-login}")
     public ResponseEntity<UserIdDto> getUserByLogin(@PathVariable("user-login")  String userLogin){
         return ResponseEntity.ok(signInService.getUserId(userLogin));
     }
