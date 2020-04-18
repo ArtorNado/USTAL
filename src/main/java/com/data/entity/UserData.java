@@ -1,6 +1,9 @@
 package com.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="userData")
@@ -18,15 +21,29 @@ public class UserData {
 
     private String userCity;
 
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name="team_id")
+    private Teams team;
+
     public UserData() {
     }
 
-    public UserData(Integer userId, String userFirstName, String userSecondName, String userGender, String userCity) {
+    public UserData(Integer userId, String userFirstName, String userSecondName, String userGender, String userCity, Teams team) {
         this.userId = userId;
         this.userFirstName = userFirstName;
         this.userSecondName = userSecondName;
         this.userGender = userGender;
         this.userCity = userCity;
+        this.team = team;
+    }
+
+    public Teams getTeam() {
+        return team;
+    }
+
+    public void setTeam(Teams team) {
+        this.team = team;
     }
 
     public String getUserGender() {

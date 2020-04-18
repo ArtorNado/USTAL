@@ -30,7 +30,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         User newUser = new User(u.getUserLogin(), u.getUserPassword());
         userRepository.save(newUser);
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
-                u.getUserGender(), u.getUserCity());
+                u.getUserGender(), u.getUserCity(), null);
         userDataRepository.save(newUserData);
         return new Message("success");
     }

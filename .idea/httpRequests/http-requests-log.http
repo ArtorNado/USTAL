@@ -1,3 +1,93 @@
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T054652.200.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T054257.200.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T054140.500.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T053828.200.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T053201.200.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-18T053132.200.json
+
+###
+
+POST http://localhost:8080/createTeam
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+{
+  "teamName" : "TeamName2",
+  "teamCity" : "TeamCity2",
+  "creatorId" : "9"
+}
+
+<> 2020-04-18T015132.200.json
+
+###
+
+POST http://localhost:8080/createTeam
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+{
+  "teamName" : "TeamName1",
+  "teamCity" : "TeamCity1",
+  "creatorId" : "8"
+}
+
+<> 2020-04-18T013936.200.json
+
+###
+
+POST http://localhost:8080/createTeam
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+{
+  "teamName" : "TeamName1",
+  "teamCity" : "TeamCity1",
+  "creatorId" : "8"
+}
+
+<> 2020-04-18T013546.500.json
+
+###
+
 GET http://localhost:8080/userId/br
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
@@ -363,101 +453,6 @@ Content-Type: application/json
 }
 
 <> 2020-04-15T071438.200.json
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-  "userLogin" : "dd",
-  "userPassword" : "dd",
-  "userFirstName" : "ddaa",
-  "userSecondName" : "ddaa",
-  "userGender" : "ddaa",
-  "userCity" : "daad"
-}
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-  "userLogin" : "dd",
-  "userPassword" : "dd",
-  "userFirstName" : "ddaa",
-  "userSecondName" : "ddaa",
-  "userGender" : "ddaa",
-  "userCity" : "daad"
-}
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-{
-  "userLogin" : "dd",
-  "userPassword" : "dd",
-  "userFirstName" : "dd",
-  "userSecondName" : "dd",
-  "userGender" : "dd",
-  "userCity" : "dd"
-}
-
-###
-
-POST http://localhost:8080/user/8
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-<> 2020-04-09T043017.200.json
-
-###
-
-POST http://localhost:8080/user/2
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-###
-
-POST http://localhost:8080/user/2
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-<> 2020-04-09T042503.500.json
-
-###
-
-POST http://localhost:8080/user/2
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-{
-"userId": "2"
-}
-
-<> 2020-04-09T041354.500.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-{
-"userId": "2"
-}
-
-<> 2020-04-09T041037.500.json
 
 ###
 
