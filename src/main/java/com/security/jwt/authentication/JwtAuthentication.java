@@ -3,6 +3,7 @@ package com.security.jwt.authentication;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.Collection;
 
@@ -45,7 +46,7 @@ public class JwtAuthentication implements Authentication {
     }
 
     @Override
-    public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
+    public void setAuthenticated(boolean isAuthenticated) throws HttpClientErrorException.Unauthorized {
         this.isAuthenticated = isAuthenticated;
     }
 

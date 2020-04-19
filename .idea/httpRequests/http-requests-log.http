@@ -1,5 +1,17 @@
 POST http://localhost:8080/getPlayers/23
 Content-Type: application/json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
+
+<> 2020-04-19T033120.403.json
+
+###
+
+POST http://localhost:8080/getPlayers/23
+Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
 
 <> 2020-04-18T054652.200.json
@@ -426,33 +438,6 @@ Content-Type: application/json
 }
 
 <> 2020-04-15T075754.500.json
-
-###
-
-POST http://localhost:8080/userId
-Content-Type: application/json
-
-{
-  "userLogin" : "dsssd"
-}
-
-<> 2020-04-15T075431.403.json
-
-###
-
-POST http://localhost:8080/registration
-Content-Type: application/json
-
-{
-  "userLogin" : "dsssd",
-  "userPassword" : "ddsss",
-  "userFirstName" : "ddaa",
-  "userSecondName" : "ddaa",
-  "userGender" : "ddaa",
-  "userCity" : "daad"
-}
-
-<> 2020-04-15T071438.200.json
 
 ###
 
