@@ -1,3 +1,27 @@
+POST http://localhost:8080/getTeamsByCity/TeamCity2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-22T035846.200.json
+
+###
+
+POST http://localhost:8080/getTeamsByTeamCity/TeamCity2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-22T035822.404.json
+
+###
+
+POST http://localhost:8080/getTeams
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-22T035801.200.json
+
+###
+
 POST http://localhost:8080/getTeams
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
@@ -402,39 +426,6 @@ Content-Type: application/json
 }
 
 <> 2020-04-15T080238.500.json
-
-###
-
-POST http://localhost:8080/userId
-Content-Type: application/json
-
-{
-  "userLogin" : "login1"
-}
-
-<> 2020-04-15T075831.500.json
-
-###
-
-POST http://localhost:8080/userId
-Content-Type: application/json
-
-{
-  "userLogin" : "br"
-}
-
-<> 2020-04-15T075815.500.json
-
-###
-
-POST http://localhost:8080/userId
-Content-Type: application/json
-
-{
-  "userLogin" : "dr"
-}
-
-<> 2020-04-15T075803.500.json
 
 ###
 

@@ -20,6 +20,8 @@ public class Teams {
 
     private Integer creatorId;
 
+    private String teamStatus;
+
     @JsonIgnore
     @OneToMany(mappedBy="team")
     private Set<UserData> users;

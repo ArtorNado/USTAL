@@ -1,11 +1,6 @@
-POST http://localhost:8080//getPlayers/23
+POST http://localhost:8080/getTeams
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
 
 
-
-
-
-
-###
 

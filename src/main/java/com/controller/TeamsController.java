@@ -9,10 +9,7 @@ import com.service.teams.TeamsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,5 +36,18 @@ public class TeamsController {
     public ResponseEntity<List<Teams>> getTeams(){
         return ResponseEntity.ok(teamsService.getTeams());
     }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeamsByCity/{city}")
+    public ResponseEntity<List<Teams>> getTeamsByTeamCity(@PathVariable("city")  String city){
+        return ResponseEntity.ok(teamsService.getTeamsByTeamCity(city));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeamsByStatus/{status}")
+    public ResponseEntity<List<Teams>> getTeamsByTeamStatus(@PathVariable("status")  String status){
+        return ResponseEntity.ok(teamsService.getTeamsByTeamStatus(status));
+    }
+
 
 }

@@ -15,4 +15,9 @@ public interface TeamsService {
     List<UserData> getTeamPlayers(Integer teamId);
 
     List<Teams> getTeams();
+
+    List<Teams> getTeamsByTeamCity(String city);
+
+    List<Teams> getTeamsByTeamStatus(String status);
+
 }

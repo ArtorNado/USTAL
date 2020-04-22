@@ -58,4 +58,20 @@ public class TeamsServiceImpl implements TeamsService {
             return teamsFromDb.get();
         }else throw new AccessDeniedException("Teams not found");
     }
+
+    @Override
+    public List<Teams> getTeamsByTeamCity(String city) {
+        Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamCity(city);
+        if(teamsFromDb.isPresent()){
+            return teamsFromDb.get();
+        }else throw new AccessDeniedException("Teams not found");
+    }
+
+    @Override
+    public List<Teams> getTeamsByTeamStatus(String status) {
+        Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamStatus(status);
+        if(teamsFromDb.isPresent()){
+            return teamsFromDb.get();
+        }else throw new AccessDeniedException("Teams not found");
+    }
 }

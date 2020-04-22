@@ -1,6 +1,8 @@
-POST http://localhost:8080/getTeams
+POST http://localhost:8080/getTeamsByCity/TeamCity2
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+###
 
 
 
