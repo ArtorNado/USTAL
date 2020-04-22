@@ -1,5 +1,6 @@
 package com.service.teams;
 
+import com.data.entity.Teams;
 import com.data.entity.UserData;
 import com.dto.TeamDto;
 import com.response.Message;
@@ -12,4 +13,6 @@ public interface TeamsService {
     Message createTeam(TeamDto teamDto);
 
     List<UserData> getTeamPlayers(Integer teamId);
+
+    List<Teams> getTeams();
 }

@@ -47,8 +47,15 @@ public class TeamsServiceImpl implements TeamsService {
     public List<UserData> getTeamPlayers(Integer teamId) {
         Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(teamId);
         if(teamsFromDb.isPresent()){
-            List<UserData> players = userDataRepository.findUserDataByTeam(teamsFromDb.get());
-            return players;
+            return userDataRepository.findUserDataByTeam(teamsFromDb.get());
         }else throw new AccessDeniedException("User not found");
+    }
+
+    @Override
+    public List<Teams> getTeams() {
+        Optional<List<Teams>> teamsFromDb = teamsRepository.getAll();
+        if(teamsFromDb.isPresent()){
+            return teamsFromDb.get();
+        }else throw new AccessDeniedException("Teams not found");
     }
 }

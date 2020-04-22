@@ -1,6 +1,7 @@
 package com.controller;
 
 
+import com.data.entity.Teams;
 import com.data.entity.UserData;
 import com.dto.TeamDto;
 import com.response.Message;
@@ -31,6 +32,12 @@ public class TeamsController {
     @RequestMapping("/getPlayers/{teamId}")
     public  ResponseEntity<List<UserData>> getPlayers(@PathVariable("teamId")  String teamId){
         return ResponseEntity.ok(teamsService.getTeamPlayers(Integer.parseInt(teamId)));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeams")
+    public ResponseEntity<List<Teams>> getTeams(){
+        return ResponseEntity.ok(teamsService.getTeams());
     }
 
 }

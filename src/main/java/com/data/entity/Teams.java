@@ -1,5 +1,7 @@
 package com.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -18,6 +20,7 @@ public class Teams {
 
     private Integer creatorId;
 
+    @JsonIgnore
     @OneToMany(mappedBy="team")
     private Set<UserData> users;
 

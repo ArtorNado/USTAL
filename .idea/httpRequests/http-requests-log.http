@@ -1,3 +1,11 @@
+POST http://localhost:8080/getTeams
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
+
+<> 2020-04-22T032303.200.json
+
+###
+
 POST http://localhost:8080/getPlayers/23
 Content-Type: application/json
 
@@ -427,17 +435,6 @@ Content-Type: application/json
 }
 
 <> 2020-04-15T075803.500.json
-
-###
-
-POST http://localhost:8080/userId
-Content-Type: application/json
-
-{
-  "userLogin" : "dsssd"
-}
-
-<> 2020-04-15T075754.500.json
 
 ###
 
