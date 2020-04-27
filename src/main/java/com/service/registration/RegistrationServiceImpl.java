@@ -1,5 +1,6 @@
 package com.service.registration;
 
+import com.data.entity.Role;
 import com.data.entity.User;
 import com.data.entity.UserData;
 import com.data.repository.UserDataRepository;
@@ -27,7 +28,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         if(userFromDb.isPresent()){
             return new Message("Этот логин уже существует");
         }
-        User newUser = new User(u.getUserLogin(), u.getUserPassword());
+        User newUser = new User(u.getUserLogin(), u.getUserPassword(), Role.USER);
         userRepository.save(newUser);
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
                 u.getUserGender(), u.getUserCity(), null);

@@ -1,8 +1,6 @@
 package com.controller;
 
 
-import com.data.entity.UserData;
-import com.data.repository.UserDataRepository;
 import com.dto.SignInDto;
 import com.dto.TokenDto;
 import com.dto.UserIdDto;
@@ -11,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 @RestController
 public class SignInController {
@@ -24,11 +23,13 @@ public class SignInController {
 */
 
     @PostMapping("/signIn")
+    @RequestScope
     public ResponseEntity<TokenDto> signIn(@RequestBody SignInDto signInData) {
         return ResponseEntity.ok(signInService.signIn(signInData));
     }
 
     @PreAuthorize("isAuthenticated()")
+    @RequestScope
     @GetMapping("/userId/{user-login}")
     public ResponseEntity<UserIdDto> getUserByLogin(@PathVariable("user-login")  String userLogin){
         return ResponseEntity.ok(signInService.getUserId(userLogin));

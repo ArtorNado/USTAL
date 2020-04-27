@@ -44,9 +44,21 @@ public class TeamsController {
     }
 
     @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeamsByName/{name}")
+    public ResponseEntity<List<Teams>> getTeamsByTeamName(@PathVariable("name")  String name){
+        return ResponseEntity.ok(teamsService.getTeamsByName(name));
+    }
+
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping("/getTeamsByStatus/{status}")
     public ResponseEntity<List<Teams>> getTeamsByTeamStatus(@PathVariable("status")  String status){
         return ResponseEntity.ok(teamsService.getTeamsByTeamStatus(status));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeamsByCityAndStatus")
+    public ResponseEntity<List<Teams>> getTeamsByTeamStatus(@RequestParam String city, String status){
+        return ResponseEntity.ok(teamsService.getTeamsByCityAndStatus(city, status));
     }
 
 

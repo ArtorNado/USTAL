@@ -19,8 +19,6 @@ public class User {
     private Role role;
 
 
-
-
     public User() {
     }
 
@@ -32,9 +30,10 @@ public class User {
         this.userId = userId;
     }
 
-    public User(String userLogin, String userPassword) {
+    public User(String userLogin, String userPassword, Role role) {
         this.userLogin = userLogin;
         this.userPassword = userPassword;
+        this.role = role;
     }
 
     public String getUserLogin() {
@@ -51,5 +50,13 @@ public class User {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

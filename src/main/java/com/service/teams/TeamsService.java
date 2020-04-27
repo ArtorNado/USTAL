@@ -16,8 +16,12 @@ public interface TeamsService {
 
     List<Teams> getTeams();
 
+    List<Teams> getTeamsByName(String name);
+
     List<Teams> getTeamsByTeamCity(String city);
 
     List<Teams> getTeamsByTeamStatus(String status);
+
+    List<Teams> getTeamsByCityAndStatus(String city, String status);
 
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Controller
 public class RegistrationController {
@@ -23,6 +24,7 @@ public class RegistrationController {
     private RegistrationService registrationService;
 
     @RequestMapping("/registration")
+    @RequestScope
     public ResponseEntity<Message> registration(@RequestBody U u){
         return ResponseEntity.ok(registrationService.registr(u));    }
 }

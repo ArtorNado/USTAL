@@ -38,7 +38,7 @@ public class SignInServiceImpl implements SignInService {
                 String token = Jwts.builder()
                         .setSubject(user.getUserId().toString()) // id пользователя
                         .claim("name", user.getUserLogin()) // имя
-                        /*.claim("role", user.getRole().name()) // роль*/
+                        .claim("role", user.getRole().name()) // роль
                         .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
                         .compact(); // преобразовали в строку
                 return new TokenDto(token);
