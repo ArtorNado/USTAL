@@ -1,16 +1,17 @@
 package com.service.teams;
 
-import com.data.entity.Teams;
-import com.data.entity.UserData;
+import com.models.Teams;
+import com.models.UserData;
 import com.dto.TeamDto;
-import com.response.Message;
+import com.dto.MessageDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface TeamsService {
-    Message createTeam(TeamDto teamDto);
+    MessageDto createTeam(TeamDto teamDto);
+
+    Teams getTeamById(Integer id);
 
     List<UserData> getTeamPlayers(Integer teamId);
 

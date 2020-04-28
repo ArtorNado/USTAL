@@ -1,10 +1,10 @@
-GET http://localhost:8080/user/33
+POST http://localhost:8080/signIn
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
+
 
 {
   "userLogin" : "userLogin11",
-  "userPassword" : "userPassword11"
+  "userPassword" : "userLogin11"
 }
 
 ###

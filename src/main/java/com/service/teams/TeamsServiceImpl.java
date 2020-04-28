@@ -1,11 +1,11 @@
 package com.service.teams;
 
-import com.data.entity.Teams;
-import com.data.entity.UserData;
-import com.data.repository.TeamsRepository;
-import com.data.repository.UserDataRepository;
+import com.models.Teams;
+import com.models.UserData;
+import com.repository.TeamsRepository;
+import com.repository.UserDataRepository;
 import com.dto.TeamDto;
-import com.response.Message;
+import com.dto.MessageDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -21,10 +21,10 @@ public class TeamsServiceImpl implements TeamsService {
     @Autowired
     UserDataRepository userDataRepository;
 
-    public Message createTeam(TeamDto teamDto){
+    public MessageDto createTeam(TeamDto teamDto){
         Optional<Teams> teamsFromDb = teamsRepository.findByTeamName(teamDto.getTeamName());
         if(teamsFromDb.isPresent()){
-            return new Message("Команда с таким названием уже существует");
+            return new MessageDto("Команда с таким названием уже существует");
         }
         Teams newTeam = new Teams();
         newTeam.setTeamName(teamDto.getTeamName());
@@ -37,7 +37,7 @@ public class TeamsServiceImpl implements TeamsService {
         UserData user = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
         user.setTeam(newTeam);
         userDataRepository.save(user);
-        return new Message("success");
+        return new MessageDto("success");
     }
 
     @Override
@@ -79,6 +79,16 @@ public class TeamsServiceImpl implements TeamsService {
             return teamsFromDb.get();
         }else throw new AccessDeniedException("Teams not found");
     }
+
+    @Override
+    public Teams getTeamById(Integer id) {
+        Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(id);
+        if(teamsFromDb.isPresent()){
+            return teamsFromDb.get();
+        }else throw new AccessDeniedException("Team not found");
+    }
+
+
 
     @Override
     public List<Teams> getTeamsByCityAndStatus(String city, String status) {

@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.data.entity.UserData;
-import com.data.repository.UserDataRepository;
+import com.models.UserData;
+import com.repository.UserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

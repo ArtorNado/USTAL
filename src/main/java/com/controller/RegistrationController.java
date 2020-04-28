@@ -1,9 +1,9 @@
 package com.controller;
 
-import com.data.x.U;
-import com.data.repository.UserDataRepository;
-import com.data.repository.UserRepository;
-import com.response.Message;
+import com.dto.UserDto;
+import com.repository.UserDataRepository;
+import com.repository.UserRepository;
+import com.dto.MessageDto;
 import com.service.registration.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +25,6 @@ public class RegistrationController {
 
     @RequestMapping("/registration")
     @RequestScope
-    public ResponseEntity<Message> registration(@RequestBody U u){
+    public ResponseEntity<MessageDto> registration(@RequestBody UserDto u){
         return ResponseEntity.ok(registrationService.registr(u));    }
 }

@@ -1,10 +1,10 @@
 package com.controller;
 
 
-import com.data.entity.Teams;
-import com.data.entity.UserData;
+import com.models.Teams;
+import com.models.UserData;
 import com.dto.TeamDto;
-import com.response.Message;
+import com.dto.MessageDto;
 import com.service.teams.TeamsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class TeamsController {
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping("/createTeam")
-    public ResponseEntity<Message> registration(@RequestBody TeamDto teamDto){
+    public ResponseEntity<MessageDto> registration(@RequestBody TeamDto teamDto){
         return ResponseEntity.ok(teamsService.createTeam(teamDto));}
 
 
@@ -59,6 +59,12 @@ public class TeamsController {
     @RequestMapping("/getTeamsByCityAndStatus")
     public ResponseEntity<List<Teams>> getTeamsByTeamStatus(@RequestParam String city, String status){
         return ResponseEntity.ok(teamsService.getTeamsByCityAndStatus(city, status));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getTeam/{teamId}")
+    public ResponseEntity<Teams> getTeamByTeamId(@PathVariable("teamId")  Integer teamId){
+        return ResponseEntity.ok(teamsService.getTeamById(teamId));
     }
 
 

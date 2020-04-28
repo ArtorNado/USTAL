@@ -1,13 +1,12 @@
 package com.service.registration;
 
-import com.data.entity.Role;
-import com.data.entity.User;
-import com.data.entity.UserData;
-import com.data.repository.UserDataRepository;
-import com.data.repository.UserRepository;
-import com.data.x.U;
-import com.response.Message;
-import com.service.registration.RegistrationService;
+import com.models.Role;
+import com.models.User;
+import com.models.UserData;
+import com.repository.UserDataRepository;
+import com.repository.UserRepository;
+import com.dto.UserDto;
+import com.dto.MessageDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,16 +22,16 @@ public class RegistrationServiceImpl implements RegistrationService {
     private UserDataRepository userDataRepository;
 
     @Override
-    public Message registr(U u) {
+    public MessageDto registr(UserDto u) {
         Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
         if(userFromDb.isPresent()){
-            return new Message("Этот логин уже существует");
+            return new MessageDto("Этот логин уже существует");
         }
         User newUser = new User(u.getUserLogin(), u.getUserPassword(), Role.USER);
         userRepository.save(newUser);
         UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
                 u.getUserGender(), u.getUserCity(), null);
         userDataRepository.save(newUserData);
-        return new Message("success");
+        return new MessageDto("success");
     }
 }

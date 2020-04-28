@@ -1,3 +1,88 @@
+POST http://localhost:8080/getTeam/22
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
+
+{
+  "userLogin" : "userLogin11",
+  "userPassword" : "userLogin11"
+}
+
+<> 2020-04-28T091318.200.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "userLogin11",
+  "userPassword" : "userLogin11"
+}
+
+<> 2020-04-28T091254.200.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "userLogin11",
+  "userPassword" : "userLogin11"
+}
+
+<> 2020-04-28T051704.200.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "br",
+  "userPassword" : "br"
+}
+
+<> 2020-04-28T051632.500.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "br",
+  "userPassword" : "br"
+}
+
+<> 2020-04-28T122618.500.json
+
+###
+
+POST http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "userLogin11",
+  "userPassword" : "userPassword11"
+}
+
+<> 2020-04-28T122607.200.json
+
+###
+
+GET http://localhost:8080/signIn
+Content-Type: application/json
+
+{
+  "userLogin" : "userLogin11",
+  "userPassword" : "userPassword11"
+}
+
+<> 2020-04-28T122551.405.json
+
+###
+
 GET http://localhost:8080/user/33
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
@@ -459,70 +544,6 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
 
 <> 2020-04-15T095312.200.json
-
-###
-
-GET http://localhost:8080/user/8
-Content-Type: application/json
-Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA"
-
-<> 2020-04-15T095223.403.json
-
-###
-
-GET http://localhost:8080/user/8
-Content-Type: application/json
-Authentication: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA"
-
-<> 2020-04-15T095215.403.json
-
-###
-
-GET http://localhost:8080/user/8
-Content-Type: application/json
-Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA"
-
-<> 2020-04-15T095152.403.json
-
-###
-
-GET http://localhost:8080/user/8
-Content-Type: application/json
-Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA"
-
-<> 2020-04-15T095148.403.json
-
-###
-
-POST http://localhost:8080/user/8
-Content-Type: application/json
-Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA"
-
-<> 2020-04-15T095136.405.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-"userLogin": "br",
-  "userpassword" : "br"
-}
-
-<> 2020-04-15T095106.200.json
-
-###
-
-GET http://localhost:8080/signIn
-Content-Type: application/json
-
-{
-"userLogin": "br",
-  "userpassword" : "br"
-}
-
-<> 2020-04-15T095100.405.json
 
 ###
 

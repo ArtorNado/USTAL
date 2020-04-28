@@ -1,7 +1,8 @@
 package com.service.signIn;
 
-import com.data.entity.User;
-import com.data.repository.UserRepository;
+import com.aspect.LogExecutionTime;
+import com.models.User;
+import com.repository.UserRepository;
 import com.dto.SignInDto;
 import com.dto.TokenDto;
 import com.dto.UserIdDto;
@@ -12,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -26,6 +26,7 @@ public class SignInServiceImpl implements SignInService {
     private String secret;
 
     @Override
+    @LogExecutionTime
     public TokenDto signIn(SignInDto signInData) {
         // получаем пользователя по его email
         Optional<User> userOptional = userRepository.findByUserLogin(signInData.getUserLogin());
