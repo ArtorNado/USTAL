@@ -1,3 +1,17 @@
+GET http://localhost:8080/createTeam
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
+
+{
+  "teamName" : "GGteam",
+  "teamCity" : "Moscow",
+  "creatorId" : 34
+}
+
+<> 2020-04-29T082556.200.json
+
+###
+
 GET http://localhost:8080/determineStatus?userId=17&teamId=33
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
@@ -543,14 +557,6 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
 
 <> 2020-04-18T053201.200.json
-
-###
-
-POST http://localhost:8080/getPlayers/23
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA
-
-<> 2020-04-18T053132.200.json
 
 ###
 

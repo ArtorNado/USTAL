@@ -1,10 +1,11 @@
-GET http://localhost:8080/user/16
+GET http://localhost:8080/createTeam
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
 
 {
-  "userLogin" : "userLogin11",
-  "userPassword" : "userLogin11"
+  "teamName" : "GGteam",
+  "teamCity" : "Moscow",
+  "creatorId" : 34
 }
 
 ###
