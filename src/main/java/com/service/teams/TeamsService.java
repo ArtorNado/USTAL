@@ -1,5 +1,6 @@
 package com.service.teams;
 
+import com.dto.StatusDto;
 import com.models.Teams;
 import com.models.UserData;
 import com.dto.TeamDto;
@@ -9,9 +10,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface TeamsService {
+
     MessageDto createTeam(TeamDto teamDto);
 
     Teams getTeamById(Integer id);
+
+    StatusDto determineUserStatusInTeam(Integer userId, Integer teamId);
 
     List<UserData> getTeamPlayers(Integer teamId);
 

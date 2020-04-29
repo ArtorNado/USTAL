@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserDataRepository extends JpaRepository<UserData, Integer> {
+
     Optional<UserData> findUserDataByUserId(Integer userId);
 
     List<UserData> findUserDataByTeam(Teams team);

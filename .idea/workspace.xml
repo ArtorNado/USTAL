@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-04-18T013546.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/UserDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/UserDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/user/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/user/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dto/StatusDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-04-18T013936.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-04-18T015132.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/TeamsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/TeamsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/teams/TeamsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/teams/TeamsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/teams/TeamsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/teams/TeamsServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -42,7 +47,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="32" />
           <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -60,6 +65,7 @@
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.69" value="3" />
+          <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.80" value="1" />
@@ -69,14 +75,14 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
           <entry key="HTTP Request" value="16" />
-          <entry key="JAVA" value="275" />
+          <entry key="JAVA" value="292" />
           <entry key="Kotlin" value="1" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="3" />
@@ -84,8 +90,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTTP Request" value="891" />
-          <entry key="JAVA" value="5228" />
+          <entry key="HTTP Request" value="913" />
+          <entry key="JAVA" value="6074" />
           <entry key="JSON" value="36" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Properties" value="29" />
@@ -98,44 +104,27 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+            <state>
+              <caret column="61" selection-start-column="61" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/SignInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="276">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="45">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -143,26 +132,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="191">
+              <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4069#4070#0" expanded="true" />
+                <element signature="e#4096#4097#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="138">
+              <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/UserDataDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/StatusDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="121" selection-start-line="13" selection-start-column="121" selection-end-line="13" selection-end-column="121" />
+            <state relative-caret-position="92">
+              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/constants/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -173,8 +185,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -189,9 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/data/entity/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/config/DatabaseConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/security/jwt/filter/JwtAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dto/TokenDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dto/SignInDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/security/jwt/details/UserDetailsImpl.java" />
@@ -230,16 +239,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/service/signIn/SignInService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/signIn/SignInServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aspect/LogginAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/UserData.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
         <option value="$PROJECT_DIR$/src/main/java/com/dto/UserDataDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dto/SatusDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dto/StatusDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
       </list>
     </option>
   </component>
@@ -284,6 +296,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,6 +348,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USTAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="USTAL" type="b2602c69:ProjectViewProjectNode" />
@@ -430,8 +453,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,7 +463,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588169779498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588179096662" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SCP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -458,6 +479,72 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/determineStatus" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="17" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teamId" />
+                <option name="value" value="33" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;userLogin11&quot;,&#10;  &quot;userPassword&quot; : &quot;userLogin11&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/determineStatus" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="17" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teamId" />
+                <option name="value" value="32" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;userLogin11&quot;,&#10;  &quot;userPassword&quot; : &quot;userLogin11&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/user/16" />
@@ -1359,42 +1446,6 @@
           <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;dsssd&quot;,&#10;  &quot;userPassword&quot; : &quot;ddsss&quot;,&#10;  &quot;userFirstName&quot; : &quot;ddaa&quot;,&#10;  &quot;userSecondName&quot; : &quot;ddaa&quot;,&#10;  &quot;userGender&quot; : &quot;ddaa&quot;,&#10;  &quot;userCity&quot; : &quot;daad&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/registration" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;dd&quot;,&#10;  &quot;userPassword&quot; : &quot;dd&quot;,&#10;  &quot;userFirstName&quot; : &quot;ddaa&quot;,&#10;  &quot;userSecondName&quot; : &quot;ddaa&quot;,&#10;  &quot;userGender&quot; : &quot;ddaa&quot;,&#10;  &quot;userCity&quot; : &quot;daad&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/registration" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwibmFtZSI6ImJyIn0.hIEY4o38yPrQWYaNmUgiKsIkVWB_7vJZwZAuYssxwUA" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;dd&quot;,&#10;  &quot;userPassword&quot; : &quot;dd&quot;,&#10;  &quot;userFirstName&quot; : &quot;dd&quot;,&#10;  &quot;userSecondName&quot; : &quot;dd&quot;,&#10;  &quot;userGender&quot; : &quot;dd&quot;,&#10;  &quot;userCity&quot; : &quot;dd&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1475,16 +1526,18 @@
       <workItem from="1588096532947" duration="1077000" />
       <workItem from="1588168556595" duration="1315000" />
       <workItem from="1588170719646" duration="260000" />
+      <workItem from="1588176716274" duration="2415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92222000" />
+    <option name="totallyTimeSpent" value="94637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22281879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1581,14 +1634,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/SignInService.kt" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1621,13 +1666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1722,13 +1760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1757,31 +1788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/MessageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/SignInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/SignInDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1837,13 +1847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/TeamsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1855,13 +1858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1879,24 +1875,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="138">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -1913,32 +1905,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="253">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/SignInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/MessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/SignInDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/StatusDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="61" selection-start-column="61" selection-end-column="61" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

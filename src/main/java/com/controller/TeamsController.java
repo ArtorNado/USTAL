@@ -1,6 +1,7 @@
 package com.controller;
 
 
+import com.dto.StatusDto;
 import com.models.Teams;
 import com.models.UserData;
 import com.dto.TeamDto;
@@ -65,6 +66,12 @@ public class TeamsController {
     @RequestMapping("/getTeam/{teamId}")
     public ResponseEntity<Teams> getTeamByTeamId(@PathVariable("teamId")  Integer teamId){
         return ResponseEntity.ok(teamsService.getTeamById(teamId));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/determineStatus")
+    public ResponseEntity<StatusDto> determineUserStatusInTeam(@RequestParam Integer userId, Integer teamId){
+        return ResponseEntity.ok(teamsService.determineUserStatusInTeam(userId, teamId));
     }
 
 

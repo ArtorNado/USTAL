@@ -1,11 +1,15 @@
 package com.service.teams;
 
+import static com.constants.Constants.*;
+
+import com.dto.StatusDto;
 import com.models.Teams;
 import com.models.UserData;
 import com.repository.TeamsRepository;
 import com.repository.UserDataRepository;
 import com.dto.TeamDto;
 import com.dto.MessageDto;
+import jdk.net.SocketFlow;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -90,7 +94,20 @@ public class TeamsServiceImpl implements TeamsService {
         }else throw new AccessDeniedException("Team not found");
     }
 
-
+    @Override
+    public StatusDto determineUserStatusInTeam(Integer userId, Integer teamId) {
+        Optional<UserData> userFromDb = userDataRepository.findUserDataByUserId(userId);
+        if(userFromDb.isPresent()){
+            if(userFromDb.get().getTeam() != null){
+                Teams userTeam = userFromDb.get().getTeam();
+                if (userTeam.getTeamId().equals(teamId)){
+                    if (userTeam.getCreatorId().equals(userId)){
+                        return  new StatusDto(ADMIN_STATUS);
+                    } else return new StatusDto(PARTICIPANT_STATUS);
+                }else return new StatusDto(USER_STATUS);
+            } else return new StatusDto(USER_STATUS);
+        } else throw new AccessDeniedException("Team not found");
+    }
 
     @Override
     public List<Teams> getTeamsByCityAndStatus(String city, String status) {
