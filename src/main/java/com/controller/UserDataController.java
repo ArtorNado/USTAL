@@ -21,7 +21,7 @@ public class UserDataController {
     @PreAuthorize("isAuthenticated()")
     @RequestScope
     @GetMapping("/user/{user-id}")
-    public ResponseEntity<UserDataDto> getUser(@PathVariable("user-id") Integer userId) {
+    public ResponseEntity<UserData> getUser(@PathVariable("user-id") Integer userId) {
         return ResponseEntity.ok(userService.getUserData(userId));
     }
 }

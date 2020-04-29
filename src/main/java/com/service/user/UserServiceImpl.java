@@ -16,13 +16,9 @@ public class UserServiceImpl implements UserService {
     UserDataRepository userDataRepository;
 
     @Override
-    public UserDataDto getUserData(Integer userId) {
+    public UserData getUserData(Integer userId) {
         Optional<UserData> userDataFromDb = userDataRepository.findUserDataByUserId(userId);
-        if (userDataFromDb.isPresent()){
-            UserDataDto user = new UserDataDto(userDataFromDb.get().getUserFirstName(), userDataFromDb.get().getUserSecondName(),
-                    userDataFromDb.get().getUserGender(), userDataFromDb.get().getUserCity(),
-                    userDataFromDb.get().getTeam().getTeamId());
-            return user;
-        } else throw new AccessDeniedException("User not found");
+        if (userDataFromDb.isPresent()) return userDataFromDb.get();
+        else throw new AccessDeniedException("User not found");
     }
 }

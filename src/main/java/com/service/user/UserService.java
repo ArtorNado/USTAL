@@ -1,8 +1,8 @@
 package com.service.user;
 
-import com.dto.UserDataDto;
+import com.models.UserData;
 
 public interface UserService {
 
-    UserDataDto getUserData(Integer userId);
+    UserData getUserData(Integer userId);
 }
