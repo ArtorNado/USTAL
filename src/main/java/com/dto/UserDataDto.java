@@ -6,15 +6,25 @@ public class UserDataDto {
     private String userSecondName;
     private String userGender;
     private String userCity;
+    private Integer teamId;
 
     public UserDataDto() {
     }
 
-    public UserDataDto(String userFirstName, String userSecondName, String userGender, String userCity) {
+    public UserDataDto(String userFirstName, String userSecondName, String userGender, String userCity, Integer teamId) {
         this.userFirstName = userFirstName;
         this.userSecondName = userSecondName;
         this.userGender = userGender;
         this.userCity = userCity;
+        this.teamId = teamId;
+    }
+
+    public Integer getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(Integer teamId) {
+        this.teamId = teamId;
     }
 
     public String getUserFirstName() {

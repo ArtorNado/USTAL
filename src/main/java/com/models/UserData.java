@@ -20,7 +20,9 @@ public class UserData {
 
     private String userCity;
 
+/*
     @JsonIgnore
+*/
     @ManyToOne
     @JoinColumn(name="team_id")
     private Teams team;

@@ -34,9 +34,11 @@ public class TeamsServiceImpl implements TeamsService {
             add(userDataRepository.findUserDataByUserId(teamDto.getCreatorId()));
         }});*/
         teamsRepository.save(newTeam);
-        UserData user = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
-        user.setTeam(newTeam);
-        userDataRepository.save(user);
+        Optional<UserData> user = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
+        if (user.isPresent()) {
+            user.get().setTeam(newTeam);
+            userDataRepository.save(user.get());
+        }
         return new MessageDto("success");
     }
 
