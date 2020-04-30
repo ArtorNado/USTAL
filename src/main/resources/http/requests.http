@@ -1,11 +1,12 @@
-GET http://localhost:8080/createTeam
+GET http://localhost:8080/answerNotification?notification=37&answer=1
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
 
 {
-  "teamName" : "GGteam",
-  "teamCity" : "Moscow",
-  "creatorId" : 34
+  "senderId" : 33,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
 }
 
 ###
