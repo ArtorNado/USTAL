@@ -32,7 +32,6 @@ class LogginAspect {
 
     @AfterReturning(pointcut = "execution(public String com.service.signIn.SignInServiceImpl.signIn())", returning = "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
-
         logger.log(Level.INFO, "возвращенное значение: " + result.toString());
     }
 

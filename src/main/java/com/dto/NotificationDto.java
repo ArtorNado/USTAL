@@ -1,6 +1,7 @@
 package com.dto;
 
 import lombok.Data;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Data
 public class NotificationDto {

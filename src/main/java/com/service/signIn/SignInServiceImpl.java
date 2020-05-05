@@ -10,6 +10,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 
 @Service
+@Scope(scopeName = "tenant")
 public class SignInServiceImpl implements SignInService {
 
     @Autowired
@@ -50,7 +52,6 @@ public class SignInServiceImpl implements SignInService {
     public UserIdDto getUserId(String userLogin) {
         System.out.println(userLogin);
         Optional<User> userOptional = userRepository.findByUserLogin(userLogin);
-        System.out.println(userOptional.toString() + "userOpt");
         if(userOptional.isPresent()) {
             UserIdDto userIdDto = new UserIdDto();
             userIdDto.setUserID(userOptional.get().getUserId());

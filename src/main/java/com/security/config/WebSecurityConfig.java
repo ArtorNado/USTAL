@@ -1,5 +1,6 @@
 package com.security.config;
 
+import com.security.jwt.authentication.CustomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -34,7 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/signIn", "/registration", "/userId");
+        web.ignoring().antMatchers("/signIn", "/registration");
     }
 
     @Override
@@ -45,6 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class);
+        http.addFilterAfter(new CustomFilter(), BasicAuthenticationFilter.class);
     }
 
     @Autowired

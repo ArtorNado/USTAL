@@ -1,0 +1,74 @@
+[
+  {
+    "teamId": 22,
+    "teamName": "TeamName1",
+    "teamCity": "TeamCity1",
+    "creatorId": 8
+  },
+  {
+    "teamId": 23,
+    "teamName": "TeamName2",
+    "teamCity": "TeamCity2",
+    "creatorId": 9
+  },
+  {
+    "teamId": 24,
+    "teamName": "team3",
+    "teamCity": "kazan",
+    "creatorId": 1
+  },
+  {
+    "teamId": 25,
+    "teamName": "team4",
+    "teamCity": "kazan",
+    "creatorId": 1
+  },
+  {
+    "teamId": 26,
+    "teamName": "team5",
+    "teamCity": "Moscow",
+    "creatorId": 1
+  },
+  {
+    "teamId": 27,
+    "teamName": "team6",
+    "teamCity": "Saint Petersburg",
+    "creatorId": 12
+  },
+  {
+    "teamId": 28,
+    "teamName": "team7",
+    "teamCity": "Novosibirsk",
+    "creatorId": 13
+  },
+  {
+    "teamId": 29,
+    "teamName": "team8",
+    "teamCity": "Naberezhnye Chelny",
+    "creatorId": 14
+  },
+  {
+    "teamId": 30,
+    "teamName": "team9",
+    "teamCity": "Sochi",
+    "creatorId": 15
+  },
+  {
+    "teamId": 31,
+    "teamName": "team10",
+    "teamCity": "Yekaterinburg",
+    "creatorId": 16
+  },
+  {
+    "teamId": 32,
+    "teamName": "team11",
+    "teamCity": "Nizhny Novgorod",
+    "creatorId": 17
+  },
+  {
+    "teamId": 35,
+    "teamName": "GGteam",
+    "teamCity": "Moscow",
+    "creatorId": 34
+  }
+]

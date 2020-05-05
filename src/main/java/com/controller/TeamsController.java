@@ -8,6 +8,7 @@ import com.dto.TeamDto;
 import com.dto.MessageDto;
 import com.service.teams.TeamsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Role;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +34,7 @@ public class TeamsController {
     }
 
     @PreAuthorize("isAuthenticated()")
-    @RequestMapping("/getTeams")
+    @GetMapping("/getTeams")
     public ResponseEntity<List<Teams>> getTeams(){
         return ResponseEntity.ok(teamsService.getTeams());
     }

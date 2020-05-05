@@ -1,14 +1,11 @@
-GET http://localhost:8080/answerNotification?notification=37&answer=1
+POST http://localhost:8080/getTeam/29
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsIm5hbWUiOiJ1c2VyTG9naW4xMSIsInJvbGUiOiJVU0VSIn0.Y1Y8QQyneTtl0_DTuSANcLimwUlnVEzHTXl3D1aOw-I
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
 {
-  "senderId" : 33,
-  "recipientId" : 35,
-  "notificationType" : 1,
-  "notificationStatus" : 3
+  "userLogin" : "gg",
+  "userPassword" : "gg"
 }
-
 ###
 
 

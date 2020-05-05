@@ -1,5 +1,6 @@
 package com.service.registration;
 
+import com.aspect.LogExecutionTime;
 import com.models.Role;
 import com.models.User;
 import com.models.UserData;
@@ -8,11 +9,13 @@ import com.repository.UserRepository;
 import com.dto.UserDto;
 import com.dto.MessageDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Scope(scopeName = "tenant")
 public class RegistrationServiceImpl implements RegistrationService {
 
     @Autowired
@@ -22,6 +25,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     private UserDataRepository userDataRepository;
 
     @Override
+    @LogExecutionTime
     public MessageDto registr(UserDto u) {
         Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
         if(userFromDb.isPresent()){

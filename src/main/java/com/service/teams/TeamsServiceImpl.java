@@ -2,6 +2,7 @@ package com.service.teams;
 
 import static com.constants.Constants.*;
 
+import com.aspect.LogExecutionTime;
 import com.dto.StatusDto;
 import com.models.Teams;
 import com.models.UserData;
@@ -11,12 +12,14 @@ import com.dto.TeamDto;
 import com.dto.MessageDto;
 import jdk.net.SocketFlow;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Scope(scopeName = "tenant")
 public class TeamsServiceImpl implements TeamsService {
 
     @Autowired
@@ -25,6 +28,7 @@ public class TeamsServiceImpl implements TeamsService {
     @Autowired
     UserDataRepository userDataRepository;
 
+    @LogExecutionTime
     public MessageDto createTeam(TeamDto teamDto){
         Optional<Teams> teamsFromDb = teamsRepository.findByTeamName(teamDto.getTeamName());
         if(teamsFromDb.isPresent()){
@@ -47,6 +51,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<UserData> getTeamPlayers(Integer teamId) {
         Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(teamId);
         if(teamsFromDb.isPresent()){
@@ -55,6 +60,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<Teams> getTeams() {
         Optional<List<Teams>> teamsFromDb = teamsRepository.getAll();
         if(teamsFromDb.isPresent()){
@@ -63,6 +69,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<Teams> getTeamsByName(String name) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamNameIgnoreCase(name);
         if(teamsFromDb.isPresent()){
@@ -71,6 +78,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<Teams> getTeamsByTeamCity(String city) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamCityIgnoreCase(city);
         if(teamsFromDb.isPresent()){
@@ -79,6 +87,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<Teams> getTeamsByTeamStatus(String status) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamStatus(status);
         if(teamsFromDb.isPresent()){
@@ -87,6 +96,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public Teams getTeamById(Integer id) {
         Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(id);
         if(teamsFromDb.isPresent()){
@@ -95,6 +105,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public StatusDto determineUserStatusInTeam(Integer userId, Integer teamId) {
         Optional<UserData> userFromDb = userDataRepository.findUserDataByUserId(userId);
         if(userFromDb.isPresent()){
@@ -110,6 +121,7 @@ public class TeamsServiceImpl implements TeamsService {
     }
 
     @Override
+    @LogExecutionTime
     public List<Teams> getTeamsByCityAndStatus(String city, String status) {
         return null;
     }

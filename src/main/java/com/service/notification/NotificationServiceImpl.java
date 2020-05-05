@@ -11,6 +11,7 @@ import com.repository.UserDataRepository;
 import com.sun.org.apache.xpath.internal.SourceTree;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import javax.accessibility.AccessibleAction;
 import java.util.Optional;
 
 @Service
+@Scope(scopeName = "tenant")
 public class NotificationServiceImpl implements NotificationService {
 
     @Autowired
