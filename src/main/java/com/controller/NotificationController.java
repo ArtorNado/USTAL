@@ -2,12 +2,15 @@ package com.controller;
 
 import com.dto.MessageDto;
 import com.dto.NotificationDto;
+import com.models.Notifications;
 import com.service.notification.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Role;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class NotificationController {
@@ -22,7 +25,7 @@ public class NotificationController {
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping("/getNotificationByRecipient/{id}")
-    public ResponseEntity<NotificationDto> getNotificationByRecipientId(@PathVariable("id") Integer id){
+    public ResponseEntity<List<Notifications>> getNotificationByRecipientId(@PathVariable("id") Integer id){
         return ResponseEntity.ok(notificationService.getMessageByRecipientId(id));}
 
     @PreAuthorize("isAuthenticated()")

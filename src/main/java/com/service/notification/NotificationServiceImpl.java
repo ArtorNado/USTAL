@@ -16,6 +16,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 import javax.accessibility.AccessibleAction;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -33,12 +34,10 @@ public class NotificationServiceImpl implements NotificationService {
 
 
     @Override
-    public NotificationDto getMessageByRecipientId(Integer recipientId) {
-        Optional<Notifications> notificationFromDb = notificationRepository.getNotificationsByRecipientId(recipientId);
+    public List<Notifications> getMessageByRecipientId(Integer recipientId) {
+        Optional<List<Notifications>> notificationFromDb = notificationRepository.getNotificationsByRecipientId(recipientId);
         if (notificationFromDb.isPresent()) {
-            Notifications not = notificationFromDb.get();
-            return new NotificationDto(not.getNotificationId(), not.getSenderId(), not.getRecipientId(),
-                    not.getNotificationType(), not.getNotificationStatus());
+            return notificationFromDb.get();
         } else throw new AccessDeniedException("Notifications not found");
     }
 
