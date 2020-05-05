@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class);
-        /*http.authorizeRequests()
+       /* http.authorizeRequests()
                 .antMatchers("/getNotificationByRecipient/**").hasAuthority("ADMIN");
         http.authorizeRequests()
                 .antMatchers("/getTeam/**").authenticated()

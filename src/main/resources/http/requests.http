@@ -1,4 +1,4 @@
-POST http://localhost:8080/sendNotification
+POST http://localhost:8080/getTeams
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
 

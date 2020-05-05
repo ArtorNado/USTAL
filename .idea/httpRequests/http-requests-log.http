@@ -1,3 +1,19 @@
+POST http://localhost:8080/getTeams
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
+
+{
+  "notificationId" : 998,
+  "senderId" : 998,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 0
+}
+
+<> 2020-05-06T015604.405.json
+
+###
+
 POST http://localhost:8080/sendNotification
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
@@ -627,19 +643,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-05T113824.403.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-05T113644.403.json
 
 ###
 

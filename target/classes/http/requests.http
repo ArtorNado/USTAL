@@ -1,10 +1,13 @@
-POST http://localhost:8080/getNotificationByRecipient/35
+POST http://localhost:8080/sendNotification
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
 
 {
-  "userLogin" : "gg",
-  "userPassword" : "gg"
+  "notificationId" : 998,
+  "senderId" : 998,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 0
 }
 ###
 //getNotificationByRecipient/35

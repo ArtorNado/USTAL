@@ -34,7 +34,7 @@ public class TeamsController {
     }
 
     @PreAuthorize("isAuthenticated()")
-    @GetMapping("/getTeams")
+    @RequestMapping("/getTeams")
     public ResponseEntity<List<Teams>> getTeams(){
         return ResponseEntity.ok(teamsService.getTeams());
     }
