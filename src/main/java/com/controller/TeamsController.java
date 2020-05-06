@@ -69,7 +69,6 @@ public class TeamsController {
         return ResponseEntity.ok(teamsService.getTeamById(teamId));
     }
 
-    @PreAuthorize("isAuthenticated()")
     @RequestMapping("/determineStatus")
     public ResponseEntity<StatusDto> determineUserStatusInTeam(@RequestParam Integer userId, Integer teamId){
         return ResponseEntity.ok(teamsService.determineUserStatusInTeam(userId, teamId));

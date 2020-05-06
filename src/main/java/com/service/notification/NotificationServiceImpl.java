@@ -1,7 +1,9 @@
 package com.service.notification;
 
 import com.dto.MessageDto;
+import com.dto.NotificationAnswerDto;
 import com.dto.NotificationDto;
+import com.dto.UserIdNamesDto;
 import com.models.Notifications;
 import com.models.Teams;
 import com.models.UserData;
@@ -14,8 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.RequestScope;
 
 import javax.accessibility.AccessibleAction;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,14 +38,36 @@ public class NotificationServiceImpl implements NotificationService {
 
 
     @Override
-    public List<Notifications> getMessageByRecipientId(Integer recipientId) {
+    public List<NotificationAnswerDto> getMessageByRecipientId(Integer recipientId) {
         Optional<List<Notifications>> notificationFromDb = notificationRepository.getNotificationsByRecipientId(recipientId);
         if (notificationFromDb.isPresent()) {
-            return notificationFromDb.get();
+            List<Notifications> not = notificationFromDb.get();
+            List<NotificationAnswerDto> answer = new ArrayList<NotificationAnswerDto>();
+            for(Notifications n : not){
+                NotificationAnswerDto nad = new NotificationAnswerDto();
+                Optional<UserData> senderData = userDataRepository.findUserDataByUserId(n.getSenderId());
+                if (senderData.isPresent()) {
+                    nad.setSenderData(new UserIdNamesDto(senderData.get().getUserId(), senderData.get().getUserFirstName(),
+                            senderData.get().getUserSecondName()));
+                } else {
+                    nad.setSenderData(null);
+                }
+                nad.setNotificationId(n.getNotificationId());
+                nad.setSenderId(n.getSenderId());
+                nad.setRecipientId(n.getRecipientId());
+                nad.setNotificationType(n.getNotificationType());
+                nad.setNotificationStatus(n.getNotificationStatus());
+                answer.add(nad);
+                System.out.println(nad + "NAD");
+                System.out.println(answer.size());
+            }
+            System.out.println(answer.toString());
+            return answer;
         } else throw new AccessDeniedException("Notifications not found");
     }
 
     @Override
+    @RequestScope
     public MessageDto sendNotification(NotificationDto notification) {
         switch (notification.getNotificationType()) {
             case 1: {

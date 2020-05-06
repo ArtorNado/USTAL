@@ -1,6 +1,7 @@
 package com.service.notification;
 
 import com.dto.MessageDto;
+import com.dto.NotificationAnswerDto;
 import com.dto.NotificationDto;
 import com.models.Notifications;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 public interface NotificationService {
 
-    List<Notifications> getMessageByRecipientId(Integer recipientId);
+    List<NotificationAnswerDto> getMessageByRecipientId(Integer recipientId);
 
     MessageDto sendNotification(NotificationDto notification);
 

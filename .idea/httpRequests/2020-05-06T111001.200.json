@@ -5,5 +5,12 @@
     "recipientId": 35,
     "notificationType": 1,
     "notificationStatus": 1
+  },
+  {
+    "notificationId": 40,
+    "senderId": 998,
+    "recipientId": 35,
+    "notificationType": 1,
+    "notificationStatus": 0
   }
 ]

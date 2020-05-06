@@ -45,31 +45,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class);
-       /* http.authorizeRequests()
+        /*http.authorizeRequests()
                 .antMatchers("/getNotificationByRecipient/**").hasAuthority("ADMIN");
         http.authorizeRequests()
                 .antMatchers("/getTeam/**").authenticated()
                 .and()
                 .httpBasic().and().addFilterAfter(new CustomFilter(),  BasicAuthenticationFilter.class);*/
-                /*.anyRequest().permitAll();*/
     }
 
     /*@Configuration
-    @Order(2)
-    public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
-        protected void configure(HttpSecurity http) throws Exception {
-            http.csrf().disable();
-            http.formLogin().disable();
-            http.logout().disable();
-            http.authorizeRequests()
-                    .antMatchers("/getTeam/**").authenticated()
-                    .anyRequest().permitAll()
-                    .and()
-                    .httpBasic().and().addFilterAfter(new CustomFilter(),  BasicAuthenticationFilter.class);
-        }
-    }*/
-
-   /* @Configuration
     @Order(3)
     public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
         protected void configure(HttpSecurity http) throws Exception {

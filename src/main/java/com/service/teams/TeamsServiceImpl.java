@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.ApplicationScope;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +31,7 @@ public class TeamsServiceImpl implements TeamsService {
     UserDataRepository userDataRepository;
 
     @LogExecutionTime
+    @ApplicationScope
     public MessageDto createTeam(TeamDto teamDto){
         Optional<Teams> teamsFromDb = teamsRepository.findByTeamName(teamDto.getTeamName());
         if(teamsFromDb.isPresent()){

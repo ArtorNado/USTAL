@@ -1,42 +1,39 @@
-package com.models;
+package com.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.models.UserData;
 
-import javax.persistence.*;
-import java.util.Set;
+public class NotificationAnswerDto {
 
-@Entity
-@Table(name = "notifications")
-public class Notifications {
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "notification_id")
     private Integer notificationId;
 
     private Integer senderId;
 
     private Integer recipientId;
 
-    // 1 - Заявка на вступление в команду. Если тип 1, то ид получателя равняется ид команды, которой адрессована заявка
     private Integer notificationType;
 
-    // 3 - заявка рассматривается, 1 - заявка принята, 2 - заявка отклонена
     private Integer notificationStatus;
 
+    private UserIdNamesDto senderData;
 
-    public Notifications(Integer senderId, Integer recipientId, Integer notificationType, Integer notificationStatus) {
+    public NotificationAnswerDto(Integer notificationId, Integer senderId, Integer recipientId, Integer notificationType, Integer notificationStatus, UserIdNamesDto senderData) {
+        this.notificationId = notificationId;
         this.senderId = senderId;
         this.recipientId = recipientId;
         this.notificationType = notificationType;
         this.notificationStatus = notificationStatus;
+        this.senderData = senderData;
     }
 
-    public Notifications() {
+    public NotificationAnswerDto() {
     }
 
     public Integer getNotificationId() {
         return notificationId;
+    }
+
+    public void setNotificationId(Integer notificationId) {
+        this.notificationId = notificationId;
     }
 
     public Integer getSenderId() {
@@ -69,5 +66,13 @@ public class Notifications {
 
     public void setNotificationStatus(Integer notificationStatus) {
         this.notificationStatus = notificationStatus;
+    }
+
+    public UserIdNamesDto getSenderData() {
+        return senderData;
+    }
+
+    public void setSenderData(UserIdNamesDto senderData) {
+        this.senderData = senderData;
     }
 }

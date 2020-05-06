@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.dto.MessageDto;
+import com.dto.NotificationAnswerDto;
 import com.dto.NotificationDto;
 import com.models.Notifications;
 import com.service.notification.NotificationService;
@@ -25,7 +26,7 @@ public class NotificationController {
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping("/getNotificationByRecipient/{id}")
-    public ResponseEntity<List<Notifications>> getNotificationByRecipientId(@PathVariable("id") Integer id){
+    public ResponseEntity<List<NotificationAnswerDto>> getNotificationByRecipientId(@PathVariable("id") Integer id){
         return ResponseEntity.ok(notificationService.getMessageByRecipientId(id));}
 
     @PreAuthorize("isAuthenticated()")

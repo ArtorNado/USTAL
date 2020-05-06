@@ -15,7 +15,7 @@ public class MyFilterConfig{
     public  FilterRegistrationBean<TransactionFilter> filter(){
        FilterRegistrationBean<TransactionFilter> reqBean = new FilterRegistrationBean<>();
        reqBean.setFilter(new TransactionFilter());
-       reqBean.addUrlPatterns("/getMatches/*");
+       reqBean.addUrlPatterns("/user/**");
        return reqBean;
    }
 }

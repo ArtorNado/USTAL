@@ -35,12 +35,5 @@ public class SignInController {
         return ResponseEntity.ok(signInService.getUserId(userLogin));
     }
 
-
-  /*  @PreAuthorize("isAuthenticated()")
-    @GetMapping("/user/{user-id}")
-    public ResponseEntity<UserData> getUser(@PathVariable("user-id") String userId) {
-        System.out.println(userId);
-        return ResponseEntity.ok(userDataRepository.findUserDataByUserId(Integer.parseInt(userId)));
-    }*/
 }
 

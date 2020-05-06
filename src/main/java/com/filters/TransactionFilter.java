@@ -27,8 +27,10 @@ public class TransactionFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
+        System.out.println(req.getHeader("User-agent"));
+
         if(req.authenticate((HttpServletResponse) response)){
-            chain.doFilter(request, res);
+                chain.doFilter(request, res);
         } else{
             throw new AccessDeniedException("Matches not found");
         }

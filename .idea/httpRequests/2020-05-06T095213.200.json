@@ -1,0 +1,22 @@
+[
+  {
+    "notificationId": 37,
+    "senderId": 33,
+    "recipientId": 35,
+    "notificationType": 1,
+    "notificationStatus": 1,
+    "senderData": {
+      "userId": 33,
+      "userFirstName": "userFirstName11",
+      "userSecondName": "userSecondName11"
+    }
+  },
+  {
+    "notificationId": 40,
+    "senderId": 998,
+    "recipientId": 35,
+    "notificationType": 1,
+    "notificationStatus": 0,
+    "senderData": null
+  }
+]
