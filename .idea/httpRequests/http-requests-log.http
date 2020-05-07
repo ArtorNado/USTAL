@@ -1,3 +1,61 @@
+GET http://localhost:8080/answerNotification?notification=37&answer=1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "senderId" : 38,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
+}
+
+<> 2020-05-07T074817.200.json
+
+###
+
+POST http://localhost:8080/answerNotification?notification=37&answer=1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "senderId" : 38,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
+}
+
+<> 2020-05-07T074758.200.json
+
+###
+
+POST http://localhost:8080/answerNotification?notification=37&answer=1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "senderId" : 38,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
+}
+
+###
+
+POST http://localhost:8080/sendNotification
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "senderId" : 38,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
+}
+
+<> 2020-05-07T070939.200.json
+
+###
+
 POST http://localhost:8080/getNotificationByRecipient/35
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -600,58 +658,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJV
 }
 
 <> 2020-05-06T124731.403.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T124601.403.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T124535.200.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T124348.403.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T124322.403.json
 
 ###
 
