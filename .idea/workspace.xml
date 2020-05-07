@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124322.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124348.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124535.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124601.403.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124731.403.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T124754.403.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-06T125142.403.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/MyFilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/MyFilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/service/notification/NotificationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/notification/NotificationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/http/requests.http" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -42,7 +44,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.101" value="2" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.18" value="2" />
@@ -59,9 +61,9 @@
           <entry key="project.open.time.59" value="3" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.62" value="1" />
-          <entry key="project.open.time.64" value="3" />
+          <entry key="project.open.time.64" value="4" />
           <entry key="project.open.time.65" value="6" />
-          <entry key="project.open.time.66" value="3" />
+          <entry key="project.open.time.66" value="4" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.69" value="3" />
           <entry key="project.open.time.71" value="1" />
@@ -77,14 +79,14 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="53" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="16" />
           <entry key="HTTP Request" value="28" />
-          <entry key="JAVA" value="497" />
+          <entry key="JAVA" value="503" />
           <entry key="Kotlin" value="1" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="3" />
@@ -92,8 +94,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTTP Request" value="1767" />
-          <entry key="JAVA" value="12139" />
+          <entry key="HTTP Request" value="1778" />
+          <entry key="JAVA" value="12146" />
           <entry key="JSON" value="51" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Properties" value="29" />
@@ -105,78 +107,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Notifications.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/NotificationDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="467">
-              <caret line="33" column="98" selection-start-line="33" selection-start-column="86" selection-end-line="33" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/NotificationAnswerDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1144#1145#0" expanded="true" />
-                <element signature="e#1183#1184#0" expanded="true" />
-                <element signature="e#1217#1218#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1401#1402#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1522#1523#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1609#1610#0" expanded="true" />
-                <element signature="e#1678#1679#0" expanded="true" />
-                <element signature="e#1738#1739#0" expanded="true" />
-                <element signature="e#1783#1784#0" expanded="true" />
-                <element signature="e#1816#1817#0" expanded="true" />
-                <element signature="e#1876#1877#0" expanded="true" />
-                <element signature="e#1920#1921#0" expanded="true" />
-              </folding>
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -184,11 +118,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="112" column="83" selection-start-line="112" selection-start-column="83" selection-end-line="112" selection-end-column="83" />
+            <state relative-caret-position="467">
+              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/registration/RegistrationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/signIn/SignInServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/config/MyFilterConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/security/config/WebSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -266,7 +266,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/security/jwt/authentication/CustomFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filters/CustomFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/config/MyFilterConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filters/TransactionFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/security/jwt/details/UserDetailsImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java" />
@@ -277,9 +276,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dto/UserIdNamesDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dto/NotificationAnswerDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/config/MyFilterConfig.java" />
       </list>
     </option>
   </component>
@@ -323,7 +323,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -422,6 +421,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -449,6 +449,79 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/answerNotification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="notification" />
+                <option name="value" value="44" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="answer" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;senderId&quot; : 20,&#10;  &quot;recipientId&quot; : 35,&#10;  &quot;notificationType&quot; : 1,&#10;  &quot;notificationStatus&quot; : 3&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/sendNotification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;senderId&quot; : 20,&#10;  &quot;recipientId&quot; : 35,&#10;  &quot;notificationType&quot; : 1,&#10;  &quot;notificationStatus&quot; : 3&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/sendNotification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;senderId&quot; : 21,&#10;  &quot;recipientId&quot; : 35,&#10;  &quot;notificationType&quot; : 1,&#10;  &quot;notificationStatus&quot; : 3&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/answerNotification" />
@@ -1399,58 +1472,6 @@
           <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;admin&quot;,&#10;  &quot;userPassword&quot; : &quot;admin&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/user/33" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;admin&quot;,&#10;  &quot;userPassword&quot; : &quot;admin&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/getTeams" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;admin&quot;,&#10;  &quot;userPassword&quot; : &quot;admin&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/user/33" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;userLogin&quot; : &quot;admin&quot;,&#10;  &quot;userPassword&quot; : &quot;admin&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1553,16 +1574,19 @@
       <workItem from="1588865808639" duration="72000" />
       <workItem from="1588867382292" duration="426000" />
       <workItem from="1588869805296" duration="629000" />
+      <workItem from="1588876076886" duration="1273000" />
+      <workItem from="1588879121763" duration="209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148812000" />
+    <option name="totallyTimeSpent" value="150085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1980,6 +2004,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/NotificationDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/NotificationAnswerDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -2026,18 +2060,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="112" column="83" selection-start-line="112" selection-start-column="83" selection-end-line="112" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/NotificationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="191">
+          <caret line="117" column="29" lean-forward="true" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2046,15 +2070,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="33" column="98" selection-start-line="33" selection-start-column="86" selection-end-line="33" selection-end-column="98" />
+        <state relative-caret-position="145">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
         </state>
       </provider>
     </entry>

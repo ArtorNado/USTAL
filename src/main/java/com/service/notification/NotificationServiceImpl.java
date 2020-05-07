@@ -24,7 +24,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+/*
 @Scope(scopeName = "tenant")
+*/
 public class NotificationServiceImpl implements NotificationService {
 
     @Autowired
@@ -120,8 +122,7 @@ public class NotificationServiceImpl implements NotificationService {
                         if (teamFromDp.isPresent()) {
                             userDataFromDb.get().setTeam(teamFromDp.get());
                             userDataRepository.save(userDataFromDb.get());
-                            notification.setNotificationStatus(1);
-                            notificationRepository.save(notification);
+                            notificationRepository.delete(notification);
                             return new MessageDto("succsessful");
                         } else throw new AccessDeniedException("Команда не найдена");
                     }

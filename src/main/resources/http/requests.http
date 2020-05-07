@@ -1,9 +1,9 @@
-GET http://localhost:8080/answerNotification?notification=37&answer=1
+GET http://localhost:8080/answerNotification?notification=44&answer=1
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
 {
-  "senderId" : 38,
+  "senderId" : 20,
   "recipientId" : 35,
   "notificationType" : 1,
   "notificationStatus" : 3
@@ -11,6 +11,8 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 ###
 //ggaaa
 //gaaaag
+//sendNotification
+//answerNotification?notification=37&answer=1
 //getNotificationByRecipient/35
 //eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
 //eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8 - admin
