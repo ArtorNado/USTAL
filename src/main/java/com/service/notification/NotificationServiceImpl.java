@@ -101,7 +101,6 @@ public class NotificationServiceImpl implements NotificationService {
                 } else return true;
             } else return false;
         }catch (NullPointerException e){
-            System.out.println("PIZDEC");
             return true;
         }
     }

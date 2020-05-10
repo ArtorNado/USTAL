@@ -1,3 +1,74 @@
+GET http://localhost:8080/startChat
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "type" : "CHAT",
+  "content" : "Hi",
+  "sender" : "29"
+}
+
+<> 2020-05-10T114406.404.json
+
+###
+
+POST http://localhost:8080/startChat
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "type" : "CHAT",
+  "content" : "Hi",
+  "sender" : "29"
+}
+
+<> 2020-05-10T113945.404.json
+
+###
+
+GET http://localhost:8080/startChat
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "type" : "CHAT",
+  "content" : "Hi",
+  "sender" : "29"
+}
+
+<> 2020-05-10T113934.404.json
+
+###
+
+GET http://localhost:8080/app/chat.sendMessage
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "type" : "CHAT",
+  "content" : "Hi",
+  "sender" : "29"
+}
+
+<> 2020-05-10T113238.404.json
+
+###
+
+GET http://localhost:8080/ws
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "senderId" : 20,
+  "recipientId" : 35,
+  "notificationType" : 1,
+  "notificationStatus" : 3
+}
+
+<> 2020-05-10T112156.200.txt
+
+###
+
 GET http://localhost:8080/answerNotification?notification=44&answer=1
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -599,71 +670,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJV
 }
 
 <> 2020-05-06T125625.200.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "ggasas",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T125440.500.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "ggasasd"
-}
-
-<> 2020-05-06T125429.200.json
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T125423.200.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsIm5hbWUiOiJnZyIsInJvbGUiOiJVU0VSIn0.mf96xfFx6vaZfBJwcylJc-AR0W74AO4YXJMJCGM2lJ4
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T125358.200.json
-
-###
-
-POST http://localhost:8080/getNotificationByRecipient/35
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin" : "gg",
-  "userPassword" : "gg"
-}
-
-<> 2020-05-06T125346.200.json
 
 ###
 
