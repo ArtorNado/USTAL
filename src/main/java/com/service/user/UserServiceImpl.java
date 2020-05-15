@@ -25,4 +25,5 @@ public class UserServiceImpl implements UserService {
         if (userDataFromDb.isPresent()) return userDataFromDb.get();
         else throw new AccessDeniedException("User not found");
     }
+
 }

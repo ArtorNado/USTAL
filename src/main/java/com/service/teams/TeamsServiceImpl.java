@@ -32,11 +32,15 @@ public class TeamsServiceImpl implements TeamsService {
 
     @LogExecutionTime
     @ApplicationScope
-    public MessageDto createTeam(TeamDto teamDto){
+    public MessageDto createTeam(TeamDto teamDto) {
         Optional<Teams> teamsFromDb = teamsRepository.findByTeamName(teamDto.getTeamName());
-        if(teamsFromDb.isPresent()){
-            return new MessageDto("Команда с таким названием уже существует");
+        if (teamsFromDb.isPresent()) {
+            throw new IllegalArgumentException("Команда с таким именем уже сущствует");
         }
+        Optional<UserData> senderFromDb = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
+        if (senderFromDb.isPresent()) {
+            if (senderFromDb.get().getTeam() != null) throw new IllegalArgumentException("У вас уже есть команда");
+        } else throw new IllegalArgumentException("Ошибка серверва");
         Teams newTeam = new Teams();
         newTeam.setTeamName(teamDto.getTeamName());
         newTeam.setTeamCity(teamDto.getTeamCity());
@@ -45,11 +49,8 @@ public class TeamsServiceImpl implements TeamsService {
             add(userDataRepository.findUserDataByUserId(teamDto.getCreatorId()));
         }});*/
         teamsRepository.save(newTeam);
-        Optional<UserData> user = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
-        if (user.isPresent()) {
-            user.get().setTeam(newTeam);
-            userDataRepository.save(user.get());
-        }
+        senderFromDb.get().setTeam(newTeam);
+        userDataRepository.save(senderFromDb.get());
         return new MessageDto("success");
     }
 
@@ -57,68 +58,68 @@ public class TeamsServiceImpl implements TeamsService {
     @LogExecutionTime
     public List<UserData> getTeamPlayers(Integer teamId) {
         Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(teamId);
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return userDataRepository.findUserDataByTeam(teamsFromDb.get());
-        }else throw new AccessDeniedException("User not found");
+        } else throw new AccessDeniedException("User not found");
     }
 
     @Override
     @LogExecutionTime
     public List<Teams> getTeams() {
         Optional<List<Teams>> teamsFromDb = teamsRepository.getAll();
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return teamsFromDb.get();
-        }else throw new AccessDeniedException("Teams not found");
+        } else throw new AccessDeniedException("Teams not found");
     }
 
     @Override
     @LogExecutionTime
     public List<Teams> getTeamsByName(String name) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamNameIgnoreCase(name);
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return teamsFromDb.get();
-        }else throw new AccessDeniedException("Team not found");
+        } else throw new AccessDeniedException("Team not found");
     }
 
     @Override
     @LogExecutionTime
     public List<Teams> getTeamsByTeamCity(String city) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamCityIgnoreCase(city);
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return teamsFromDb.get();
-        }else throw new AccessDeniedException("Teams not found");
+        } else throw new AccessDeniedException("Teams not found");
     }
 
     @Override
     @LogExecutionTime
     public List<Teams> getTeamsByTeamStatus(String status) {
         Optional<List<Teams>> teamsFromDb = teamsRepository.findTeamsByTeamStatus(status);
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return teamsFromDb.get();
-        }else throw new AccessDeniedException("Teams not found");
+        } else throw new AccessDeniedException("Teams not found");
     }
 
     @Override
     @LogExecutionTime
     public Teams getTeamById(Integer id) {
         Optional<Teams> teamsFromDb = teamsRepository.findTeamsByTeamId(id);
-        if(teamsFromDb.isPresent()){
+        if (teamsFromDb.isPresent()) {
             return teamsFromDb.get();
-        }else throw new AccessDeniedException("Team not found");
+        } else throw new AccessDeniedException("Team not found");
     }
 
     @Override
     @LogExecutionTime
     public StatusDto determineUserStatusInTeam(Integer userId, Integer teamId) {
         Optional<UserData> userFromDb = userDataRepository.findUserDataByUserId(userId);
-        if(userFromDb.isPresent()){
-            if(userFromDb.get().getTeam() != null){
+        if (userFromDb.isPresent()) {
+            if (userFromDb.get().getTeam() != null) {
                 Teams userTeam = userFromDb.get().getTeam();
-                if (userTeam.getTeamId().equals(teamId)){
-                    if (userTeam.getCreatorId().equals(userId)){
-                        return  new StatusDto(ADMIN_STATUS);
+                if (userTeam.getTeamId().equals(teamId)) {
+                    if (userTeam.getCreatorId().equals(userId)) {
+                        return new StatusDto(ADMIN_STATUS);
                     } else return new StatusDto(PARTICIPANT_STATUS);
-                }else return new StatusDto(USER_STATUS);
+                } else return new StatusDto(USER_STATUS);
             } else return new StatusDto(USER_STATUS);
         } else throw new AccessDeniedException("Team not found");
     }

@@ -10,6 +10,7 @@ import com.dto.UserDto;
 import com.dto.MessageDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -24,18 +25,22 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Autowired
     private UserDataRepository userDataRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     @LogExecutionTime
     public MessageDto registr(UserDto u) {
         Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
-        if(userFromDb.isPresent()){
+        if (userFromDb.isPresent()) {
             return new MessageDto("Этот логин уже существует");
+        } else {
+            User newUser = new User(u.getUserLogin(), passwordEncoder.encode(u.getUserPassword()), Role.USER);
+            userRepository.save(newUser);
+            UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
+                    u.getUserGender(), u.getUserCity(), null);
+            userDataRepository.save(newUserData);
+            return new MessageDto("success");
         }
-        User newUser = new User(u.getUserLogin(), u.getUserPassword(), Role.USER);
-        userRepository.save(newUser);
-        UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
-                u.getUserGender(), u.getUserCity(), null);
-        userDataRepository.save(newUserData);
-        return new MessageDto("success");
     }
 }

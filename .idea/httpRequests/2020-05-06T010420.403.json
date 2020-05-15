@@ -1,7 +1,0 @@
-{
-  "timestamp": "2020-05-05T22:04:20.180+0000",
-  "status": 403,
-  "error": "Forbidden",
-  "message": "Forbidden",
-  "path": "/getNotificationByRecipient/35"
-}

@@ -12,4 +12,6 @@ public interface NotificationRepository extends JpaRepository<Notifications, Int
 
     Optional<Notifications> findNotificationsByNotificationId(Integer notificationId);
 
+    void deleteNotificationsByNotificationId(Integer notification);
+
 }
