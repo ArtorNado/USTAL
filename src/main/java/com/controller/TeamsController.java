@@ -24,7 +24,7 @@ public class TeamsController {
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping("/createTeam")
-    public ResponseEntity<MessageDto> registration(@RequestBody TeamDto teamDto){
+    public ResponseEntity<MessageDto> createTeam(@RequestBody TeamDto teamDto){
         return ResponseEntity.ok(teamsService.createTeam(teamDto));}
 
 

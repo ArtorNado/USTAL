@@ -1,16 +1,14 @@
 package com.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "match_command")
 public class MatchCommand {
 
     @Id
-    @Column(name = "match_Id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name = "match_id")
     private Integer matchId;
 
     private String date;
@@ -23,16 +21,37 @@ public class MatchCommand {
 
     private Integer secondTeamId;
 
-    public MatchCommand(Integer matchId, String date, String time, Integer creatorId, Integer firstTeamId, Integer secondTeamId) {
-        this.matchId = matchId;
+    private String matchCity;
+
+    private String description;
+
+    public MatchCommand(String date, String time, Integer creatorId, Integer firstTeamId, Integer secondTeamId, String matchCity, String description) {
         this.date = date;
         this.time = time;
         this.creatorId = creatorId;
         this.firstTeamId = firstTeamId;
         this.secondTeamId = secondTeamId;
+        this.matchCity = matchCity;
+        this.description = description;
     }
 
     public MatchCommand() {
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getMatchCity() {
+        return matchCity;
+    }
+
+    public void setMatchCity(String matchCity) {
+        this.matchCity = matchCity;
     }
 
     public Integer getMatchId() {

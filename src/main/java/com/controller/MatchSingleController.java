@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
 import com.models.MatchSingle;
 import com.service.match.MatchService;
@@ -17,7 +18,7 @@ public class MatchSingleController {
     MatchService matchService;
 
     @RequestMapping("/createMatch")
-    public ResponseEntity<MessageDto> determineUserStatusInTeam(@RequestBody MatchSingle matchSingle) {
+    public ResponseEntity<MessageDto> createMatch(@RequestBody MatchSingleDto matchSingle) {
         return ResponseEntity.ok(matchService.createSingleMatch(matchSingle));
     }
 

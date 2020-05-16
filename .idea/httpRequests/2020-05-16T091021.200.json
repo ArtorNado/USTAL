@@ -1,0 +1,22 @@
+[
+  {
+    "matchId": 71,
+    "date": "23.07",
+    "time": "16:00",
+    "creatorId": 10,
+    "firstTeamId": 10,
+    "secondTeamId": 0,
+    "matchCity": "Kazan",
+    "description": "TODAY"
+  },
+  {
+    "matchId": 72,
+    "date": "23.07",
+    "time": "16:00",
+    "creatorId": 22,
+    "firstTeamId": 22,
+    "secondTeamId": 23,
+    "matchCity": "Kazan",
+    "description": "TODAY"
+  }
+]

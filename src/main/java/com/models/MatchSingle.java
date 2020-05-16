@@ -1,6 +1,9 @@
 package com.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "match_single")
@@ -8,7 +11,7 @@ public class MatchSingle {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "match_Id")
+    @Column(name = "match_id")
     private Integer matchId;
 
     private String date;
@@ -23,24 +26,33 @@ public class MatchSingle {
 
     private String description;
 
-    public MatchSingle(String date, String time, Integer creatorId, Integer numberParticipant, Integer currentNumberParticipant, String description) {
+    private String matchCity;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="matchId")
+    private Set<UserMatch> users;
+
+
+    public MatchSingle(String date, String time, Integer creatorId, Integer numberParticipant, Integer currentNumberParticipant, String description, String matchCity /*Set<UserMatch> users*/) {
         this.date = date;
         this.time = time;
         this.creatorId = creatorId;
         this.numberParticipant = numberParticipant;
         this.currentNumberParticipant = currentNumberParticipant;
         this.description = description;
+        this.matchCity = matchCity;
+        /*this.users = users;*/
     }
 
     public MatchSingle() {
     }
 
-    public String getDescription() {
-        return description;
+    public String getMatchCity() {
+        return matchCity;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMatchCity(String matchCity) {
+        this.matchCity = matchCity;
     }
 
     public Integer getMatchId() {
@@ -89,5 +101,21 @@ public class MatchSingle {
 
     public void setCurrentNumberParticipant(Integer currentNumberParticipant) {
         this.currentNumberParticipant = currentNumberParticipant;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Set<UserMatch> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<UserMatch> users) {
+        this.users = users;
     }
 }
