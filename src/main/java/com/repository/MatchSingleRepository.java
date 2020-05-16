@@ -11,8 +11,8 @@ import java.util.Optional;
 
 public interface MatchSingleRepository extends JpaRepository<MatchSingle, Integer> {
 
-    @Query("select matchSingle from MatchSingle matchSingle WHERE matchSingle = matchSingle")
-    Optional<MatchSingle> find(MatchSingle matchSingle);
+
+    Optional<MatchSingle> findMatchSingleByCreatorIdAndAndDateAndTime(Integer creatorId, String date, String time);
 
     void deleteMatchSingleByMatchId(Integer id);
 

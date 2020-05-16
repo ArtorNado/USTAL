@@ -1,3 +1,102 @@
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "15:00",
+  "creatorId": 9,
+  "numberParticipant": 12,
+  "currentNumberParticipant": 0,
+  "description" : "TODAY"
+}
+
+<> 2020-05-16T104056.200.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "15:00",
+  "creatorId": 9,
+  "numberParticipant": 12,
+  "currentNumberParticipant": 0,
+  "description" : "TODAY"
+}
+
+<> 2020-05-16T103520.500.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "15:00",
+  "creatorId": 9,
+  "numberParticipant": 12,
+  "currentNumberParticipant": 0,
+  "description" : "TODAY"
+}
+
+<> 2020-05-16T103349.500.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "15:00",
+  "creatorId": 9,
+  "numberParticipant": 12,
+  "currentNumberParticipant": 0
+}
+
+<> 2020-05-16T102943.500.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "15:00",
+  "creatorId": 9,
+  "numberParticipant": 12,
+  "currentNumberParticipant": 0
+}
+
+<> 2020-05-16T102459.500.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+ "date" : "21.07",
+  "time" : "18:00",
+ "creatorId" : 9,
+  "numberParticipant" : 12,
+ "currentNumberParticipant" : 0
+}
+
+<> 2020-05-16T102251.500.json
+
+###
+
 POST http://localhost:8080/joinSingleMatch?idSingleMatch=62&recipient=9
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -542,90 +641,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-10T020833.200.html
-
-###
-
-GET http://localhost:8080/playerList
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T020523.500.json
-
-###
-
-GET http://localhost:8080/playerList
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T020255.200.html
-
-###
-
-GET http://localhost:8080/WEB-INF/jsp/playerList
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T015810.404.json
-
-###
-
-GET http://localhost:8080/playerList
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T015348.200.txt
-
-###
-
-GET http://localhost:8080/ggeett
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T015014.200.txt
-
-###
-
-GET http://localhost:8080/startChat
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "type" : "CHAT",
-  "content" : "Hi",
-  "sender" : "29"
-}
-
-<> 2020-05-10T114406.404.json
 
 ###
 

@@ -29,7 +29,8 @@ public class MatchServiceImpl implements MatchService {
     public MessageDto createSingleMatch(MatchSingle matchSingle) {
         matchSingle.setCurrentNumberParticipant(matchSingle.getCurrentNumberParticipant() + 1);
         matchSingleRepository.save(matchSingle);
-        Optional<MatchSingle> matchFromDb = matchSingleRepository.find(matchSingle);
+        Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByCreatorIdAndAndDateAndTime(matchSingle.getCreatorId(), matchSingle.getDate(), matchSingle.getTime());
+        System.out.println(matchFromDb.get().getCreatorId().toString());
         matchFromDb.ifPresent(matchSingle1 -> userMatchRepository.save(new UserMatch(matchFromDb.get().getMatchId(),
                 matchSingle.getCreatorId())));
         return new MessageDto("success");
