@@ -144,16 +144,15 @@ public class MatchServiceImpl implements MatchService {
         Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
+        System.out.println(listAll.size() + " ALL");
         List<MatchSingle> lms = listAll;
         if (listWR.isPresent()) {
             for (UserMatch um :
                     listWR.get()) {
                 lwr.add(um.getMatchId());
             }
-            if (listWR.isPresent()) {
-                lms.removeAll(lwr);
-                return lms;
-            } else return lwr;
-        } else return lwr;
+            lms.removeAll(lwr);
+            return lms;
+        } else return lms;
     }
 }
