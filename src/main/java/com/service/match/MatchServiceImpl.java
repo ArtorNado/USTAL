@@ -129,14 +129,12 @@ public class MatchServiceImpl implements MatchService {
             return getSingleMatchWithoutRole(userId);
         } else {
             Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
-            if (list.isPresent()) {
-                List<MatchSingle> listM = new ArrayList<>();
-                for (UserMatch um :
-                        list.get()) {
-                    listM.add(um.getMatchId());
-                }
-                return listM;
-            } else throw new NullPointerException("Elements not found");
+            List<MatchSingle> listM = new ArrayList<>();
+            for (UserMatch um :
+                    list.get()) {
+                listM.add(um.getMatchId());
+            }
+            return listM;
         }
     }
 
