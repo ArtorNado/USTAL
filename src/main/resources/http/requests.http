@@ -1,13 +1,14 @@
-POST http://localhost:8080/getAllCommandMatch
+POST http://localhost:8080/joinSingleMatch?idSingleMatch=73&participant=11
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
 {
   "date": "23.07",
   "time": "16:00",
-  "creatorId": 22,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
+  "creatorId": 11,
+  "numberParticipant" : 11,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
 }
 //joinSingleMatch?idSingleMatch=59&recipient=9
 ###

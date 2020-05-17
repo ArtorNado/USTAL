@@ -17,9 +17,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @Scope(proxyMode = ScopedProxyMode.INTERFACES)
@@ -57,13 +55,15 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
-    public MessageDto joinSingleMatch(Integer idSingleMatch, Integer recipient) {
+    public MessageDto joinSingleMatch(Integer idSingleMatch, Integer participant) {
         Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByMatchId(idSingleMatch);
         if (matchFromDb.isPresent()) {
             System.out.println(idSingleMatch.toString());
-            System.out.println(recipient.toString());
-            UserMatch um = new UserMatch(matchFromDb.get(), recipient, "Recipient");
+            System.out.println(participant.toString());
+            UserMatch um = new UserMatch(matchFromDb.get(), participant, "Participant");
             userMatchRepository.save(um);
+            matchFromDb.get().setCurrentNumberParticipant(matchFromDb.get().getCurrentNumberParticipant() + 1);
+            matchSingleRepository.save(matchFromDb.get());
             return new MessageDto("success");
         }
         return new MessageDto("failed");
@@ -123,14 +123,41 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getSingleMatchByRole(Integer userId, String role) {
-        Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
-        if (list.isPresent()) {
-            List<MatchSingle> listM = new ArrayList<>();
+        System.out.println("ROLE" + role);
+        if (role.equals("Free")) {
+            System.out.println("ROLE" + role);
+            return getSingleMatchWithoutRole(userId);
+        } else {
+            Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            if (list.isPresent()) {
+                List<MatchSingle> listM = new ArrayList<>();
+                for (UserMatch um :
+                        list.get()) {
+                    listM.add(um.getMatchId());
+                }
+                return listM;
+            } else throw new NullPointerException("Elements not found");
+        }
+    }
+
+    private List<MatchSingle> getSingleMatchWithoutRole(Integer userId) {
+        System.out.println("FIRST");
+        Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        System.out.println("SECOND");
+        List<MatchSingle> listAll = userMatchRepository.getAll();
+        List<MatchSingle> lms = listAll;
+        if (listWR.isPresent()) {
+            List<MatchSingle> lwr = new ArrayList<>();
             for (UserMatch um :
-                    list.get()) {
-                listM.add(um.getMatchId());
+                    listWR.get()) {
+                lwr.add(um.getMatchId());
             }
-            return listM;
+            if (listWR.isPresent()) {
+                System.out.println(listAll + " ALL");
+                System.out.println(listWR.get() + "WR");
+                lms.removeAll(lwr);
+                return lms;
+            } else throw new NullPointerException("Elements not found");
         } else throw new NullPointerException("Elements not found");
     }
 }

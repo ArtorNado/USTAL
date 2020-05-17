@@ -30,12 +30,18 @@ public class MatchSingleController {
 
     @RequestMapping("/joinSingleMatch")
     public ResponseEntity<MessageDto> joinSingleMatch(@RequestParam(value="idSingleMatch", required=false)Integer idSingleMatch,
-                                                      @RequestParam(value="recipient", required=false) Integer recipient) {
-        return ResponseEntity.ok(matchService.joinSingleMatch(idSingleMatch, recipient));
+                                                      @RequestParam(value="participant", required=false) Integer participant) {
+        return ResponseEntity.ok(matchService.joinSingleMatch(idSingleMatch, participant));
     }
 
     @RequestMapping("/getAllSingleMatch")
     public ResponseEntity<List<MatchSingle>> getAllSingleMatch() {
         return ResponseEntity.ok(matchService.getAllMatch());
+    }
+
+    @RequestMapping("/getSingleMatchByRole")
+    public ResponseEntity<List<MatchSingle>> getByRole(@RequestParam(value="userId", required=false)Integer userId,
+                                                      @RequestParam(value="role", required=false) String role) {
+        return ResponseEntity.ok(matchService.getSingleMatchByRole(userId, role));
     }
 }
