@@ -123,39 +123,37 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getSingleMatchByRole(Integer userId, String role) {
+        List<MatchSingle> listM = new ArrayList<>();
         System.out.println("ROLE" + role);
         if (role.equals("Free")) {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRole(userId);
         } else {
             Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
-            List<MatchSingle> listM = new ArrayList<>();
-            for (UserMatch um :
-                    list.get()) {
-                listM.add(um.getMatchId());
-            }
-            return listM;
+            if (list.isPresent()) {
+                for (UserMatch um :
+                        list.get()) {
+                    listM.add(um.getMatchId());
+                }
+                return listM;
+            } else return listM;
         }
     }
 
     private List<MatchSingle> getSingleMatchWithoutRole(Integer userId) {
-        System.out.println("FIRST");
         Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
-        System.out.println("SECOND");
+        List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
         if (listWR.isPresent()) {
-            List<MatchSingle> lwr = new ArrayList<>();
             for (UserMatch um :
                     listWR.get()) {
                 lwr.add(um.getMatchId());
             }
             if (listWR.isPresent()) {
-                System.out.println(listAll + " ALL");
-                System.out.println(listWR.get() + "WR");
                 lms.removeAll(lwr);
                 return lms;
-            } else throw new NullPointerException("Elements not found");
-        } else throw new NullPointerException("Elements not found");
+            } else return lwr;
+        } else return lwr;
     }
 }
