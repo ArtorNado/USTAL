@@ -3,6 +3,7 @@ package com.service.match;
 import com.dto.MatchCommandDto;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
+import com.dto.StatusDto;
 import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import com.models.MatchCommand;
 import com.models.MatchSingle;
@@ -10,6 +11,7 @@ import com.models.UserData;
 import com.models.UserMatch;
 import com.repository.MatchCommandRepository;
 import com.repository.MatchSingleRepository;
+import com.repository.UserDataRepository;
 import com.repository.UserMatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -17,6 +19,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.text.html.Option;
 import java.util.*;
 
 @Service
@@ -32,6 +35,9 @@ public class MatchServiceImpl implements MatchService {
 
     @Autowired
     MatchCommandRepository matchCommandRepository;
+
+    @Autowired
+    UserDataRepository userDataRepository;
 
     @Override
     public MessageDto createSingleMatch(MatchSingleDto matchSingle) {
@@ -140,6 +146,28 @@ public class MatchServiceImpl implements MatchService {
         }
     }
 
+    @Override
+    public MatchSingle findMatchSingleById(Integer matchId) {
+        Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByMatchId(matchId);
+        if (matchFromDb.isPresent()) return matchFromDb.get();
+        else throw new IllegalArgumentException("Match not found");
+    }
+
+    @Override
+    public List<UserData> getMatchParticipant(Integer matchId) {
+        List<UserData> usersData = new ArrayList<>();
+        Optional<MatchSingle> mfd = matchSingleRepository.findMatchSingleByMatchId(matchId);
+        Optional<List<UserMatch>> users = userMatchRepository.getUserMatchByMatchId(mfd.get());
+        if (users.isPresent()) {
+            for (UserMatch um :
+                    users.get()) {
+                usersData.add(userDataRepository.findUserDataByUserId(um.getUserId()).get());
+            }
+            return usersData;
+        } else return usersData;
+    }
+
+
     private List<MatchSingle> getSingleMatchWithoutRole(Integer userId) {
         Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
         List<MatchSingle> lwr = new ArrayList<>();
@@ -154,5 +182,16 @@ public class MatchServiceImpl implements MatchService {
             lms.removeAll(lwr);
             return lms;
         } else return lms;
+    }
+
+    @Override
+    public StatusDto determineUserStatusInMatch(Integer matchId, Integer userId) {
+        Optional<MatchSingle> mfd = matchSingleRepository.findMatchSingleByMatchId(matchId);
+        Optional<UserMatch> user = userMatchRepository.getUserMatchByMatchIdAndUserId(mfd.get(), userId);
+        if (user.isPresent()) {
+            if (mfd.get().getCreatorId() == user.get().getUserId()) {
+                return new StatusDto("Admin");
+            } else return new StatusDto("Participant");
+        } else return new StatusDto("Undefined");
     }
 }

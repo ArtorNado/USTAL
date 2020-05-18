@@ -3,8 +3,10 @@ package com.service.match;
 import com.dto.MatchCommandDto;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
+import com.dto.StatusDto;
 import com.models.MatchCommand;
 import com.models.MatchSingle;
+import com.models.UserData;
 
 import java.util.List;
 
@@ -27,4 +29,10 @@ public interface MatchService {
     List<MatchCommand> getAllCommandMatch();
 
     List<MatchSingle> getSingleMatchByRole(Integer userId, String role);
+
+    MatchSingle findMatchSingleById(Integer matchId);
+
+    List<UserData> getMatchParticipant(Integer matchId);
+
+    StatusDto determineUserStatusInMatch(Integer matchId, Integer userId);
 }

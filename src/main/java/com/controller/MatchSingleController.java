@@ -2,7 +2,9 @@ package com.controller;
 
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
+import com.dto.StatusDto;
 import com.models.MatchSingle;
+import com.models.UserData;
 import com.service.match.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -43,5 +45,23 @@ public class MatchSingleController {
     public ResponseEntity<List<MatchSingle>> getByRole(@RequestParam(value="userId", required=false)Integer userId,
                                                       @RequestParam(value="role", required=false) String role) {
         return ResponseEntity.ok(matchService.getSingleMatchByRole(userId, role));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getParticipant/{id}")
+    public ResponseEntity<List<UserData>> getParticipants(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(matchService.getMatchParticipant(id));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getSingleMatch/{id}")
+    public ResponseEntity<MatchSingle> getSingleMatch(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(matchService.findMatchSingleById(id));
+    }
+
+    @RequestMapping("/getUserStatusInMatch")
+    public ResponseEntity<StatusDto> getUserStatus(@RequestParam(value="matchId", required=false) Integer matchId,
+                                                   @RequestParam(value="userId", required=false) Integer userId) {
+        return ResponseEntity.ok(matchService.determineUserStatusInMatch(matchId, userId));
     }
 }
