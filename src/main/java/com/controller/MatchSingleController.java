@@ -3,6 +3,7 @@ package com.controller;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
 import com.dto.StatusDto;
+import com.models.MatchCommand;
 import com.models.MatchSingle;
 import com.models.UserData;
 import com.service.match.MatchService;
@@ -63,5 +64,11 @@ public class MatchSingleController {
     public ResponseEntity<StatusDto> getUserStatus(@RequestParam(value="matchId", required=false) Integer matchId,
                                                    @RequestParam(value="userId", required=false) Integer userId) {
         return ResponseEntity.ok(matchService.determineUserStatusInMatch(matchId, userId));
+    }
+
+    @RequestMapping("/getCommandMatchByRole")
+    public ResponseEntity<List<MatchCommand>> getCommandMatchByRole(@RequestParam(value="userId", required=false)Integer userId,
+                                                                    @RequestParam(value="role", required=false) String role) {
+        return ResponseEntity.ok(matchService.getCommandMatchByRole(userId, role));
     }
 }

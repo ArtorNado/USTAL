@@ -172,8 +172,13 @@ public class MatchServiceImpl implements MatchService {
         Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
-        System.out.println(listAll.size() + " ALL");
         List<MatchSingle> lms = listAll;
+        for (MatchSingle m :
+                lms) {
+            if (m.getNumberParticipant() == m.getCurrentNumberParticipant()) {
+                lms.remove(m);
+            }
+        }
         if (listWR.isPresent()) {
             for (UserMatch um :
                     listWR.get()) {
@@ -193,5 +198,37 @@ public class MatchServiceImpl implements MatchService {
                 return new StatusDto("Admin");
             } else return new StatusDto("Participant");
         } else return new StatusDto("Undefined");
+    }
+
+    @Override
+    public List<MatchCommand> getCommandMatchByRole(Integer userId, String role) {
+        Optional<UserData> userDataFromDb = userDataRepository.findUserDataByUserId(userId);
+        List<MatchCommand> list = new ArrayList<>();
+        if (userDataFromDb.isPresent()) {
+            switch (role) {
+                case "Admin": {
+                    if (userDataFromDb.get().getTeam() == null) {
+                        return list;
+                    } else {
+                        if (userDataFromDb.get().getTeam().getCreatorId() == userId) {
+                            return matchCommandRepository.getMatchbyRoleAdmin(userDataFromDb.get().getTeam().getTeamId());
+                        } else {
+                            return list;
+                        }
+                    }
+                }
+                case "Participant": {
+                    if (userDataFromDb.get().getTeam() == null) {
+                        return list;
+                    } else {
+                        return matchCommandRepository.getMatchBRole(userDataFromDb.get().getTeam().getTeamId());
+                    }
+                }
+                case "Free": {
+                    return getAllCommandMatch();
+                }
+            }
+        } else return list;
+        return list;
     }
 }

@@ -35,4 +35,6 @@ public interface MatchService {
     List<UserData> getMatchParticipant(Integer matchId);
 
     StatusDto determineUserStatusInMatch(Integer matchId, Integer userId);
+
+    List<MatchCommand> getCommandMatchByRole(Integer userId, String role);
 }

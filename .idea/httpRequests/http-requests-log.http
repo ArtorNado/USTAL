@@ -1,3 +1,20 @@
+POST http://localhost:8080/getCommandMatchByRole?userId=8&role=Admin
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "23.07",
+  "time": "16:00",
+  "creatorId": 11,
+  "numberParticipant" : 11,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-19T100304.200.json
+
+###
+
 POST http://localhost:8080/getUserStatusInMatch?matchId=73&userId=18
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -820,24 +837,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-16T090351.200.json
-
-###
-
-POST http://localhost:8080/createMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 10,
-  "numberParticipant": 14,
-  "currentNumberParticipant": 0,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-16T031618.200.json
 
 ###
 
