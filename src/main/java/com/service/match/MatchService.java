@@ -37,4 +37,6 @@ public interface MatchService {
     StatusDto determineUserStatusInMatch(Integer matchId, Integer userId);
 
     List<MatchCommand> getCommandMatchByRole(Integer userId, String role);
+
+    MatchCommand getCommandMatchById(Integer id);
 }

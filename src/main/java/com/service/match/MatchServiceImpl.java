@@ -4,7 +4,6 @@ import com.dto.MatchCommandDto;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
 import com.dto.StatusDto;
-import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import com.models.MatchCommand;
 import com.models.MatchSingle;
 import com.models.UserData;
@@ -119,7 +118,10 @@ public class MatchServiceImpl implements MatchService {
             } else return new MessageDto("failed");
 
         } else return new MessageDto("failed");
+    }
 
+    public MatchCommand getCommandMatchById(Integer id) {
+        return matchCommandRepository.getMatchCommandByMatchId(id).get();
     }
 
     @Override

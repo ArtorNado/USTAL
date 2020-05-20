@@ -65,10 +65,15 @@ public class MatchSingleController {
                                                    @RequestParam(value="userId", required=false) Integer userId) {
         return ResponseEntity.ok(matchService.determineUserStatusInMatch(matchId, userId));
     }
-
     @RequestMapping("/getCommandMatchByRole")
     public ResponseEntity<List<MatchCommand>> getCommandMatchByRole(@RequestParam(value="userId", required=false)Integer userId,
                                                                     @RequestParam(value="role", required=false) String role) {
         return ResponseEntity.ok(matchService.getCommandMatchByRole(userId, role));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getCommandMatch/{id}")
+    public ResponseEntity<MatchCommand> getCommandMatch(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(matchService.getCommandMatchById(id));
     }
 }
