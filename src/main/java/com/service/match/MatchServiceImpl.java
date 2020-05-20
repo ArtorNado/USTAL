@@ -4,17 +4,12 @@ import com.dto.MatchCommandDto;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
 import com.dto.StatusDto;
-import com.models.MatchCommand;
-import com.models.MatchSingle;
-import com.models.UserData;
-import com.models.UserMatch;
-import com.repository.MatchCommandRepository;
-import com.repository.MatchSingleRepository;
-import com.repository.UserDataRepository;
-import com.repository.UserMatchRepository;
+import com.models.*;
+import com.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,6 +32,9 @@ public class MatchServiceImpl implements MatchService {
 
     @Autowired
     UserDataRepository userDataRepository;
+
+    @Autowired
+    TeamsRepository teamsRepository;
 
     @Override
     public MessageDto createSingleMatch(MatchSingleDto matchSingle) {
@@ -98,25 +96,31 @@ public class MatchServiceImpl implements MatchService {
         Optional<MatchCommand> matchFromDb = matchCommandRepository.getMatchCommandByDateAndTimeAndMatchCityAndCreatorId(
                 matchCommand.getDate(), matchCommand.getTime(), matchCommand.getMatchCity(), matchCommand.getCreatorId()
         );
-        if (!matchFromDb.isPresent()) {
-            MatchCommand nm = new MatchCommand(matchCommand.getDate(), matchCommand.getTime(), matchCommand.getCreatorId(),
-                    matchCommand.getCreatorId(), 0, matchCommand.getMatchCity(), matchCommand.getDescription());
-            matchCommandRepository.save(nm);
-            return new MessageDto("success");
-        } else return new MessageDto("failed");
+        Optional<Teams> firstTeam = teamsRepository.findTeamsByCreatorId(matchCommand.getCreatorId());
+        if (firstTeam.isPresent()) {
+            if (!matchFromDb.isPresent()) {
+                MatchCommand nm = new MatchCommand(matchCommand.getDate(), matchCommand.getTime(), firstTeam.get().getTeamId(),
+                        firstTeam.get().getTeamId(), firstTeam.get().getTeamName(), null, null, matchCommand.getMatchCity(), matchCommand.getDescription());
+                matchCommandRepository.save(nm);
+                return new MessageDto("success");
+            } else return new MessageDto("failed");
+        } else throw new AccessDeniedException("You are not admin");
     }
 
     @Override
     public MessageDto joinCommandMatch(Integer idCommandMatch, Integer recipient) {
         Optional<MatchCommand> matchFromDb = matchCommandRepository.getMatchCommandByMatchId(idCommandMatch);
-        if (matchFromDb.isPresent()) {
-            if (matchFromDb.get().getSecondTeamId() == 0) {
-                MatchCommand nm = matchFromDb.get();
-                nm.setSecondTeamId(recipient);
-                matchCommandRepository.save(nm);
-                return new MessageDto("succeess");
+        Optional<Teams> secondTeam = teamsRepository.findTeamsByCreatorId(recipient);
+        if (secondTeam.isPresent()) {
+            if (matchFromDb.isPresent()) {
+                if (matchFromDb.get().getSecondTeamId() == null) {
+                    MatchCommand nm = matchFromDb.get();
+                    nm.setSecondTeamId(secondTeam.get().getTeamId());
+                    nm.setSecondTeamName(secondTeam.get().getTeamName());
+                    matchCommandRepository.save(nm);
+                    return new MessageDto("succeess");
+                } else return new MessageDto("failed");
             } else return new MessageDto("failed");
-
         } else return new MessageDto("failed");
     }
 

@@ -19,23 +19,45 @@ public class MatchCommand {
 
     private Integer firstTeamId;
 
+    private String firstTeamName;
+
     private Integer secondTeamId;
+
+    private String secondTeamName;
 
     private String matchCity;
 
     private String description;
 
-    public MatchCommand(String date, String time, Integer creatorId, Integer firstTeamId, Integer secondTeamId, String matchCity, String description) {
+    public MatchCommand(String date, String time, Integer creatorId, Integer firstTeamId, String firstTeamName, Integer secondTeamId, String secondTeamName, String matchCity, String description) {
         this.date = date;
         this.time = time;
         this.creatorId = creatorId;
         this.firstTeamId = firstTeamId;
+        this.firstTeamName = firstTeamName;
         this.secondTeamId = secondTeamId;
+        this.secondTeamName = secondTeamName;
         this.matchCity = matchCity;
         this.description = description;
     }
 
     public MatchCommand() {
+    }
+
+    public String getFirstTeamName() {
+        return firstTeamName;
+    }
+
+    public void setFirstTeamName(String firstTeamName) {
+        this.firstTeamName = firstTeamName;
+    }
+
+    public String getSecondTeamName() {
+        return secondTeamName;
+    }
+
+    public void setSecondTeamName(String secondTeamName) {
+        this.secondTeamName = secondTeamName;
     }
 
     public String getDescription() {

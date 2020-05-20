@@ -23,4 +23,6 @@ public interface TeamsRepository extends JpaRepository<Teams, Integer> {
     Optional<List<Teams>> findTeamsByTeamStatus(String teamStatus);
 
     Optional<List<Teams>> findTeamsByTeamCityAndTeamStatus(String teamCity, String teamStatus);
+
+    Optional<Teams> findTeamsByCreatorId(Integer creatorId);
 }
