@@ -1,6 +1,7 @@
 package com.service.teams;
 
 import com.dto.StatusDto;
+import com.dto.UserTeamStatus;
 import com.models.Teams;
 import com.models.UserData;
 import com.dto.TeamDto;
@@ -28,5 +29,7 @@ public interface TeamsService {
     List<Teams> getTeamsByTeamStatus(String status);
 
     List<Teams> getTeamsByCityAndStatus(String city, String status);
+
+    UserTeamStatus determineUserStatus(Integer userId);
 
 }

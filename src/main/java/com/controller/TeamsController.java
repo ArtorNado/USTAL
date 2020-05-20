@@ -2,6 +2,7 @@ package com.controller;
 
 
 import com.dto.StatusDto;
+import com.dto.UserTeamStatus;
 import com.models.Teams;
 import com.models.UserData;
 import com.dto.TeamDto;
@@ -73,6 +74,12 @@ public class TeamsController {
     @RequestMapping("/determineStatus")
     public ResponseEntity<StatusDto> determineUserStatusInTeam(@RequestParam Integer userId, Integer teamId){
         return ResponseEntity.ok(teamsService.determineUserStatusInTeam(userId, teamId));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/determineUserStatus/{userId}")
+    public ResponseEntity<UserTeamStatus> determineUserStatus(@PathVariable("userId")  Integer userId){
+        return ResponseEntity.ok(teamsService.determineUserStatus(userId));
     }
 
 

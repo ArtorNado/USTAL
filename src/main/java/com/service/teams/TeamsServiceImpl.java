@@ -4,6 +4,7 @@ import static com.constants.Constants.*;
 
 import com.aspect.LogExecutionTime;
 import com.dto.StatusDto;
+import com.dto.UserTeamStatus;
 import com.models.Teams;
 import com.models.UserData;
 import com.repository.TeamsRepository;
@@ -122,6 +123,15 @@ public class TeamsServiceImpl implements TeamsService {
                 } else return new StatusDto(USER_STATUS);
             } else return new StatusDto(USER_STATUS);
         } else throw new AccessDeniedException("Team not found");
+    }
+
+    public UserTeamStatus determineUserStatus(Integer userId){
+        Optional<UserData> userFromDb = userDataRepository.findUserDataByUserId(userId);
+        if(userFromDb.get().getTeam() != null){
+            if(userFromDb.get().getTeam().getCreatorId() == userId){
+                return new UserTeamStatus(userId, userFromDb.get().getTeam().getTeamId(), "Admin");
+            } else return new UserTeamStatus(userId, userFromDb.get().getTeam().getTeamId(), "Participant");
+        } else return new UserTeamStatus(userId, 0, "Undefined");
     }
 
     @Override
