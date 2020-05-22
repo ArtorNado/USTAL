@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
-/*@Service
+/*
+@Service
 public class Process {
 
     @Autowired
@@ -137,5 +138,6 @@ public class Process {
     public void upTeamRaiting(int teamId, double points){
         tournamentRepository.setTeamRaiting(teamId, points);
     }
-}*/
+}
 
+*/

@@ -26,6 +26,14 @@ public class Teams {
     @OneToMany(mappedBy="team")
     private Set<UserData> users;
 
+    @JsonIgnore
+    @OneToMany(mappedBy="firstTeam")
+    private Set<EndedCommandMatch> firstTeam;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="secondTeam")
+    private Set<EndedCommandMatch> secondTeam;
+
     public Teams(Integer teamId, String teamName, String teamCity, Integer creatorId, Set<UserData> users) {
         this.teamId = teamId;
         this.teamName = teamName;

@@ -37,5 +37,10 @@ public class MatchCommandController {
         return ResponseEntity.ok(matchService.getAllCommandMatch());
     }
 
-
+    @RequestMapping("/endCommandMatch")
+    public ResponseEntity<MessageDto> joinCommandMatch(@RequestParam(value="matchId", required=false)Integer matchId,
+                                                       @RequestParam(value="firstTeamScore", required=false) Integer firstTeamScore,
+                                                       @RequestParam(value="secondTeamsScore", required=false) Integer secondTeamsScore) {
+        return ResponseEntity.ok(matchService.endCommandMatch(matchId, firstTeamScore, secondTeamsScore));
+    }
 }

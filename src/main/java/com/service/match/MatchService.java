@@ -39,4 +39,6 @@ public interface MatchService {
     List<MatchCommand> getCommandMatchByRole(Integer userId, String role);
 
     MatchCommand getCommandMatchById(Integer id);
+
+    MessageDto endCommandMatch(Integer matchId, Integer firstTeamScore, Integer secondTeamsScore);
 }

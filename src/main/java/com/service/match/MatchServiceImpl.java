@@ -36,6 +36,9 @@ public class MatchServiceImpl implements MatchService {
     @Autowired
     TeamsRepository teamsRepository;
 
+    @Autowired
+    EndCommandMatchRepository endCommandMatchRepository;
+
     @Override
     public MessageDto createSingleMatch(MatchSingleDto matchSingle) {
         Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByCreatorIdAndAndDateAndTime(
@@ -236,5 +239,29 @@ public class MatchServiceImpl implements MatchService {
             }
         } else return list;
         return list;
+    }
+
+    public MessageDto endCommandMatch(Integer matchId, Integer firstTeamScore, Integer secondTeamsScore) {
+        Optional<MatchCommand> matchFromDb = matchCommandRepository.getMatchCommandByMatchId(matchId);
+        Teams winTeam = new Teams();
+        if (matchFromDb.isPresent()) {
+            Optional<Teams> firstTeamFromDb = teamsRepository.findTeamsByTeamId(matchFromDb.get().getFirstTeamId());
+            Optional<Teams> secondTeamFromDb = teamsRepository.findTeamsByTeamId(matchFromDb.get().getSecondTeamId());
+            if (firstTeamFromDb.isPresent() && secondTeamFromDb.isPresent()) {
+                if (firstTeamScore > secondTeamsScore) {
+                    winTeam = firstTeamFromDb.get();
+                } else if (secondTeamsScore > firstTeamScore) {
+                    winTeam = secondTeamFromDb.get();
+                } else {
+                    winTeam = null;
+                }
+                EndedCommandMatch endedCommandMatch = new EndedCommandMatch(matchFromDb.get().getMatchId(),
+                        winTeam.getTeamId(), firstTeamScore, secondTeamsScore, firstTeamFromDb.get(), secondTeamFromDb.get());
+                endCommandMatchRepository.save(endedCommandMatch);
+                matchCommandRepository.delete(matchFromDb.get());
+                Optional<EndedCommandMatch> check = endCommandMatchRepository.findById(endedCommandMatch.getMatchId());
+                return new MessageDto("success");
+            } else throw new IllegalArgumentException("Teams not found");
+        } else throw new IllegalArgumentException("Match not found");
     }
 }

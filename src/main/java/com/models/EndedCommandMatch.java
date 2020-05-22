@@ -1,9 +1,6 @@
 package com.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ended_command_match")
@@ -13,27 +10,46 @@ public class EndedCommandMatch {
     @Column(name = "match_Id")
     private Integer matchId;
 
-    private Integer firstTeamId;
-
-    private Integer secondTeamId;
-
     private Integer winTeamId;
 
     private Integer goalsFirstTeam;
 
     private Integer goalsSecondTeam;
 
+    @ManyToOne
+    @JoinColumn(name="first_team", insertable=false, updatable=false)
+    private Teams firstTeam;
 
-    public EndedCommandMatch(Integer matchId, Integer firstTeamId, Integer secondTeamId, Integer winTeamId, Integer goalsFirstTeam, Integer goalsSecondTeam) {
+    @ManyToOne
+    @JoinColumn(name="second_team", insertable=false, updatable=false)
+    private Teams secondTeam;
+
+    public EndedCommandMatch(Integer matchId, Integer winTeamId, Integer goalsFirstTeam, Integer goalsSecondTeam, Teams firstTeam, Teams secondTeam) {
         this.matchId = matchId;
-        this.firstTeamId = firstTeamId;
-        this.secondTeamId = secondTeamId;
         this.winTeamId = winTeamId;
         this.goalsFirstTeam = goalsFirstTeam;
         this.goalsSecondTeam = goalsSecondTeam;
+        this.firstTeam = firstTeam;
+        this.secondTeam = secondTeam;
     }
 
     public EndedCommandMatch() {
+    }
+
+    public Teams getFirstTeam() {
+        return firstTeam;
+    }
+
+    public void setFirstTeam(Teams firstTeam) {
+        this.firstTeam = firstTeam;
+    }
+
+    public Teams getSecondTeam() {
+        return secondTeam;
+    }
+
+    public void setSecondTeam(Teams secondTeam) {
+        this.secondTeam = secondTeam;
     }
 
     public Integer getMatchId() {
@@ -42,22 +58,6 @@ public class EndedCommandMatch {
 
     public void setMatchId(Integer matchId) {
         this.matchId = matchId;
-    }
-
-    public Integer getFirstTeamId() {
-        return firstTeamId;
-    }
-
-    public void setFirstTeamId(Integer firstTeamId) {
-        this.firstTeamId = firstTeamId;
-    }
-
-    public Integer getSecondTeamId() {
-        return secondTeamId;
-    }
-
-    public void setSecondTeamId(Integer secondTeamId) {
-        this.secondTeamId = secondTeamId;
     }
 
     public Integer getWinTeamId() {
