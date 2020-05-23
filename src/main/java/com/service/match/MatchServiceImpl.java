@@ -255,7 +255,7 @@ public class MatchServiceImpl implements MatchService {
                 } else {
                     winTeam = null;
                 }
-                EndedCommandMatch endedCommandMatch = new EndedCommandMatch(matchFromDb.get().getMatchId(),
+                EndedCommandMatch endedCommandMatch = new EndedCommandMatch(matchFromDb.get().getMatchId(), matchFromDb.get().getDate(),
                         winTeam.getTeamId(), firstTeamScore, secondTeamsScore, firstTeamFromDb.get(), secondTeamFromDb.get());
                 endCommandMatchRepository.save(endedCommandMatch);
                 matchCommandRepository.delete(matchFromDb.get());

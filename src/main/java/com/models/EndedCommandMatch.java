@@ -10,6 +10,8 @@ public class EndedCommandMatch {
     @Column(name = "match_Id")
     private Integer matchId;
 
+    private String date;
+
     private Integer winTeamId;
 
     private Integer goalsFirstTeam;
@@ -24,8 +26,9 @@ public class EndedCommandMatch {
     @JoinColumn(name="second_team", insertable=false, updatable=false)
     private Teams secondTeam;
 
-    public EndedCommandMatch(Integer matchId, Integer winTeamId, Integer goalsFirstTeam, Integer goalsSecondTeam, Teams firstTeam, Teams secondTeam) {
+    public EndedCommandMatch(Integer matchId, String date, Integer winTeamId, Integer goalsFirstTeam, Integer goalsSecondTeam, Teams firstTeam, Teams secondTeam) {
         this.matchId = matchId;
+        this.date = date;
         this.winTeamId = winTeamId;
         this.goalsFirstTeam = goalsFirstTeam;
         this.goalsSecondTeam = goalsSecondTeam;
@@ -34,6 +37,14 @@ public class EndedCommandMatch {
     }
 
     public EndedCommandMatch() {
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public Teams getFirstTeam() {
