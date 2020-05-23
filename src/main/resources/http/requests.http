@@ -1,11 +1,11 @@
-POST http://localhost:8080/endCommandMatch?matchId=85&firstTeamScore=7&secondTeamsScore=4
+GET http://localhost:8080/joinCommandMatch?idCommandMatch=87&recipient=88
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
 {
   "date": "22.07",
   "time": "11:00",
-  "creatorId": 14,
+  "creatorId": 34,
   "matchCity" : "Kazan",
   "description" : "TODAY"
 }
