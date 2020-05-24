@@ -44,4 +44,6 @@ public interface MatchService {
     MessageDto endCommandMatch(Integer matchId, Integer firstTeamScore, Integer secondTeamsScore);
 
     List<EndedCommandMatch> getEndedCommandMatch(Integer teamId);
+
+    List<MatchCommand> getAllMatchesTeam(Integer teamId);
 }

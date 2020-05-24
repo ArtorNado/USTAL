@@ -48,4 +48,10 @@ public class MatchCommandController {
     public ResponseEntity<List<EndedCommandMatch>> getEndedCommandMatch(@RequestParam(value="teamId", required=false)Integer teamId) {
         return ResponseEntity.ok(matchService.getEndedCommandMatch(teamId));
     }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getCommandMatches")
+    public ResponseEntity<List<MatchCommand>> getEndedCommandMatches(@RequestParam(value="teamId", required=false)Integer teamId) {
+        return ResponseEntity.ok(matchService.getAllMatchesTeam(teamId));
+    }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "matchId": 75,
+    "date": "23.07",
+    "time": "11:00",
+    "creatorId": 35,
+    "firstTeamId": 35,
+    "firstTeamName": "GGteam",
+    "secondTeamId": 14,
+    "secondTeamName": null,
+    "matchCity": "Kazan",
+    "description": "TODAY"
+  },
+  {
+    "matchId": 90,
+    "date": "26.09",
+    "time": "18:00",
+    "creatorId": 35,
+    "firstTeamId": 35,
+    "firstTeamName": "GGteam",
+    "secondTeamId": 89,
+    "secondTeamName": "testasTeam",
+    "matchCity": "Kazan",
+    "description": "Игра пройдет на поле около станции метро Проспект Победы"
+  }
+]

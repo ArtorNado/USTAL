@@ -2,39 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-17T062639.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-17T064623.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-17T064804.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-17T064944.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-17T065200.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021735.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021743.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021750.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021813.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021821.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021834.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T124417.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T124453.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T124505.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T124512.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T124522.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T125747.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021840.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-19T021846.200.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/EndCommandMatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/EndCommandMatchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/TeamsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/TeamsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/MatchCommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/MatchCommandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/EndedCommandMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/models/EndedCommandMatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/EndCommandMatchRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/EndCommandMatchRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/TeamsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/TeamsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/match/MatchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/http/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/MatchCommandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/MatchCommandRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -67,7 +46,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="112" />
+          <entry key="project.closed" value="113" />
           <entry key="project.open.time.101" value="2" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.111" value="1" />
@@ -103,7 +82,7 @@
           <entry key="project.open.time.66" value="4" />
           <entry key="project.open.time.67" value="4" />
           <entry key="project.open.time.68" value="3" />
-          <entry key="project.open.time.69" value="7" />
+          <entry key="project.open.time.69" value="8" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.71" value="2" />
           <entry key="project.open.time.72" value="1" />
@@ -120,7 +99,7 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="113" />
+          <entry key="project.opened" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -130,7 +109,7 @@
           <entry key="HTML" value="5" />
           <entry key="HTTP Request" value="42" />
           <entry key="Handlebars/Mustache" value="1" />
-          <entry key="JAVA" value="823" />
+          <entry key="JAVA" value="831" />
           <entry key="JSP" value="7" />
           <entry key="JavaScript" value="6" />
           <entry key="Kotlin" value="1" />
@@ -141,8 +120,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="HTTP Request" value="2592" />
-          <entry key="JAVA" value="24879" />
+          <entry key="HTTP Request" value="2610" />
+          <entry key="JAVA" value="25252" />
           <entry key="JSON" value="67" />
           <entry key="JSP" value="216" />
           <entry key="PLAIN_TEXT" value="26" />
@@ -158,25 +137,52 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="58" selection-start-column="58" selection-end-column="58" />
+              <caret column="44" selection-start-column="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="47" column="99" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="99" />
+            <state relative-caret-position="322">
+              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Teams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="115">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -184,8 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5221">
-              <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
+            <state relative-caret-position="499">
+              <caret line="277" column="13" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,19 +200,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/EndCommandMatchRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="513">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="22" column="83" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="83" />
+            <state relative-caret-position="499">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -278,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/MatchSingleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserDataRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dto/UserTeamStatus.java" />
@@ -288,12 +302,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/Teams.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/tournament/Process.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/TeamsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/EndCommandMatchRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
       </list>
     </option>
@@ -339,6 +354,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -433,6 +449,16 @@
               <item name="USTAL" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USTAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USTAL" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,7 +473,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -481,6 +506,55 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/getCommandMatches" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="teamId" />
+                <option name="value" value="35" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;13:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/getCommandMatches/teamId=35" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;13:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/getEndedCommandMatches" />
@@ -1755,72 +1829,6 @@
           <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;23.07&quot;,&#10;  &quot;time&quot;: &quot;16:00&quot;,&#10;  &quot;creatorId&quot;: 11,&#10;  &quot;numberParticipant&quot; : 11,&#10;  &quot;description&quot; : &quot;TODAY&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/getSingleMatchByRole" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="userId" />
-                <option name="value" value="34" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="role" />
-                <option name="value" value="Free" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;23.07&quot;,&#10;  &quot;time&quot;: &quot;16:00&quot;,&#10;  &quot;creatorId&quot;: 11,&#10;  &quot;numberParticipant&quot; : 11,&#10;  &quot;description&quot; : &quot;TODAY&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/getSingleMatchByRole" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="userId" />
-                <option name="value" value="34" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="role" />
-                <option name="value" value="Participant" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;23.07&quot;,&#10;  &quot;time&quot;: &quot;16:00&quot;,&#10;  &quot;creatorId&quot;: 11,&#10;  &quot;numberParticipant&quot; : 11,&#10;  &quot;description&quot; : &quot;TODAY&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1983,16 +1991,18 @@
       <workItem from="1590275441517" duration="1772000" />
       <workItem from="1590302696562" duration="851000" />
       <workItem from="1590303661657" duration="29000" />
+      <workItem from="1590313815731" duration="962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244715000" />
+    <option name="totallyTimeSpent" value="245677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20872483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2089,13 +2099,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.2.2.RELEASE/spring-orm-5.2.2.RELEASE.jar!/org/springframework/orm/jpa/SharedEntityManagerCreator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="281" selection-start-line="281" selection-end-line="281" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Notifications.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -2250,13 +2253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/signIn/SignInServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
@@ -2268,13 +2264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="37" column="75" lean-forward="true" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2299,20 +2288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Teams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dto/MatchSingleDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -2327,13 +2302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
@@ -2341,24 +2309,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/TeamsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -2390,23 +2344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="58" selection-start-column="58" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5221">
-          <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/EndCommandMatchRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -2421,17 +2358,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="47" column="99" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="99" />
+        <state relative-caret-position="-628">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="277" column="13" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/UserDataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Teams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

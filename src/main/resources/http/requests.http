@@ -1,4 +1,4 @@
-GET http://localhost:8080/getEndedCommandMatches?teamId=35
+GET http://localhost:8080/getCommandMatches?teamId=35
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 

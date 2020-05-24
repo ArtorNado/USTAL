@@ -274,4 +274,12 @@ public class MatchServiceImpl implements MatchService {
         if (matchfromDb.isPresent()) return matchfromDb.get();
         else return list;
     }
+
+    @Override
+    public List<MatchCommand> getAllMatchesTeam(Integer teamId){
+        List<MatchCommand> matchesFromDb = matchCommandRepository.getAllTeamCommandMatches(teamId);
+        return matchesFromDb;
+    }
+
+
 }

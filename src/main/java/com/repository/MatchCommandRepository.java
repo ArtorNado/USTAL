@@ -23,4 +23,7 @@ public interface MatchCommandRepository extends JpaRepository<MatchCommand, Inte
 
     @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE matchCommand.creatorId = :teamId")
     List<MatchCommand> getMatchbyRoleAdmin(Integer teamId);
+
+    @Query("SELECT matchCommand FROM MatchCommand matchCommand WHERE (matchCommand.firstTeamId = :teamId OR matchCommand.secondTeamId =:teamId)")
+    List<MatchCommand> getAllTeamCommandMatches(Integer teamId);
 }
