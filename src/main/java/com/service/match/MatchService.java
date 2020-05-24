@@ -4,6 +4,7 @@ import com.dto.MatchCommandDto;
 import com.dto.MatchSingleDto;
 import com.dto.MessageDto;
 import com.dto.StatusDto;
+import com.models.EndedCommandMatch;
 import com.models.MatchCommand;
 import com.models.MatchSingle;
 import com.models.UserData;
@@ -41,4 +42,6 @@ public interface MatchService {
     MatchCommand getCommandMatchById(Integer id);
 
     MessageDto endCommandMatch(Integer matchId, Integer firstTeamScore, Integer secondTeamsScore);
+
+    List<EndedCommandMatch> getEndedCommandMatch(Integer teamId);
 }

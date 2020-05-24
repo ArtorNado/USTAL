@@ -11,7 +11,7 @@ public interface TeamsRepository extends JpaRepository<Teams, Integer> {
 
     Optional<Teams> findByTeamName(String teamName);
 
-    Optional<Teams> findTeamsByTeamId(Integer tamId);
+    Optional<Teams> findTeamsByTeamId(Integer teamId);
 
     @Query("select teams from Teams teams")
     Optional<List<Teams>> getAll();

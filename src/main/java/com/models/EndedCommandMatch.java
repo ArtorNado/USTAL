@@ -19,11 +19,11 @@ public class EndedCommandMatch {
     private Integer goalsSecondTeam;
 
     @ManyToOne
-    @JoinColumn(name="first_team", insertable=false, updatable=false)
+    @JoinColumn(name="first_team", updatable=false)
     private Teams firstTeam;
 
     @ManyToOne
-    @JoinColumn(name="second_team", insertable=false, updatable=false)
+    @JoinColumn(name="second_team", updatable=false)
     private Teams secondTeam;
 
     public EndedCommandMatch(Integer matchId, String date, Integer winTeamId, Integer goalsFirstTeam, Integer goalsSecondTeam, Teams firstTeam, Teams secondTeam) {

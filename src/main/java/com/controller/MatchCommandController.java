@@ -2,15 +2,14 @@ package com.controller;
 
 import com.dto.MatchCommandDto;
 import com.dto.MessageDto;
+import com.models.EndedCommandMatch;
 import com.models.MatchCommand;
 import com.models.MatchSingle;
 import com.service.match.MatchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -42,5 +41,11 @@ public class MatchCommandController {
                                                        @RequestParam(value="firstTeamScore", required=false) Integer firstTeamScore,
                                                        @RequestParam(value="secondTeamsScore", required=false) Integer secondTeamsScore) {
         return ResponseEntity.ok(matchService.endCommandMatch(matchId, firstTeamScore, secondTeamsScore));
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @RequestMapping("/getEndedCommandMatches")
+    public ResponseEntity<List<EndedCommandMatch>> getEndedCommandMatch(@RequestParam(value="teamId", required=false)Integer teamId) {
+        return ResponseEntity.ok(matchService.getEndedCommandMatch(teamId));
     }
 }

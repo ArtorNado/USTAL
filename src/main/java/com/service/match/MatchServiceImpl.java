@@ -264,4 +264,14 @@ public class MatchServiceImpl implements MatchService {
             } else throw new IllegalArgumentException("Teams not found");
         } else throw new IllegalArgumentException("Match not found");
     }
+
+    @Override
+    public List<EndedCommandMatch> getEndedCommandMatch(Integer teamId) {
+        Optional<Teams> teamfromDb = teamsRepository.findTeamsByTeamId(teamId);
+        Optional<List<EndedCommandMatch>> matchfromDb = endCommandMatchRepository.getEndedCommandBM(teamfromDb.get());
+        System.out.println(matchfromDb.get().toString());
+        List<EndedCommandMatch> list = new ArrayList<>();
+        if (matchfromDb.isPresent()) return matchfromDb.get();
+        else return list;
+    }
 }

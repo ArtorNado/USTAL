@@ -1,0 +1,21 @@
+[
+  {
+    "matchId": 91,
+    "date": "22.07",
+    "winTeamId": 89,
+    "goalsFirstTeam": 4,
+    "goalsSecondTeam": 5,
+    "firstTeam": {
+      "teamId": 35,
+      "teamName": "GGteam",
+      "teamCity": "Moscow",
+      "creatorId": 34
+    },
+    "secondTeam": {
+      "teamId": 89,
+      "teamName": "testasTeam",
+      "teamCity": "Kazan",
+      "creatorId": 88
+    }
+  }
+]
