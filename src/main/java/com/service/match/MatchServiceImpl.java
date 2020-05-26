@@ -48,6 +48,7 @@ public class MatchServiceImpl implements MatchService {
                     matchSingle.getNumberParticipant(), 1, matchSingle.getDescription(), matchSingle.getMatchCity());
             matchSingleRepository.save(nm);
             UserMatch num = new UserMatch(nm, matchSingle.getCreatorId(), "Admin");
+            System.out.println(num.toString());
             userMatchRepository.save(num);
             return new MessageDto("success");
         } else return new MessageDto("failed");
@@ -78,6 +79,11 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public List<MatchSingle> getAllMatch() {
         return matchSingleRepository.getAll().get();
+    }
+
+    @Override
+    public List<MatchSingle> getAllSingleMatchByCity(String city) {
+        return matchSingleRepository.findMatchSingleByMatchCity(city);
     }
 
     @Override
@@ -156,6 +162,31 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
+    public List<MatchSingle> getSingleMatchByRoleAndCity(Integer userId, String role, String city) {
+        List<MatchSingle> listM = new ArrayList<>();
+        System.out.println("ROLE" + role);
+        if (role.equals("Free")) {
+            System.out.println("ROLE" + role);
+            return getSingleMatchWithoutRoleByCity(userId, city);
+        } else {
+            Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            if (list.isPresent()) {
+                System.out.println("CITY - " + city);
+                System.out.println(list.get().toString());
+                for (UserMatch um :
+                        list.get()) {
+                    System.out.println(um.getMatchId().getMatchCity());
+                    if (um.getMatchId().getMatchCity().equals(city)) {
+                        System.out.println("truuuuuue");
+                        listM.add(um.getMatchId());
+                    }
+                }
+                return listM;
+            } else return listM;
+        }
+    }
+
+    @Override
     public MatchSingle findMatchSingleById(Integer matchId) {
         Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByMatchId(matchId);
         if (matchFromDb.isPresent()) return matchFromDb.get();
@@ -185,6 +216,27 @@ public class MatchServiceImpl implements MatchService {
         for (MatchSingle m :
                 lms) {
             if (m.getNumberParticipant() == m.getCurrentNumberParticipant()) {
+                lms.remove(m);
+            }
+        }
+        if (listWR.isPresent()) {
+            for (UserMatch um :
+                    listWR.get()) {
+                lwr.add(um.getMatchId());
+            }
+            lms.removeAll(lwr);
+            return lms;
+        } else return lms;
+    }
+
+    private List<MatchSingle> getSingleMatchWithoutRoleByCity(Integer userId, String city) {
+        Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        List<MatchSingle> lwr = new ArrayList<>();
+        List<MatchSingle> listAll = userMatchRepository.getAll();
+        List<MatchSingle> lms = listAll;
+        for (MatchSingle m :
+                lms) {
+            if ((m.getNumberParticipant() == m.getCurrentNumberParticipant()) || (!city.equals(m.getMatchCity()))) {
                 lms.remove(m);
             }
         }
@@ -279,19 +331,19 @@ public class MatchServiceImpl implements MatchService {
         return list;
     }
 
-    public List<MatchCommand> getAllCommandMatchFree(Integer userId){
+    public List<MatchCommand> getAllCommandMatchFree(Integer userId) {
         Optional<UserData> user = userDataRepository.findUserDataByUserId(userId);
         List<MatchCommand> list = new ArrayList<>();
-        if(user.isPresent()) {
+        if (user.isPresent()) {
             List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFree(user.get().getTeam().getTeamId());
             return matchFromDb;
         } else return list;
     }
 
-    public List<MatchCommand> getAllCommandMatchFreeAndCity(Integer userId, String city){
+    public List<MatchCommand> getAllCommandMatchFreeAndCity(Integer userId, String city) {
         Optional<UserData> user = userDataRepository.findUserDataByUserId(userId);
         List<MatchCommand> list = new ArrayList<>();
-        if(user.isPresent()) {
+        if (user.isPresent()) {
             List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFreeAndCity(user.get().getTeam().getTeamId(), city);
             return matchFromDb;
         } else return list;
@@ -332,7 +384,7 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
-    public List<MatchCommand> getAllMatchesTeam(Integer teamId){
+    public List<MatchCommand> getAllMatchesTeam(Integer teamId) {
         List<MatchCommand> matchesFromDb = matchCommandRepository.getAllTeamCommandMatches(teamId);
         return matchesFromDb;
     }

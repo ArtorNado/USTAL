@@ -48,6 +48,18 @@ public class MatchSingleController {
         return ResponseEntity.ok(matchService.getSingleMatchByRole(userId, role));
     }
 
+    @RequestMapping("/getSingleMatchByRoleAndCity")
+    public ResponseEntity<List<MatchSingle>> getByRole(@RequestParam(value="userId", required=false)Integer userId,
+                                                       @RequestParam(value="role", required=false) String role,
+                                                       @RequestParam(value="city", required=false) String city) {
+        return ResponseEntity.ok(matchService.getSingleMatchByRoleAndCity(userId, role, city));
+    }
+
+    @RequestMapping("/getSingleMatchByCity")
+    public ResponseEntity<List<MatchSingle>> getByRole(@RequestParam(value="city", required=false)String city) {
+        return ResponseEntity.ok(matchService.getAllSingleMatchByCity(city));
+    }
+
     @PreAuthorize("isAuthenticated()")
     @RequestMapping("/getParticipant/{id}")
     public ResponseEntity<List<UserData>> getParticipants(@PathVariable("id") Integer id) {

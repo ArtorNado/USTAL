@@ -21,4 +21,7 @@ public interface MatchSingleRepository extends JpaRepository<MatchSingle, Intege
     @Query("select matchSingle from MatchSingle matchSingle")
     Optional<List<MatchSingle>> getAll();
 
+    List<MatchSingle> findMatchSingleByMatchCity(String matchCity);
+
+
 }

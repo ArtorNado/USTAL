@@ -41,6 +41,10 @@ public interface MatchService {
 
     List<MatchCommand> getCommandMatchByRoleAndCity(Integer userId, String role, String city);
 
+    List<MatchSingle> getSingleMatchByRoleAndCity(Integer userId, String role, String city);
+
+    List<MatchSingle> getAllSingleMatchByCity(String city);
+
     List<MatchCommand> getAllCommandMatchByCity(String city);
 
     MatchCommand getCommandMatchById(Integer id);

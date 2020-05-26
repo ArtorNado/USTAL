@@ -1,3 +1,415 @@
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T095620.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Participant&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T095605.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Participant&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T095341.500.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T095324.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T095302.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094949.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094749.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094500.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city="Kazan"
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094450.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Participant&city="Kazan"
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094440.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34?role=Participant&city="Kazan"
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094409.400.json
+
+###
+
+POST http://localhost:8080/getSingleMatchByRoleAndCity?userId=34?role=Participant&city="Kazan"
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T094352.400.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-26T092518.200.json
+
+###
+
+POST http://localhost:8080/createMatch
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=11&role=Admin&city=kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T090753.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=11&role=Admin&city=kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T090421.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=11&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085911.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=11&role=Kazan&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085905.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=11&role=Kazan&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085858.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Free&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085730.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Participant&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085722.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085712.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByCity?city=Moscow
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085448.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByCity?city=kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085439.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByCity?city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "matchCity" : "Kazan",
+  "description" : "TODAY"
+}
+
+<> 2020-05-26T085431.200.json
+
+###
+
 GET http://localhost:8080/getCommandMatchByRole?userId=34&role=Free
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -393,413 +805,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-24T121725.200.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=86&recipient=17
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T082628.200.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T082526.200.json
-
-###
-
-POST http://localhost:8080/endCommandMatch?matchId=85&firstTeamScore=7&secondTeamsScore=4
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 14,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T071658.200.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=85&recipient=15
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 14,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T071619.200.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 14,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T071534.200.json
-
-###
-
-POST http://localhost:8080/endCommandMatch?matchId=75&firstTeamScore=7&secondTeamsScore=4
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T071352.500.json
-
-###
-
-POST http://localhost:8080/endCommandMatch?matchId=72&firstTeamScore=7&secondTeamsScore=1
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T070349.200.json
-
-###
-
-POST http://localhost:8080/endCommandMatch?matchId=76&firstTeamScore=7&secondTeamsScore=1
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T070301.500.json
-
-###
-
-POST http://localhost:8080/endCommandMatch?matchId=76&firstTeamScore=7&secondTeamsScore=1
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-22T065743.200.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=76&recipient=34
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T104451.200.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 17,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T104411.200.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 55,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T104359.500.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 8,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T104340.500.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 56,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T104253.403.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=75&recipient=14
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T103916.200.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=35&recipient=14
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T103824.500.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=35&recipient=14
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T103202.200.json
-
-###
-
-POST http://localhost:8080/createCommandMatch
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-20T102938.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/20
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083139.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/19
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083132.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/18
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083124.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/17
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083118.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/16
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083108.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/15
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083102.200.json
-
-###
-
-POST http://localhost:8080/determineUserStatus/14
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "23.07",
-  "time": "16:00",
-  "creatorId": 11,
-  "numberParticipant" : 11,
-  "description" : "TODAY",
-  "matchCity" : "Kazan"
-}
-
-<> 2020-05-20T083054.200.json
 
 ###
 
