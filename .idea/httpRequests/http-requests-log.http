@@ -11,6 +11,23 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
   "matchCity" : "Kazan"
 }
 
+<> 2020-05-26T114053.200.json
+
+###
+
+GET http://localhost:8080/getSingleMatchByRoleAndCity?userId=34&role=Admin&city=Kazan
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "22.07",
+  "time": "13:00",
+  "creatorId": 34,
+  "numberParticipant": 10,
+  "description" : "TODAY",
+  "matchCity" : "Kazan"
+}
+
 <> 2020-05-26T095620.200.json
 
 ###
@@ -789,22 +806,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-24T121743.200.json
-
-###
-
-POST http://localhost:8080/joinCommandMatch?idCommandMatch=87&recipient=88
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "date": "22.07",
-  "time": "11:00",
-  "creatorId": 34,
-  "matchCity" : "Kazan",
-  "description" : "TODAY"
-}
-
-<> 2020-05-24T121725.200.json
 
 ###
 
