@@ -1,0 +1,26 @@
+[
+  {
+    "matchId": 75,
+    "date": "23.07",
+    "time": "11:00",
+    "creatorId": 35,
+    "firstTeamId": 35,
+    "firstTeamName": "GGteam",
+    "secondTeamId": 14,
+    "secondTeamName": null,
+    "matchCity": "Kazan",
+    "description": "TODAY"
+  },
+  {
+    "matchId": 92,
+    "date": "23.09",
+    "time": "19:00",
+    "creatorId": 35,
+    "firstTeamId": 35,
+    "firstTeamName": "GGteam",
+    "secondTeamId": 89,
+    "secondTeamName": "testasTeam",
+    "matchCity": "Kazan",
+    "description": "Place"
+  }
+]

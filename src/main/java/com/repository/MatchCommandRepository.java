@@ -24,6 +24,20 @@ public interface MatchCommandRepository extends JpaRepository<MatchCommand, Inte
     @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE matchCommand.creatorId = :teamId")
     List<MatchCommand> getMatchbyRoleAdmin(Integer teamId);
 
+    @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE matchCommand.creatorId = :teamId AND matchCommand.matchCity = :city")
+    List<MatchCommand> getMatchbyRoleAdminAndCity(Integer teamId, String city);
+
+    @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE (matchCommand.firstTeamId = :teamId OR matchCommand.secondTeamId = :teamId) AND matchCommand.creatorId <> :teamId AND matchCommand.matchCity = :city")
+    List<MatchCommand> getMatchBRoleAndCity(Integer teamId, String city);
+
     @Query("SELECT matchCommand FROM MatchCommand matchCommand WHERE (matchCommand.firstTeamId = :teamId OR matchCommand.secondTeamId =:teamId)")
     List<MatchCommand> getAllTeamCommandMatches(Integer teamId);
+
+    List<MatchCommand> getMatchCommandByMatchCity(String city);
+
+    @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE (matchCommand.firstTeamId <> :teamId AND matchCommand.secondTeamId = null)")
+    List<MatchCommand> getMatchFree(Integer teamId);
+
+    @Query("SELECT matchCommand FROM MatchCommand  matchCommand WHERE (matchCommand.firstTeamId <> :teamId AND matchCommand.secondTeamId = null) AND matchCommand.matchCity = :city")
+    List<MatchCommand> getMatchFreeAndCity(Integer teamId, String city);
 }

@@ -54,4 +54,16 @@ public class MatchCommandController {
     public ResponseEntity<List<MatchCommand>> getEndedCommandMatches(@RequestParam(value="teamId", required=false)Integer teamId) {
         return ResponseEntity.ok(matchService.getAllMatchesTeam(teamId));
     }
+
+    @RequestMapping("/getCommandMatchByRoleAndCity")
+    public ResponseEntity<List<MatchCommand>> getCommandMatchByRoleAndCity(@RequestParam(value="userId", required=false)Integer userId,
+                                                       @RequestParam(value="role", required=false) String role,
+                                                       @RequestParam(value="city", required=false) String city) {
+        return ResponseEntity.ok(matchService.getCommandMatchByRoleAndCity(userId, role, city));
+    }
+
+    @RequestMapping("/getAllCommandMatchByCity")
+    public ResponseEntity<List<MatchCommand>> getAllCommandMatchByCity(@RequestParam(value="city", required=false) String city) {
+        return ResponseEntity.ok(matchService.getAllCommandMatchByCity(city));
+    }
 }

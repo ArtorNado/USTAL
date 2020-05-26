@@ -234,11 +234,67 @@ public class MatchServiceImpl implements MatchService {
                     }
                 }
                 case "Free": {
-                    return getAllCommandMatch();
+                    return getAllCommandMatchFree(userId);
                 }
             }
         } else return list;
         return list;
+    }
+
+    @Override
+    public List<MatchCommand> getCommandMatchByRoleAndCity(Integer userId, String role, String city) {
+        Optional<UserData> userDataFromDb = userDataRepository.findUserDataByUserId(userId);
+        List<MatchCommand> list = new ArrayList<>();
+        if (userDataFromDb.isPresent()) {
+            switch (role) {
+                case "Admin": {
+                    if (userDataFromDb.get().getTeam() == null) {
+                        return list;
+                    } else {
+                        if (userDataFromDb.get().getTeam().getCreatorId() == userId) {
+                            return matchCommandRepository.getMatchbyRoleAdminAndCity(userDataFromDb.get().getTeam().getTeamId(), city);
+                        } else {
+                            return list;
+                        }
+                    }
+                }
+                case "Participant": {
+                    if (userDataFromDb.get().getTeam() == null) {
+                        return list;
+                    } else {
+                        return matchCommandRepository.getMatchBRoleAndCity(userDataFromDb.get().getTeam().getTeamId(), city);
+                    }
+                }
+                case "Free": {
+                    return getAllCommandMatchFreeAndCity(userId, city);
+                }
+            }
+        } else return list;
+        return list;
+    }
+
+    @Override
+    public List<MatchCommand> getAllCommandMatchByCity(String city) {
+        List<MatchCommand> list = matchCommandRepository.getMatchCommandByMatchCity(city);
+        return list;
+    }
+
+    public List<MatchCommand> getAllCommandMatchFree(Integer userId){
+        Optional<UserData> user = userDataRepository.findUserDataByUserId(userId);
+        List<MatchCommand> list = new ArrayList<>();
+        if(user.isPresent()) {
+            List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFree(user.get().getTeam().getTeamId());
+            return matchFromDb;
+        } else return list;
+    }
+
+    public List<MatchCommand> getAllCommandMatchFreeAndCity(Integer userId, String city){
+        Optional<UserData> user = userDataRepository.findUserDataByUserId(userId);
+        List<MatchCommand> list = new ArrayList<>();
+        if(user.isPresent()) {
+            List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFreeAndCity(user.get().getTeam().getTeamId(), city);
+            return matchFromDb;
+        } else return list;
     }
 
     public MessageDto endCommandMatch(Integer matchId, Integer firstTeamScore, Integer secondTeamsScore) {
