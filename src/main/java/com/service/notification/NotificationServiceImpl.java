@@ -82,13 +82,18 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public MessageDto sendNotificationForTeam(NotificationDto notification) {
+        System.out.println(notification.getSenderId());
         Optional<UserData> senderData = userDataRepository.findUserDataByUserId(notification.getSenderId());
+        System.out.println(senderData.get().toString());
+        System.out.println("STEP1");
         if(senderData.isPresent()) {
+            System.out.println("STEP2");
             if(senderData.get().getTeam() == null) {
+                System.out.println("STEP3");
                 Notifications newNotification = new Notifications(notification.getSenderId(), notification.getRecipientId(),
                         notification.getNotificationType(), notification.getNotificationStatus());
                 notificationRepository.save(newNotification);
-            } else throw new AccessDeniedException("Вы уже состоите в команде");
+            } else throw new IllegalArgumentException("Вы уже состоите в команде");
         } else throw new AccessDeniedException("Пользователь не найден");
         return new MessageDto("succsessful");
     }

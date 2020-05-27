@@ -29,9 +29,7 @@ public class NotificationController {
     public ResponseEntity<List<NotificationAnswerDto>> getNotificationByRecipientId(@PathVariable("id") Integer id){
         return ResponseEntity.ok(notificationService.getMessageByRecipientId(id));}
 
-/*
-    @PreAuthorize("isAuthenticated()")
-*/
+
     @RequestMapping("/answerNotification")
     public ResponseEntity<MessageDto> determineUserStatusInTeam(@RequestParam Integer notification, Integer answer){
         return ResponseEntity.ok(notificationService.answerNotifications(notification, answer));
