@@ -141,7 +141,7 @@ public class NotificationServiceImpl implements NotificationService {
                     }
                     default: return new MessageDto("failed");
                 }
-            } else return new MessageDto("Пользователь уже состоит в команде");
+            } else throw new AccessDeniedException("Пользователь уже состоит в команде");
         } else throw new AccessDeniedException("Пользователь не найден");
     }
 

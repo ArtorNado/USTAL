@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T022005.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T022246.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T022445.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T022607.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T022612.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-24T121743.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NotificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/NotificationController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -46,7 +35,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="120" />
+          <entry key="project.closed" value="121" />
           <entry key="project.open.time.101" value="2" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.111" value="1" />
@@ -83,7 +72,7 @@
           <entry key="project.open.time.67" value="4" />
           <entry key="project.open.time.68" value="4" />
           <entry key="project.open.time.69" value="8" />
-          <entry key="project.open.time.70" value="1" />
+          <entry key="project.open.time.70" value="2" />
           <entry key="project.open.time.71" value="2" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.73" value="1" />
@@ -100,7 +89,7 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="121" />
+          <entry key="project.opened" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -122,7 +111,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="HTTP Request" value="2843" />
-          <entry key="JAVA" value="26549" />
+          <entry key="JAVA" value="26569" />
           <entry key="JSON" value="69" />
           <entry key="JSP" value="216" />
           <entry key="PLAIN_TEXT" value="26" />
@@ -137,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+            <state relative-caret-position="299">
+              <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -164,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="90" column="40" lean-forward="true" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+            <state relative-caret-position="536">
+              <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -173,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Notifications.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
+            <state relative-caret-position="138">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
@@ -261,8 +250,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -308,7 +297,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -437,6 +425,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2171,17 +2160,18 @@
       <workItem from="1590518153610" duration="1326000" />
       <workItem from="1590525279631" duration="429000" />
       <workItem from="1590584636432" duration="1270000" />
+      <workItem from="1590665920432" duration="630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257641000" />
+    <option name="totallyTimeSpent" value="258271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2295302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23288591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2527,9 +2517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3542">
           <caret line="172" selection-start-line="172" selection-end-line="172" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2558,12 +2545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="32" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2595,17 +2576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Notifications.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NotificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        <state relative-caret-position="299">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -2623,10 +2597,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Notifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/notification/NotificationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="90" column="40" lean-forward="true" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+        <state relative-caret-position="536">
+          <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
         </state>
       </provider>
     </entry>
