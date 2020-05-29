@@ -31,7 +31,7 @@ public class SignInServiceImpl implements SignInService {
     @LogExecutionTime
     public TokenDto signIn(SignInDto signInData) {
         // получаем пользователя по его email
-        Optional<User> userOptional = userRepository.findByUserLoginPasAndUserPassword(signInData.getUserLogin(), signInData.getUserPassword());
+        Optional<User> userOptional = userRepository.findUserByUserLoginAndUserPassword(signInData.getUserLogin(), signInData.getUserPassword());
         // если у меня есть этот пользвователь
         if (userOptional.isPresent()) {
             // получаем его
