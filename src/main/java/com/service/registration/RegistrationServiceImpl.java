@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,11 +32,14 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Override
     @LogExecutionTime
     public MessageDto registr(UserDto u) {
-        Optional<User> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
+        Optional<List<User>> userFromDb = userRepository.findByUserLogin(u.getUserLogin());
         if (userFromDb.isPresent()) {
             return new MessageDto("Этот логин уже существует");
         } else {
+/*
             User newUser = new User(u.getUserLogin(), passwordEncoder.encode(u.getUserPassword()), Role.USER);
+*/
+            User newUser = new User(u.getUserLogin(), u.getUserPassword(), Role.USER);
             userRepository.save(newUser);
             UserData newUserData = new UserData(newUser.getUserId(), u.getUserFirstName(), u.getUserSecondName(),
                     u.getUserGender(), u.getUserCity(), null);

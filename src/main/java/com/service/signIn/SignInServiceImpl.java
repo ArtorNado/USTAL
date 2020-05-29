@@ -31,20 +31,20 @@ public class SignInServiceImpl implements SignInService {
     @LogExecutionTime
     public TokenDto signIn(SignInDto signInData) {
         // получаем пользователя по его email
-        Optional<User> userOptional = userRepository.findByUserLogin(signInData.getUserLogin());
+        Optional<User> userOptional = userRepository.findByUserLoginPasAndUserPassword(signInData.getUserLogin(), signInData.getUserPassword());
         // если у меня есть этот пользвователь
         if (userOptional.isPresent()) {
             // получаем его
             User user = userOptional.get();
             // если пароль подходит
-                // создаем токен
-                String token = Jwts.builder()
-                        .setSubject(user.getUserId().toString()) // id пользователя
-                        .claim("name", user.getUserLogin()) // имя
-                        .claim("role", user.getRole().name()) // роль
-                        .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
-                        .compact(); // преобразовали в строку
-                return new TokenDto(token);
+            // создаем токен
+            String token = Jwts.builder()
+                    .setSubject(user.getUserId().toString()) // id пользователя
+                    .claim("name", user.getUserLogin()) // имя
+                    .claim("role", user.getRole().name()) // роль
+                    .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
+                    .compact(); // преобразовали в строку
+            return new TokenDto(token);
         } else throw new AccessDeniedException("User not found");
     }
 
@@ -52,7 +52,7 @@ public class SignInServiceImpl implements SignInService {
     public UserIdDto getUserId(String userLogin) {
         System.out.println(userLogin);
         Optional<User> userOptional = userRepository.findByUserLogin(userLogin);
-        if(userOptional.isPresent()) {
+        if (userOptional.isPresent()) {
             UserIdDto userIdDto = new UserIdDto();
             userIdDto.setUserID(userOptional.get().getUserId());
             return userIdDto;
