@@ -34,7 +34,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     public MessageDto registr(UserDto u) {
 
 
-        Optional<List<User>> userFromDb = userRepository.getUsersByUserId(u.getUserLogin());
+        Optional<List<User>> userFromDb = userRepository.getUserByUserLogin(u.getUserLogin());
         if (userFromDb.isPresent()) {
             return new MessageDto("Этот логин уже существует");
         } else {
