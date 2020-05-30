@@ -148,14 +148,15 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public List<MatchSingle> getSingleMatchByRole(Integer userId, String role) {
         List<MatchSingle> listM = new ArrayList<>();
-        System.out.println("ROLE" + role);
         if (role.equals("Free")) {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRole(userId);
         } else {
+            System.out.println(" STEP! ASDASD");
             Optional<List<UserMatch1>> list;
-            if(role == "Admin"){
+            if(role.equals("Admin")){
                 list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
+                System.out.println(list.get().toString() + "  ASDASD");
             }
             else {
                 list = userMatchRepository.getUserMatchByUserIdAndRole2(userId.toString());
