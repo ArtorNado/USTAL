@@ -1,17 +1,19 @@
 package com.models;
 
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_single_match")
+@Table(name = "user_single_match1")
 public class UserMatch {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "user_id")
+    @Column(name = "user_id", unique = true)
     private Integer userId;
 
     @ManyToOne(cascade=CascadeType.ALL)
