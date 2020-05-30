@@ -91,7 +91,7 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getAllMatchSingleByRole(Integer userId, String role) {
-        Optional<List<UserMatch1>> userDataFromDb = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+        Optional<List<UserMatch1>> userDataFromDb = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
         if (userDataFromDb.isPresent()) {
             List<MatchSingle> list = new ArrayList<>();
             for (UserMatch1 um :
@@ -155,10 +155,10 @@ public class MatchServiceImpl implements MatchService {
         } else {
             Optional<List<UserMatch1>> list;
             if(role == "Admin"){
-                list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+                list = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
             }
             else {
-                list = userMatchRepository.getUserMatchByUserIdAndRole2(userId);
+                list = userMatchRepository.getUserMatchByUserIdAndRole2(userId.toString());
             }
             /*Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
             if (list.isPresent()) {
@@ -179,7 +179,7 @@ public class MatchServiceImpl implements MatchService {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRoleByCity(userId, city);
         } else {
-            Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
             if (list.isPresent()) {
                 System.out.println("CITY - " + city);
                 System.out.println(list.get().toString());
@@ -219,7 +219,7 @@ public class MatchServiceImpl implements MatchService {
 
 
     private List<MatchSingle> getSingleMatchWithoutRole(Integer userId) {
-        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId.toString());
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
@@ -240,7 +240,7 @@ public class MatchServiceImpl implements MatchService {
     }
 
     private List<MatchSingle> getSingleMatchWithoutRoleByCity(Integer userId, String city) {
-        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId.toString());
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
@@ -263,7 +263,7 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public StatusDto determineUserStatusInMatch(Integer matchId, Integer userId) {
         Optional<MatchSingle> mfd = matchSingleRepository.findMatchSingleByMatchId(matchId);
-        Optional<UserMatch1> user = userMatchRepository.getUserMatchByMatchIdAndUserId(mfd.get(), userId);
+        Optional<UserMatch1> user = userMatchRepository.getUserMatchByMatchIdAndUserId(mfd.get(), userId.toString());
         if (user.isPresent()) {
             if (mfd.get().getCreatorId() == Integer.parseInt(user.get().getUserId())) {
                 return new StatusDto("Admin");

@@ -3,10 +3,10 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
 {
-  "date": "18.09.20",
-  "time": "18:00",
+  "date": "20.09.20",
+  "time": "10:00",
   "creatorId": 47,
-  "numberParticipant" : 10,
+  "numberParticipant" : 12,
   "description" : "desc",
   "matchCity" : "Kazan"
 }
