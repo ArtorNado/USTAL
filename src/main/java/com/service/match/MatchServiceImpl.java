@@ -91,7 +91,7 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getAllMatchSingleByRole(Integer userId, String role) {
-        Optional<List<UserMatch1>> userDataFromDb = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
+        Optional<List<UserMatch1>> userDataFromDb = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
         if (userDataFromDb.isPresent()) {
             List<MatchSingle> list = new ArrayList<>();
             for (UserMatch1 um :
@@ -155,7 +155,7 @@ public class MatchServiceImpl implements MatchService {
         } else {
             Optional<List<UserMatch1>> list;
             if(role == "Admin"){
-                list = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
+                list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
             }
             else {
                 list = userMatchRepository.getUserMatchByUserIdAndRole2(userId.toString());
@@ -179,7 +179,7 @@ public class MatchServiceImpl implements MatchService {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRoleByCity(userId, city);
         } else {
-            Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId.toString(), role);
+            Optional<List<UserMatch1>> list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
             if (list.isPresent()) {
                 System.out.println("CITY - " + city);
                 System.out.println(list.get().toString());

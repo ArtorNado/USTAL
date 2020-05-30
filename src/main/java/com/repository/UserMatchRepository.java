@@ -12,7 +12,8 @@ public interface UserMatchRepository extends JpaRepository<UserMatch1, Integer> 
 
     void deleteAllByMatchId(Integer matchId);
 
-    Optional<List<UserMatch1>>  getUserMatchByUserIdAndRole(String userId, String Role);
+    @Query("SELECT userMatch FROM UserMatch1 userMatch WHERE  userMatch.userId = :userId AND userMatch.role = :role")
+    Optional<List<UserMatch1>>  getUserMatch1ByUserIdAndRole(String userId, String role);
 
     @Query("SELECT userMatch FROM UserMatch1 userMatch WHERE  userMatch.userId = :userId ")
     Optional<List<UserMatch1>>  getUserMatchByUserIdAndRole2(String userId);
