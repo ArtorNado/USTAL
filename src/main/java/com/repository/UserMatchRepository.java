@@ -16,8 +16,8 @@ public interface UserMatchRepository extends JpaRepository<UserMatch, Integer> {
 
     Optional<List<UserMatch>>  getUserMatchByUserIdAndRole(Integer userId, String Role);
 
-    @Query("SELECT userMatch FROM UserMatch userMatch WHERE  userMatch.userId = :userId AND (userMatch.role =: Admin OR userMatch.role = Participant)")
-    Optional<List<UserMatch>>  getUserMatchByUserIdAndRole2(Integer userId, String Role);
+    @Query("SELECT userMatch FROM UserMatch userMatch WHERE  userMatch.userId = :userId ")
+    Optional<List<UserMatch>>  getUserMatchByUserIdAndRole2(Integer userId);
 
     Optional<List<UserMatch>> getUserMatchByRole(String role);
 

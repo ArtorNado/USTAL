@@ -155,7 +155,7 @@ public class MatchServiceImpl implements MatchService {
                 list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
             }
             else {
-                list = userMatchRepository.getUserMatchByUserIdAndRole2(userId, role);
+                list = userMatchRepository.getUserMatchByUserIdAndRole2(userId);
             }
             /*Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
             if (list.isPresent()) {
