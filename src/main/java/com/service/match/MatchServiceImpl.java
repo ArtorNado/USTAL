@@ -150,7 +150,14 @@ public class MatchServiceImpl implements MatchService {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRole(userId);
         } else {
-            Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            Optional<List<UserMatch>> list;
+            if(role == "Admin"){
+                list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            }
+            else {
+                list = userMatchRepository.getUserMatchByUserIdAndRole2(userId, role);
+            }
+            /*Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
             if (list.isPresent()) {
                 for (UserMatch um :
                         list.get()) {
