@@ -29,11 +29,11 @@ public class MatchSingle {
     private String matchCity;
 
     @JsonIgnore
-    @OneToMany(mappedBy="matchId", cascade=CascadeType.ALL, orphanRemoval=true)
-    private Set<UserMatch> users;
+    @ManyToMany(mappedBy="matchId")
+    private Set<UserMatch1> users;
 
 
-    public MatchSingle(String date, String time, Integer creatorId, Integer numberParticipant, Integer currentNumberParticipant, String description, String matchCity /*Set<UserMatch> users*/) {
+    public MatchSingle(String date, String time, Integer creatorId, Integer numberParticipant, Integer currentNumberParticipant, String description, String matchCity /*Set<UserMatch1> users*/) {
         this.date = date;
         this.time = time;
         this.creatorId = creatorId;
@@ -111,11 +111,11 @@ public class MatchSingle {
         this.description = description;
     }
 
-    public Set<UserMatch> getUsers() {
+    public Set<UserMatch1> getUsers() {
         return users;
     }
 
-    public void setUsers(Set<UserMatch> users) {
+    public void setUsers(Set<UserMatch1> users) {
         this.users = users;
     }
 }

@@ -6,37 +6,39 @@ import org.springframework.context.annotation.Primary;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_single_match1")
-public class UserMatch {
+@Table(name = "user_single_match2")
+public class UserMatch1 {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "id")
+    private Integer iid;
 
-    @Column(name = "user_id", unique = true)
-    private Integer userId;
+    @Column(name = "user_id")
+    private String userId;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name="match_id")
     private MatchSingle matchId;
 
     private String role;
 
-    public UserMatch(Integer userId, MatchSingle matchId, String role) {
-        this.userId = userId;
+    public UserMatch1(Integer iid,  MatchSingle matchId,String userId, String role) {
+        this.iid = iid;
         this.matchId = matchId;
+        this.userId = userId;
         this.role = role;
     }
 
     public Integer getId() {
-        return id;
+        return iid;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.iid = id;
     }
 
-    public UserMatch() {
+    public UserMatch1() {
     }
 
     public String getRole() {
@@ -47,11 +49,11 @@ public class UserMatch {
         this.role = role;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

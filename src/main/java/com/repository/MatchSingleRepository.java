@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface MatchSingleRepository extends JpaRepository<MatchSingle, Integer> {
 
 
-    Optional<MatchSingle> findMatchSingleByCreatorIdAndAndDateAndTime(Integer creatorId, String date, String time);
+    Optional<MatchSingle> findMatchSingleByCreatorIdAndDateAndTime(Integer creatorId, String date, String time);
 
     void deleteMatchSingleByMatchId(Integer id);
 

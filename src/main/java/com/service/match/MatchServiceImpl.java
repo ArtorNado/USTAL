@@ -13,7 +13,6 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.swing.text.html.Option;
 import java.util.*;
 
 @Service
@@ -41,13 +40,17 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public MessageDto createSingleMatch(MatchSingleDto matchSingle) {
-        Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByCreatorIdAndAndDateAndTime(
+        System.out.println("1");
+        Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByCreatorIdAndDateAndTime(
                 matchSingle.getCreatorId(), matchSingle.getDate(), matchSingle.getTime());
         if (!matchFromDb.isPresent()) {
+            System.out.println("2");
             MatchSingle nm = new MatchSingle(matchSingle.getDate(), matchSingle.getTime(), matchSingle.getCreatorId(),
                     matchSingle.getNumberParticipant(), 1, matchSingle.getDescription(), matchSingle.getMatchCity());
             matchSingleRepository.save(nm);
-            UserMatch num = new UserMatch(matchSingle.getCreatorId(), nm, "Admin");
+            System.out.println("3");
+            UserMatch1 num = new UserMatch1(null, nm, matchSingle.getCreatorId().toString(), "Admin");
+            System.out.println("4");
             System.out.println(num.toString());
             userMatchRepository.save(num);
             return new MessageDto("success");
@@ -67,7 +70,7 @@ public class MatchServiceImpl implements MatchService {
         if (matchFromDb.isPresent()) {
             System.out.println(idSingleMatch.toString());
             System.out.println(participant.toString());
-            UserMatch um = new UserMatch(participant, matchFromDb.get(), "Participant");
+            UserMatch1 um = new UserMatch1(null, matchFromDb.get(), participant.toString(),  "Participant");
             userMatchRepository.save(um);
             matchFromDb.get().setCurrentNumberParticipant(matchFromDb.get().getCurrentNumberParticipant() + 1);
             matchSingleRepository.save(matchFromDb.get());
@@ -88,10 +91,10 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getAllMatchSingleByRole(Integer userId, String role) {
-        Optional<List<UserMatch>> userDataFromDb = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+        Optional<List<UserMatch1>> userDataFromDb = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
         if (userDataFromDb.isPresent()) {
             List<MatchSingle> list = new ArrayList<>();
-            for (UserMatch um :
+            for (UserMatch1 um :
                     userDataFromDb.get()) {
                 list.add(um.getMatchId());
             }
@@ -150,16 +153,16 @@ public class MatchServiceImpl implements MatchService {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRole(userId);
         } else {
-            Optional<List<UserMatch>> list;
+            Optional<List<UserMatch1>> list;
             if(role == "Admin"){
                 list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
             }
             else {
                 list = userMatchRepository.getUserMatchByUserIdAndRole2(userId);
             }
-            /*Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
+            /*Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
             if (list.isPresent()) {
-                for (UserMatch um :
+                for (UserMatch1 um :
                         list.get()) {
                     listM.add(um.getMatchId());
                 }
@@ -176,11 +179,11 @@ public class MatchServiceImpl implements MatchService {
             System.out.println("ROLE" + role);
             return getSingleMatchWithoutRoleByCity(userId, city);
         } else {
-            Optional<List<UserMatch>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
+            Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);
             if (list.isPresent()) {
                 System.out.println("CITY - " + city);
                 System.out.println(list.get().toString());
-                for (UserMatch um :
+                for (UserMatch1 um :
                         list.get()) {
                     System.out.println(um.getMatchId().getMatchCity());
                     if (um.getMatchId().getMatchCity().equals(city)) {
@@ -204,11 +207,11 @@ public class MatchServiceImpl implements MatchService {
     public List<UserData> getMatchParticipant(Integer matchId) {
         List<UserData> usersData = new ArrayList<>();
         Optional<MatchSingle> mfd = matchSingleRepository.findMatchSingleByMatchId(matchId);
-        Optional<List<UserMatch>> users = userMatchRepository.getUserMatchByMatchId(mfd.get());
+        Optional<List<UserMatch1>> users = userMatchRepository.getUserMatchByMatchId(mfd.get());
         if (users.isPresent()) {
-            for (UserMatch um :
+            for (UserMatch1 um :
                     users.get()) {
-                usersData.add(userDataRepository.findUserDataByUserId(um.getUserId()).get());
+                usersData.add(userDataRepository.findUserDataByUserId(Integer.parseInt(um.getUserId())).get());
             }
             return usersData;
         } else return usersData;
@@ -216,7 +219,7 @@ public class MatchServiceImpl implements MatchService {
 
 
     private List<MatchSingle> getSingleMatchWithoutRole(Integer userId) {
-        Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
@@ -227,7 +230,7 @@ public class MatchServiceImpl implements MatchService {
             }
         }
         if (listWR.isPresent()) {
-            for (UserMatch um :
+            for (UserMatch1 um :
                     listWR.get()) {
                 lwr.add(um.getMatchId());
             }
@@ -237,7 +240,7 @@ public class MatchServiceImpl implements MatchService {
     }
 
     private List<MatchSingle> getSingleMatchWithoutRoleByCity(Integer userId, String city) {
-        Optional<List<UserMatch>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
+        Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId);
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
@@ -248,7 +251,7 @@ public class MatchServiceImpl implements MatchService {
             }
         }
         if (listWR.isPresent()) {
-            for (UserMatch um :
+            for (UserMatch1 um :
                     listWR.get()) {
                 lwr.add(um.getMatchId());
             }
@@ -260,9 +263,9 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public StatusDto determineUserStatusInMatch(Integer matchId, Integer userId) {
         Optional<MatchSingle> mfd = matchSingleRepository.findMatchSingleByMatchId(matchId);
-        Optional<UserMatch> user = userMatchRepository.getUserMatchByMatchIdAndUserId(mfd.get(), userId);
+        Optional<UserMatch1> user = userMatchRepository.getUserMatchByMatchIdAndUserId(mfd.get(), userId);
         if (user.isPresent()) {
-            if (mfd.get().getCreatorId() == user.get().getUserId()) {
+            if (mfd.get().getCreatorId() == Integer.parseInt(user.get().getUserId())) {
                 return new StatusDto("Admin");
             } else return new StatusDto("Participant");
         } else return new StatusDto("Undefined");
