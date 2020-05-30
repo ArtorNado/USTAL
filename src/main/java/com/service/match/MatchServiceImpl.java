@@ -13,6 +13,9 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
@@ -70,7 +73,7 @@ public class MatchServiceImpl implements MatchService {
         if (matchFromDb.isPresent()) {
             System.out.println(idSingleMatch.toString());
             System.out.println(participant.toString());
-            UserMatch1 um = new UserMatch1(null, matchFromDb.get(), participant.toString(),  "Participant");
+            UserMatch1 um = new UserMatch1(null, matchFromDb.get(), participant.toString(), "Participant");
             userMatchRepository.save(um);
             matchFromDb.get().setCurrentNumberParticipant(matchFromDb.get().getCurrentNumberParticipant() + 1);
             matchSingleRepository.save(matchFromDb.get());
@@ -81,12 +84,41 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchSingle> getAllMatch() {
-        return matchSingleRepository.getAll().get();
+        return sortSingle(matchSingleRepository.getAll().get());
     }
 
+    private List<MatchSingle> sortSingle(List<MatchSingle> list) {
+        DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
+        list.sort((o1, o2) -> {
+            try {
+                return format.parse(o1.getDate() +"T"+o1.getTime()).compareTo(format.parse(o2.getDate() +"T"+o2.getTime()));
+            } catch (ParseException e) {
+                return 5;
+            }
+        });
+/*
+        System.out.println(format.parse(list.get(0).getDate() +"T"+list.get(0).getTime()));
+*/
+        return list;
+    }
+
+    private List<MatchCommand> sortCommand(List<MatchCommand> list) {
+        DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
+        list.sort((o1, o2) -> {
+            try {
+                return format.parse(o1.getDate() +"T"+o1.getTime()).compareTo(format.parse(o2.getDate() +"T"+o2.getTime()));
+            } catch (ParseException e) {
+                return 5;
+            }
+        });
+/*
+        System.out.println(format.parse(list.get(0).getDate() +"T"+list.get(0).getTime()));
+*/
+        return list;
+    }
     @Override
     public List<MatchSingle> getAllSingleMatchByCity(String city) {
-        return matchSingleRepository.findMatchSingleByMatchCity(city);
+        return sortSingle(matchSingleRepository.findMatchSingleByMatchCity(city));
     }
 
     @Override
@@ -98,7 +130,7 @@ public class MatchServiceImpl implements MatchService {
                     userDataFromDb.get()) {
                 list.add(um.getMatchId());
             }
-            return list;
+            return sortSingle(list);
         } else throw new NullPointerException("Elements not found");
     }
 
@@ -142,7 +174,7 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<MatchCommand> getAllCommandMatch() {
-        return matchCommandRepository.getAll().get();
+        return sortCommand(matchCommandRepository.getAll().get());
     }
 
     @Override
@@ -150,15 +182,14 @@ public class MatchServiceImpl implements MatchService {
         List<MatchSingle> listM = new ArrayList<>();
         if (role.equals("Free")) {
             System.out.println("ROLE" + role);
-            return getSingleMatchWithoutRole(userId);
+            return sortSingle(getSingleMatchWithoutRole(userId));
         } else {
             System.out.println(" STEP! ASDASD");
             Optional<List<UserMatch1>> list;
-            if(role.equals("Admin")){
+            if (role.equals("Admin")) {
                 list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
                 System.out.println(list.get().toString() + "  ASDASD");
-            }
-            else {
+            } else {
                 list = userMatchRepository.getUserMatchByUserIdAndRole2(userId.toString());
             }
             /*Optional<List<UserMatch1>> list = userMatchRepository.getUserMatchByUserIdAndRole(userId, role);*/
@@ -167,7 +198,7 @@ public class MatchServiceImpl implements MatchService {
                         list.get()) {
                     listM.add(um.getMatchId());
                 }
-                return listM;
+                return sortSingle(listM);
             } else return listM;
         }
     }
@@ -178,7 +209,7 @@ public class MatchServiceImpl implements MatchService {
         System.out.println("ROLE" + role);
         if (role.equals("Free")) {
             System.out.println("ROLE" + role);
-            return getSingleMatchWithoutRoleByCity(userId, city);
+            return sortSingle(getSingleMatchWithoutRoleByCity(userId, city));
         } else {
             Optional<List<UserMatch1>> list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
             if (list.isPresent()) {
@@ -192,7 +223,7 @@ public class MatchServiceImpl implements MatchService {
                         listM.add(um.getMatchId());
                     }
                 }
-                return listM;
+                return sortSingle(listM);
             } else return listM;
         }
     }
@@ -236,7 +267,7 @@ public class MatchServiceImpl implements MatchService {
                 lwr.add(um.getMatchId());
             }
             lms.removeAll(lwr);
-            return lms;
+            return sortSingle(lms);
         } else return lms;
     }
 
@@ -257,7 +288,7 @@ public class MatchServiceImpl implements MatchService {
                 lwr.add(um.getMatchId());
             }
             lms.removeAll(lwr);
-            return lms;
+            return sortSingle(lms);
         } else return lms;
     }
 
@@ -283,7 +314,7 @@ public class MatchServiceImpl implements MatchService {
                         return list;
                     } else {
                         if (userDataFromDb.get().getTeam().getCreatorId() == userId) {
-                            return matchCommandRepository.getMatchbyRoleAdmin(userDataFromDb.get().getTeam().getTeamId());
+                            return sortCommand(matchCommandRepository.getMatchbyRoleAdmin(userDataFromDb.get().getTeam().getTeamId()));
                         } else {
                             return list;
                         }
@@ -293,11 +324,11 @@ public class MatchServiceImpl implements MatchService {
                     if (userDataFromDb.get().getTeam() == null) {
                         return list;
                     } else {
-                        return matchCommandRepository.getMatchBRole(userDataFromDb.get().getTeam().getTeamId());
+                        return sortCommand(matchCommandRepository.getMatchBRole(userDataFromDb.get().getTeam().getTeamId()));
                     }
                 }
                 case "Free": {
-                    return getAllCommandMatchFree(userId);
+                    return sortCommand(getAllCommandMatchFree(userId));
                 }
             }
         } else return list;
@@ -315,7 +346,7 @@ public class MatchServiceImpl implements MatchService {
                         return list;
                     } else {
                         if (userDataFromDb.get().getTeam().getCreatorId() == userId) {
-                            return matchCommandRepository.getMatchbyRoleAdminAndCity(userDataFromDb.get().getTeam().getTeamId(), city);
+                            return sortCommand(matchCommandRepository.getMatchbyRoleAdminAndCity(userDataFromDb.get().getTeam().getTeamId(), city));
                         } else {
                             return list;
                         }
@@ -325,11 +356,11 @@ public class MatchServiceImpl implements MatchService {
                     if (userDataFromDb.get().getTeam() == null) {
                         return list;
                     } else {
-                        return matchCommandRepository.getMatchBRoleAndCity(userDataFromDb.get().getTeam().getTeamId(), city);
+                        return sortCommand(matchCommandRepository.getMatchBRoleAndCity(userDataFromDb.get().getTeam().getTeamId(), city));
                     }
                 }
                 case "Free": {
-                    return getAllCommandMatchFreeAndCity(userId, city);
+                    return sortCommand(getAllCommandMatchFreeAndCity(userId, city));
                 }
             }
         } else return list;
@@ -339,7 +370,7 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public List<MatchCommand> getAllCommandMatchByCity(String city) {
         List<MatchCommand> list = matchCommandRepository.getMatchCommandByMatchCity(city);
-        return list;
+        return sortCommand(list);
     }
 
     public List<MatchCommand> getAllCommandMatchFree(Integer userId) {
@@ -347,7 +378,7 @@ public class MatchServiceImpl implements MatchService {
         List<MatchCommand> list = new ArrayList<>();
         if (user.isPresent()) {
             List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFree(user.get().getTeam().getTeamId());
-            return matchFromDb;
+            return sortCommand(matchFromDb);
         } else return list;
     }
 
@@ -356,7 +387,7 @@ public class MatchServiceImpl implements MatchService {
         List<MatchCommand> list = new ArrayList<>();
         if (user.isPresent()) {
             List<MatchCommand> matchFromDb = matchCommandRepository.getMatchFreeAndCity(user.get().getTeam().getTeamId(), city);
-            return matchFromDb;
+            return sortCommand(matchFromDb);
         } else return list;
     }
 
@@ -397,14 +428,14 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public List<MatchCommand> getAllMatchesTeam(Integer teamId) {
         List<MatchCommand> matchesFromDb = matchCommandRepository.getAllTeamCommandMatches(teamId);
-        return matchesFromDb;
+        return sortCommand(matchesFromDb);
     }
 
     @Override
-    public void deleteAll(){
-        matchSingleRepository.deleteAll();
+    public void deleteAll() {
+      /*  matchSingleRepository.deleteAll();
         userMatchRepository.deleteAll();
-        matchCommandRepository.deleteAll();
+        matchCommandRepository.deleteAll();*/
     }
 
 
