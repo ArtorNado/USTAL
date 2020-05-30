@@ -66,4 +66,9 @@ public class MatchCommandController {
     public ResponseEntity<List<MatchCommand>> getAllCommandMatchByCity(@RequestParam(value="city", required=false) String city) {
         return ResponseEntity.ok(matchService.getAllCommandMatchByCity(city));
     }
+
+    @RequestMapping("/deleteAll")
+    public void deleteAll() {
+        matchService.deleteAll();
+    }
 }

@@ -47,7 +47,7 @@ public class MatchServiceImpl implements MatchService {
             MatchSingle nm = new MatchSingle(matchSingle.getDate(), matchSingle.getTime(), matchSingle.getCreatorId(),
                     matchSingle.getNumberParticipant(), 1, matchSingle.getDescription(), matchSingle.getMatchCity());
             matchSingleRepository.save(nm);
-            UserMatch num = new UserMatch(nm, matchSingle.getCreatorId(), "Admin");
+            UserMatch num = new UserMatch(matchSingle.getCreatorId(), nm, "Admin");
             System.out.println(num.toString());
             userMatchRepository.save(num);
             return new MessageDto("success");
@@ -67,7 +67,7 @@ public class MatchServiceImpl implements MatchService {
         if (matchFromDb.isPresent()) {
             System.out.println(idSingleMatch.toString());
             System.out.println(participant.toString());
-            UserMatch um = new UserMatch(matchFromDb.get(), participant, "Participant");
+            UserMatch um = new UserMatch(participant, matchFromDb.get(), "Participant");
             userMatchRepository.save(um);
             matchFromDb.get().setCurrentNumberParticipant(matchFromDb.get().getCurrentNumberParticipant() + 1);
             matchSingleRepository.save(matchFromDb.get());
@@ -394,6 +394,13 @@ public class MatchServiceImpl implements MatchService {
     public List<MatchCommand> getAllMatchesTeam(Integer teamId) {
         List<MatchCommand> matchesFromDb = matchCommandRepository.getAllTeamCommandMatches(teamId);
         return matchesFromDb;
+    }
+
+    @Override
+    public void deleteAll(){
+        matchSingleRepository.deleteAll();
+        userMatchRepository.deleteAll();
+        matchCommandRepository.deleteAll();
     }
 
 

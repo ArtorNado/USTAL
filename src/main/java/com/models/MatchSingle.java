@@ -29,7 +29,7 @@ public class MatchSingle {
     private String matchCity;
 
     @JsonIgnore
-    @OneToMany(mappedBy="matchId")
+    @OneToMany(mappedBy="matchId", cascade=CascadeType.ALL, orphanRemoval=true)
     private Set<UserMatch> users;
 
 

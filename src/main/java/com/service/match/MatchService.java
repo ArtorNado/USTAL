@@ -54,4 +54,6 @@ public interface MatchService {
     List<EndedCommandMatch> getEndedCommandMatch(Integer teamId);
 
     List<MatchCommand> getAllMatchesTeam(Integer teamId);
+
+    void deleteAll();
 }
