@@ -415,7 +415,10 @@ public class MatchServiceImpl implements MatchService {
                 matchCommandRepository.delete(matchFromDb.get());
                 Optional<EndedCommandMatch> check = endCommandMatchRepository.findById(endedCommandMatch.getMatchId());
                 return new MessageDto("success");
-            } else throw new IllegalArgumentException("Teams not found");
+            } else {
+                matchCommandRepository.delete(matchFromDb.get());
+                return new MessageDto("success");
+            }
         } else throw new IllegalArgumentException("Match not found");
     }
 

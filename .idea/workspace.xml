@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-26T114053.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T041125.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T041317.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T041333.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T041627.403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T042311.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-27T042456.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-29T094109.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-29T094330.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T042723.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T042914.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T043614.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T043827.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T043942.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T052626.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/MatchSingle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/models/MatchSingle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/UserMatchRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/UserMatchRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/http/requests.http" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -60,7 +36,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="133" />
+          <entry key="project.closed" value="134" />
           <entry key="project.open.time.101" value="2" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.111" value="1" />
@@ -103,6 +79,7 @@
           <entry key="project.open.time.71" value="3" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.76" value="4" />
           <entry key="project.open.time.77" value="3" />
           <entry key="project.open.time.78" value="1" />
@@ -117,7 +94,7 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="134" />
+          <entry key="project.opened" value="135" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -127,7 +104,7 @@
           <entry key="HTML" value="5" />
           <entry key="HTTP Request" value="47" />
           <entry key="Handlebars/Mustache" value="1" />
-          <entry key="JAVA" value="896" />
+          <entry key="JAVA" value="898" />
           <entry key="JSP" value="7" />
           <entry key="JavaScript" value="6" />
           <entry key="Kotlin" value="1" />
@@ -139,7 +116,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="HTTP Request" value="2978" />
-          <entry key="JAVA" value="28249" />
+          <entry key="JAVA" value="28276" />
           <entry key="JSON" value="70" />
           <entry key="JSP" value="216" />
           <entry key="PLAIN_TEXT" value="26" />
@@ -160,7 +137,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -172,8 +149,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="-1059">
+              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="420" column="13" lean-forward="true" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="37" column="109" selection-start-line="37" selection-start-column="109" selection-end-line="37" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -188,23 +183,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
+            <state relative-caret-position="391">
               <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1154#1155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,6 +220,9 @@
       <find>==</find>
       <find>getMillisOf</find>
       <find>compareTo</find>
+      <find>endC</find>
+      <find>endCommand</find>
+      <find>endComman</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -294,10 +281,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/UserData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java" />
         <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -353,8 +340,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -473,6 +458,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2152,11 +2139,12 @@
       <workItem from="1590854708823" duration="6462000" />
       <workItem from="1590869511204" duration="1009000" />
       <workItem from="1590870698303" duration="1392000" />
+      <workItem from="1590940156669" duration="892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279863000" />
+    <option name="totallyTimeSpent" value="280755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2170,7 +2158,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2564,13 +2552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/UserMatchRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -2580,27 +2561,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="391">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -2608,6 +2573,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="45" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="37" column="109" selection-start-line="37" selection-start-column="109" selection-end-line="37" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1059">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="420" column="13" lean-forward="true" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="13" />
         </state>
       </provider>
     </entry>
