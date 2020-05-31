@@ -63,7 +63,7 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public MessageDto endSingleMatch(Integer idSingleMatch) {
         Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByMatchId(idSingleMatch);
-        if(matchFromDb.isPresent()) {
+        if (matchFromDb.isPresent()) {
             /*matchSingleRepository.deleteMatchSingleByMatchId(idSingleMatch);*/
             userMatchRepository.deleteAllByMatchId(matchFromDb.get());
         }
@@ -95,7 +95,7 @@ public class MatchServiceImpl implements MatchService {
         DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
         list.sort((o1, o2) -> {
             try {
-                return format.parse(o1.getDate() +"T"+o1.getTime()).compareTo(format.parse(o2.getDate() +"T"+o2.getTime()));
+                return format.parse(o1.getDate() + "T" + o1.getTime()).compareTo(format.parse(o2.getDate() + "T" + o2.getTime()));
             } catch (ParseException e) {
                 return 5;
             }
@@ -110,7 +110,7 @@ public class MatchServiceImpl implements MatchService {
         DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
         list.sort((o1, o2) -> {
             try {
-                return format.parse(o1.getDate() +"T"+o1.getTime()).compareTo(format.parse(o2.getDate() +"T"+o2.getTime()));
+                return format.parse(o1.getDate() + "T" + o1.getTime()).compareTo(format.parse(o2.getDate() + "T" + o2.getTime()));
             } catch (ParseException e) {
                 return 5;
             }
@@ -120,6 +120,7 @@ public class MatchServiceImpl implements MatchService {
 */
         return list;
     }
+
     @Override
     public List<MatchSingle> getAllSingleMatchByCity(String city) {
         return sortSingle(matchSingleRepository.findMatchSingleByMatchCity(city));
@@ -192,7 +193,6 @@ public class MatchServiceImpl implements MatchService {
             Optional<List<UserMatch1>> list;
             if (role.equals("Admin")) {
                 list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
-                System.out.println(list.get().toString() + "  ASDASD");
             } else {
                 list = userMatchRepository.getUserMatchByUserIdAndRole2(userId.toString());
             }
@@ -217,13 +217,10 @@ public class MatchServiceImpl implements MatchService {
         } else {
             Optional<List<UserMatch1>> list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
             if (list.isPresent()) {
-                System.out.println("CITY - " + city);
-                System.out.println(list.get().toString());
                 for (UserMatch1 um :
                         list.get()) {
                     System.out.println(um.getMatchId().getMatchCity());
                     if (um.getMatchId().getMatchCity().equals(city)) {
-                        System.out.println("truuuuuue");
                         listM.add(um.getMatchId());
                     }
                 }
@@ -280,20 +277,22 @@ public class MatchServiceImpl implements MatchService {
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
         List<MatchSingle> lms = listAll;
-        for (MatchSingle m :
-                lms) {
-            if ((m.getNumberParticipant() == m.getCurrentNumberParticipant()) || (!city.equals(m.getMatchCity()))) {
-                lms.remove(m);
+        if (lms != null) {
+            for (MatchSingle m :
+                    lms) {
+                if ((m.getNumberParticipant() == m.getCurrentNumberParticipant()) || (!city.equals(m.getMatchCity()))) {
+                    lms.remove(m);
+                }
             }
-        }
-        if (listWR.isPresent()) {
-            for (UserMatch1 um :
-                    listWR.get()) {
-                lwr.add(um.getMatchId());
-            }
-            lms.removeAll(lwr);
-            return sortSingle(lms);
-        } else return lms;
+            if (listWR.isPresent()) {
+                for (UserMatch1 um :
+                        listWR.get()) {
+                    lwr.add(um.getMatchId());
+                }
+                lms.removeAll(lwr);
+                return sortSingle(lms);
+            } else return lms;
+        } else return lwr;
     }
 
     @Override
@@ -426,7 +425,6 @@ public class MatchServiceImpl implements MatchService {
     public List<EndedCommandMatch> getEndedCommandMatch(Integer teamId) {
         Optional<Teams> teamfromDb = teamsRepository.findTeamsByTeamId(teamId);
         Optional<List<EndedCommandMatch>> matchfromDb = endCommandMatchRepository.getEndedCommandBM(teamfromDb.get());
-        System.out.println(matchfromDb.get().toString());
         List<EndedCommandMatch> list = new ArrayList<>();
         if (matchfromDb.isPresent()) return matchfromDb.get();
         else return list;

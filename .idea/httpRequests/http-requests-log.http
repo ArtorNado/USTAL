@@ -1,3 +1,54 @@
+POST http://localhost:8080/getSingleMatchByRole?userId=34&role=Admin
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "20.09.20",
+  "time": "10:00",
+  "creatorId": 47,
+  "numberParticipant" : 12,
+  "description" : "desc",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-31T084927.200.json
+
+###
+
+POST http://localhost:8080/getSingleMatchByRole?userId=34&role=Admin
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "20.09.20",
+  "time": "10:00",
+  "creatorId": 47,
+  "numberParticipant" : 12,
+  "description" : "desc",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-31T084544.500.json
+
+###
+
+POST http://localhost:8080/getSingleMatchByRole?userId=34&role=Participant
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
+
+{
+  "date": "20.09.20",
+  "time": "10:00",
+  "creatorId": 47,
+  "numberParticipant" : 12,
+  "description" : "desc",
+  "matchCity" : "Kazan"
+}
+
+<> 2020-05-31T084529.200.json
+
+###
+
 POST http://localhost:8080/endSingleMatch/158
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
@@ -794,55 +845,6 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUi
 }
 
 <> 2020-05-30T055308.200.json
-
-###
-
-POST http://localhost:8080/joinSingleMatch?idSingleMatch=117&participant=47
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin": "qwrr",
-  "userPassword": "qwrr",
-  "userFirstName": "qwrr",
-  "userSecondName" : "qwrr",
-  "userGender" : "Male",
-  "userCity" : "qwrr"
-}
-
-<> 2020-05-30T054956.500.json
-
-###
-
-POST http://localhost:8080/joinSingleMatch?idSingleMatch=117&participant=47
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin": "qwrr",
-  "userPassword": "qwrr",
-  "userFirstName": "qwrr",
-  "userSecondName" : "qwrr",
-  "userGender" : "Male",
-  "userCity" : "qwrr"
-}
-
-<> 2020-05-30T054140.500.json
-
-###
-
-POST http://localhost:8080/deleteAll
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
-
-{
-  "userLogin": "qwrr",
-  "userPassword": "qwrr",
-  "userFirstName": "qwrr",
-  "userSecondName" : "qwrr",
-  "userGender" : "Male",
-  "userCity" : "qwrr"
-}
 
 ###
 
