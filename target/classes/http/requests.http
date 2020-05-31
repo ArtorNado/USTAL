@@ -1,4 +1,4 @@
-POST http://localhost:8080/getSingleMatchByRole?userId=34&role=Admin
+POST http://localhost:8080/getAllCommandMatch
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8
 
