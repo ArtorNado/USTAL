@@ -17,7 +17,7 @@ public class UserMatch1 {
     @Column(name = "user_id")
     private String userId;
 
-    @ManyToOne()
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name="match_id")
     private MatchSingle matchId;
 

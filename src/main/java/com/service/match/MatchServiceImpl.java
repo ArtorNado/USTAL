@@ -62,8 +62,11 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public MessageDto endSingleMatch(Integer idSingleMatch) {
-        matchSingleRepository.deleteMatchSingleByMatchId(idSingleMatch);
-        userMatchRepository.deleteAllByMatchId(idSingleMatch);
+        Optional<MatchSingle> matchFromDb = matchSingleRepository.findMatchSingleByMatchId(idSingleMatch);
+        if(matchFromDb.isPresent()) {
+            /*matchSingleRepository.deleteMatchSingleByMatchId(idSingleMatch);*/
+            userMatchRepository.deleteAllByMatchId(matchFromDb.get());
+        }
         return new MessageDto("success");
     }
 
@@ -74,6 +77,7 @@ public class MatchServiceImpl implements MatchService {
             System.out.println(idSingleMatch.toString());
             System.out.println(participant.toString());
             UserMatch1 um = new UserMatch1(null, matchFromDb.get(), participant.toString(), "Participant");
+            System.out.println(um.toString());
             userMatchRepository.save(um);
             matchFromDb.get().setCurrentNumberParticipant(matchFromDb.get().getCurrentNumberParticipant() + 1);
             matchSingleRepository.save(matchFromDb.get());

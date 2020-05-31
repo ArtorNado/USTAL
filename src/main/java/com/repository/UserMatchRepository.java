@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface UserMatchRepository extends JpaRepository<UserMatch1, Integer> {
 
-    void deleteAllByMatchId(Integer matchId);
+    void deleteAllByMatchId(MatchSingle matchId);
 
     @Query("SELECT userMatch FROM UserMatch1 userMatch WHERE  userMatch.userId = :userId AND userMatch.role = :role")
     Optional<List<UserMatch1>>  getUserMatch1ByUserIdAndRole(String userId, String role);

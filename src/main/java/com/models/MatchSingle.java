@@ -1,6 +1,8 @@
 package com.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -29,7 +31,7 @@ public class MatchSingle {
     private String matchCity;
 
     @JsonIgnore
-    @ManyToMany(mappedBy="matchId")
+    @ManyToMany(mappedBy="matchId", cascade = CascadeType.REMOVE)
     private Set<UserMatch1> users;
 
 
