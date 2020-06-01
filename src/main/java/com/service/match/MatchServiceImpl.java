@@ -93,7 +93,7 @@ public class MatchServiceImpl implements MatchService {
 
     private List<MatchSingle> sortSingle(List<MatchSingle> list) {
         DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
-        if (!list.isEmpty()) {
+        if (list.size() != 0) {
             list.sort((o1, o2) -> {
                 try {
                     return format.parse(o1.getDate() + "T" + o1.getTime()).compareTo(format.parse(o2.getDate() + "T" + o2.getTime()));
@@ -218,16 +218,13 @@ public class MatchServiceImpl implements MatchService {
     @Override
     public List<MatchSingle> getSingleMatchByRoleAndCity(Integer userId, String role, String city) {
         List<MatchSingle> listM = new ArrayList<>();
-        System.out.println("ROLE" + role);
         if (role.equals("Free")) {
-            System.out.println("ROLE" + role);
             return sortSingle(getSingleMatchWithoutRoleByCity(userId, city));
         } else {
             Optional<List<UserMatch1>> list = userMatchRepository.getUserMatch1ByUserIdAndRole(userId.toString(), role);
             if (list.isPresent()) {
                 for (UserMatch1 um :
                         list.get()) {
-                    System.out.println(um.getMatchId().getMatchCity());
                     if (um.getMatchId().getMatchCity().equals(city)) {
                         listM.add(um.getMatchId());
                     }
