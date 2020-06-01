@@ -93,17 +93,19 @@ public class MatchServiceImpl implements MatchService {
 
     private List<MatchSingle> sortSingle(List<MatchSingle> list) {
         DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
-        list.sort((o1, o2) -> {
-            try {
-                return format.parse(o1.getDate() + "T" + o1.getTime()).compareTo(format.parse(o2.getDate() + "T" + o2.getTime()));
-            } catch (ParseException e) {
-                return 5;
-            }
-        });
+        if (!list.isEmpty()) {
+            list.sort((o1, o2) -> {
+                try {
+                    return format.parse(o1.getDate() + "T" + o1.getTime()).compareTo(format.parse(o2.getDate() + "T" + o2.getTime()));
+                } catch (ParseException e) {
+                    return 5;
+                }
+            });
+        }
+        return list;
 /*
         System.out.println(format.parse(list.get(0).getDate() +"T"+list.get(0).getTime()));
 */
-        return list;
     }
 
     private List<MatchCommand> sortCommand(List<MatchCommand> list) {
@@ -183,7 +185,7 @@ public class MatchServiceImpl implements MatchService {
     public List<MatchCommand> getAllCommandMatch() {
         List<MatchCommand> mac = new ArrayList<>();
         Optional<List<MatchCommand>> mc = matchCommandRepository.getAll();
-        if(mc.isPresent()) {
+        if (mc.isPresent()) {
             return sortCommand(matchCommandRepository.getAll().get());
         } else return mac;
     }
