@@ -11,13 +11,17 @@ import com.repository.TeamsRepository;
 import com.repository.UserDataRepository;
 import com.dto.TeamDto;
 import com.dto.MessageDto;
-import jdk.net.SocketFlow;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.annotation.ApplicationScope;
 
+import javax.xml.ws.http.HTTPException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +44,7 @@ public class TeamsServiceImpl implements TeamsService {
         }
         Optional<UserData> senderFromDb = userDataRepository.findUserDataByUserId(teamDto.getCreatorId());
         if (senderFromDb.isPresent()) {
-            if (senderFromDb.get().getTeam() != null) throw new IllegalArgumentException("У вас уже есть команда");
+            if (senderFromDb.get().getTeam() != null) throw new AccessDeniedException("У вас уже есть команда");
         } else throw new IllegalArgumentException("Ошибка серверва");
         Teams newTeam = new Teams();
         newTeam.setTeamName(teamDto.getTeamName());
