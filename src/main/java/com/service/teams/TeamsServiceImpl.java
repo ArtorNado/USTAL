@@ -121,6 +121,8 @@ public class TeamsServiceImpl implements TeamsService {
             if (userFromDb.get().getTeam() != null) {
                 Teams userTeam = userFromDb.get().getTeam();
                 if (userTeam.getTeamId().equals(teamId)) {
+                    System.out.println(userTeam.getCreatorId().toString() + " - 1");
+                    System.out.println(userId + " - 2");
                     if (userTeam.getCreatorId().equals(userId)) {
                         return new StatusDto(ADMIN_STATUS);
                     } else return new StatusDto(PARTICIPANT_STATUS);
@@ -132,7 +134,7 @@ public class TeamsServiceImpl implements TeamsService {
     public UserTeamStatus determineUserStatus(Integer userId){
         Optional<UserData> userFromDb = userDataRepository.findUserDataByUserId(userId);
         if(userFromDb.get().getTeam() != null){
-            if(userFromDb.get().getTeam().getCreatorId() == userId){
+            if(userFromDb.get().getTeam().getCreatorId().equals(userId)){
                 return new UserTeamStatus(userId, userFromDb.get().getTeam().getTeamId(), "Admin");
             } else return new UserTeamStatus(userId, userFromDb.get().getTeam().getTeamId(), "Participant");
         } else return new UserTeamStatus(userId, 0, "Undefined");
