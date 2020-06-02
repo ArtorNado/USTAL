@@ -260,11 +260,11 @@ public class MatchServiceImpl implements MatchService {
         Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId.toString());
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
-        List<MatchSingle> lms = listAll;
+        List<MatchSingle> lms = userMatchRepository.getAll();
         for (MatchSingle m :
                 lms) {
             if (m.getNumberParticipant() == m.getCurrentNumberParticipant()) {
-                lms.remove(m);
+                listAll.remove(m);
             }
         }
         if (listWR.isPresent()) {
@@ -272,9 +272,9 @@ public class MatchServiceImpl implements MatchService {
                     listWR.get()) {
                 lwr.add(um.getMatchId());
             }
-            lms.removeAll(lwr);
-            return sortSingle(lms);
-        } else return lms;
+            listAll.removeAll(lwr);
+            return sortSingle(listAll);
+        } else return listAll;
     }
 
     private List<MatchSingle> getSingleMatchWithoutRoleByCity(Integer userId, String city) {
