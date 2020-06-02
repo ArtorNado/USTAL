@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de36df19-f6aa-475a-8705-ff1a66818c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T060327.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T060402.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T061728.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T062454.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T062743.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T063345.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T063639.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T064241.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T064320.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T064330.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T064614.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T064902.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-05-30T065319.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/http/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/match/MatchServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/http/requests.http" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -40,7 +50,7 @@
     <session id="-1561028851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="141" />
+          <entry key="project.closed" value="142" />
           <entry key="project.open.time.101" value="2" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.111" value="1" />
@@ -62,7 +72,7 @@
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="3" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.52" value="2" />
           <entry key="project.open.time.53" value="3" />
@@ -99,7 +109,7 @@
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="143" />
+          <entry key="project.opened" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -109,7 +119,7 @@
           <entry key="HTML" value="5" />
           <entry key="HTTP Request" value="48" />
           <entry key="Handlebars/Mustache" value="1" />
-          <entry key="JAVA" value="906" />
+          <entry key="JAVA" value="912" />
           <entry key="JSP" value="7" />
           <entry key="JavaScript" value="6" />
           <entry key="Kotlin" value="1" />
@@ -120,8 +130,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="HTTP Request" value="3009" />
-          <entry key="JAVA" value="28613" />
+          <entry key="HTTP Request" value="3037" />
+          <entry key="JAVA" value="28693" />
           <entry key="JSON" value="70" />
           <entry key="JSP" value="216" />
           <entry key="PLAIN_TEXT" value="26" />
@@ -136,17 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="81" column="57" lean-forward="true" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="1495">
+              <caret line="81" column="57" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -154,7 +155,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="283">
               <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -163,20 +164,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="50" selection-start-column="50" selection-end-column="50" />
+            <state relative-caret-position="209">
+              <caret line="416" column="25" selection-start-line="416" selection-start-column="25" selection-end-line="416" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+            <state relative-caret-position="69">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="42" column="61" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -203,11 +231,9 @@
       <find>getEndedCommandMatch</find>
       <find>configAuthentication</find>
       <find>end</find>
-      <find>null</find>
       <find>==</find>
       <find>getMillisOf</find>
       <find>compareTo</find>
-      <find>endC</find>
       <find>endCommand</find>
       <find>endComman</find>
       <find>getSingleMatchByRoleAndCity</find>
@@ -216,6 +242,9 @@
       <find>createTe</find>
       <find>deter</find>
       <find>determine</find>
+      <find>null</find>
+      <find>endCommandMatch</find>
+      <find>endC</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -275,9 +304,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/MatchSingle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/UserMatch1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/http/requests.http" />
+        <option value="$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -495,6 +524,154 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/getSingleMatchByRoleAndCity" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="34" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="role" />
+                <option name="value" value="Free" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Kazan" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;20.09.20&quot;,&#10;  &quot;time&quot;: &quot;10:00&quot;,&#10;  &quot;creatorId&quot;: 47,&#10;  &quot;numberParticipant&quot; : 12,&#10;  &quot;description&quot; : &quot;desc&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/getSingleMatchRoleAndCity" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="34" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="role" />
+                <option name="value" value="Free" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Kazan" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;20.09.20&quot;,&#10;  &quot;time&quot;: &quot;10:00&quot;,&#10;  &quot;creatorId&quot;: 47,&#10;  &quot;numberParticipant&quot; : 12,&#10;  &quot;description&quot; : &quot;desc&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/getSingleRoleAndCity" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="34" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="role" />
+                <option name="value" value="Free" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Kazan" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;20.09.20&quot;,&#10;  &quot;time&quot;: &quot;10:00&quot;,&#10;  &quot;creatorId&quot;: 47,&#10;  &quot;numberParticipant&quot; : 12,&#10;  &quot;description&quot; : &quot;desc&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/getCommandMatchByRoleAndCity" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="userId" />
+                <option name="value" value="34" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="role" />
+                <option name="value" value="Free" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="city" />
+                <option name="value" value="Kazan" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;20.09.20&quot;,&#10;  &quot;time&quot;: &quot;10:00&quot;,&#10;  &quot;creatorId&quot;: 47,&#10;  &quot;numberParticipant&quot; : 12,&#10;  &quot;description&quot; : &quot;desc&quot;,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:8080/determineUserStatus/208" />
@@ -1861,104 +2038,6 @@
           <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;13:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/createCommandMatch" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;13:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/getEndedCommandMatches" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="teamId" />
-                <option name="value" value="35" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;11:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/getEndedCommandMatches" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="teamId" />
-                <option name="value" value="35" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;11:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/getEndedCommandMatches/35" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzOCIsIm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiJ9.yvW4S-m7_qYWiRLv_Ef2IF1tZ4ohO1XrEh6PNV7eqI8" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;  &quot;date&quot;: &quot;22.07&quot;,&#10;  &quot;time&quot;: &quot;11:00&quot;,&#10;  &quot;creatorId&quot;: 34,&#10;  &quot;matchCity&quot; : &quot;Kazan&quot;,&#10;  &quot;description&quot; : &quot;TODAY&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -2150,12 +2229,13 @@
       <workItem from="1591031750711" duration="464000" />
       <workItem from="1591034388239" duration="88000" />
       <workItem from="1591038414367" duration="619000" />
-      <workItem from="1591052847260" duration="798000" />
+      <workItem from="1591052847260" duration="1019000" />
+      <workItem from="1591054744653" duration="1269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284649000" />
+    <option name="totallyTimeSpent" value="286139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2168,8 +2248,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31208053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3167785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2179,7 +2260,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4214765" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24966443" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -2452,13 +2533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchSingleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -2480,20 +2554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/UserData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -2505,27 +2565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="975" column="15" selection-start-line="975" selection-start-column="15" selection-end-line="975" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="46" column="79" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -2578,30 +2617,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/TeamsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="81" column="57" lean-forward="true" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
+        <state relative-caret-position="1495">
+          <caret line="81" column="57" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="552">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/service/teams/TeamsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="283">
           <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2609,10 +2648,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchSingleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/http/requests.http">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="50" selection-start-column="50" selection-end-column="50" />
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/MatchCommandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="42" column="61" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/EndedCommandMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/match/MatchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="416" column="25" selection-start-line="416" selection-start-column="25" selection-end-line="416" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/repository/MatchCommandRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/MatchCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -281,12 +281,13 @@ public class MatchServiceImpl implements MatchService {
         Optional<List<UserMatch1>> listWR = userMatchRepository.getUserMatchWithoutRole(userId.toString());
         List<MatchSingle> lwr = new ArrayList<>();
         List<MatchSingle> listAll = userMatchRepository.getAll();
-        List<MatchSingle> lms = listAll;
-        if (lms != null) {
+        List<MatchSingle> lms = userMatchRepository.getAll();
+        System.out.println(listAll.size() + "ASDASDASDASD");
+        if (listAll.size() != 0) {
             for (MatchSingle m :
                     lms) {
                 if ((m.getNumberParticipant() == m.getCurrentNumberParticipant()) || (!city.equals(m.getMatchCity()))) {
-                    lms.remove(m);
+                    listAll.remove(m);
                 }
             }
             if (listWR.isPresent()) {
@@ -294,9 +295,9 @@ public class MatchServiceImpl implements MatchService {
                         listWR.get()) {
                     lwr.add(um.getMatchId());
                 }
-                lms.removeAll(lwr);
-                return sortSingle(lms);
-            } else return lms;
+                listAll.removeAll(lwr);
+                return sortSingle(listAll);
+            } else return listAll;
         } else return lwr;
     }
 
@@ -414,7 +415,7 @@ public class MatchServiceImpl implements MatchService {
                     winTeam = null;
                 }
                 EndedCommandMatch endedCommandMatch = new EndedCommandMatch(matchFromDb.get().getMatchId(), matchFromDb.get().getDate(),
-                        winTeam.getTeamId(), firstTeamScore, secondTeamsScore, firstTeamFromDb.get(), secondTeamFromDb.get());
+                        winTeam != null ? winTeam.getTeamId() : null, firstTeamScore, secondTeamsScore, firstTeamFromDb.get(), secondTeamFromDb.get());
                 endCommandMatchRepository.save(endedCommandMatch);
                 matchCommandRepository.delete(matchFromDb.get());
                 Optional<EndedCommandMatch> check = endCommandMatchRepository.findById(endedCommandMatch.getMatchId());
