@@ -32,11 +32,9 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Override
     @LogExecutionTime
     public MessageDto registr(UserDto u) {
-
-
         Optional<List<User>> userFromDb = userRepository.getUserByUserLogin(u.getUserLogin());
         if (userFromDb.isPresent()) {
-            return new MessageDto("Этот логин уже существует");
+            throw new IllegalArgumentException("Этот логин уже существует");
         } else {
             User newUser = new User(u.getUserLogin(), u.getUserPassword(), Role.USER);
             userRepository.save(newUser);
