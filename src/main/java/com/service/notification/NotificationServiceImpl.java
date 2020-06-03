@@ -87,6 +87,9 @@ public class NotificationServiceImpl implements NotificationService {
         System.out.println(senderData.get().toString());
         System.out.println("STEP1");
         if(senderData.isPresent()) {
+            if(notificationRepository.getNotificationsByRecipientIdAndSenderId(notification.getRecipientId(), notification.getSenderId()).isPresent()){
+                return new MessageDto("succsessful");
+            }
             System.out.println("STEP2");
             if(senderData.get().getTeam() == null) {
                 System.out.println("STEP3");

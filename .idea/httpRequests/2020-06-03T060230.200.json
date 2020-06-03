@@ -1,0 +1,38 @@
+[
+  {
+    "matchId": 238,
+    "date": "07.06.20",
+    "time": "16:0o",
+    "creatorId": 215,
+    "firstTeamId": 215,
+    "firstTeamName": "Arsenal",
+    "secondTeamId": 253,
+    "secondTeamName": "tesT2Team",
+    "matchCity": "Kazan",
+    "description": "Any descr"
+  },
+  {
+    "matchId": 237,
+    "date": "09.06.20",
+    "time": "11:00",
+    "creatorId": 215,
+    "firstTeamId": 215,
+    "firstTeamName": "Arsenal",
+    "secondTeamId": 253,
+    "secondTeamName": "tesT2Team",
+    "matchCity": "Kazan",
+    "description": "Any descr"
+  },
+  {
+    "matchId": 236,
+    "date": "10.06.20",
+    "time": "19:00",
+    "creatorId": 215,
+    "firstTeamId": 215,
+    "firstTeamName": "Arsenal",
+    "secondTeamId": null,
+    "secondTeamName": null,
+    "matchCity": "Kazan",
+    "description": "Any description "
+  }
+]

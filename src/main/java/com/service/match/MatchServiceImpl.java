@@ -110,6 +110,7 @@ public class MatchServiceImpl implements MatchService {
 
     private List<MatchCommand> sortCommand(List<MatchCommand> list) {
         DateFormat format = new SimpleDateFormat("dd.MM.yy'T'HH:mm");
+        System.out.println(list.size());
         if (list.size() != 0) {
             list.sort((o1, o2) -> {
                 try {
@@ -316,13 +317,16 @@ public class MatchServiceImpl implements MatchService {
     public List<MatchCommand> getCommandMatchByRole(Integer userId, String role) {
         Optional<UserData> userDataFromDb = userDataRepository.findUserDataByUserId(userId);
         List<MatchCommand> list = new ArrayList<>();
+        System.out.println("aaaa" + userDataFromDb.get().getUserSecondName().toString());
+        System.out.println("aaaa22" + userDataFromDb.get().getTeam().getCreatorId().toString());
         if (userDataFromDb.isPresent()) {
             switch (role) {
                 case "Admin": {
+                    System.out.println("aaaa22" + userDataFromDb.get().getTeam().getCreatorId().toString());
                     if (userDataFromDb.get().getTeam() == null) {
                         return list;
                     } else {
-                        if (userDataFromDb.get().getTeam().getCreatorId() == userId) {
+                        if (userDataFromDb.get().getTeam().getCreatorId().equals(userId)) {
                             return sortCommand(matchCommandRepository.getMatchbyRoleAdmin(userDataFromDb.get().getTeam().getTeamId()));
                         } else {
                             return list;
